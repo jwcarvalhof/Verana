@@ -215,10 +215,6 @@ def build():
     s_dots = ''.join(f'<li><button type="button" class="dot" data-go="{i}" {ta([("aria-label", f"seasons.items.{i}.name")])}><span></span></button></li>' for i in range(M))
 
     stays = ''.join(stay_card(i) for i in range(len(PT['stays']['items'])))
-    stories = ''.join(f'''<figure class="story reveal">
-      <blockquote>{t(f'stories.items.{i}.quote', 'p', 'story__quote')}</blockquote>
-      <figcaption>{t(f'stories.items.{i}.name', 'span', 'story__name')}{t(f'stories.items.{i}.stay', 'span', 'story__stay')}</figcaption>
-    </figure>''' for i in range(len(PT['stories']['items'])))
     faq = ''.join(f'''<div class="faq__item reveal">
       <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-{i}" id="faq-q-{i}">{t(f'faq.items.{i}.0')}{icon('chevron', 'icon faq__icon')}</button></h3>
       <div class="faq__a" id="faq-{i}" role="region" aria-labelledby="faq-q-{i}"><div>{t(f'faq.items.{i}.1', 'p')}</div></div>
@@ -427,17 +423,6 @@ def build():
     </div>
     <div class="stays__grid" data-stays-grid>{stays}</div>
     {t('fav.empty', 'p', 'stays__empty', 'data-fav-empty hidden')}
-  </div>
-</section>
-
-<section class="stories" aria-labelledby="stories-title">
-  <div class="container">
-    <div class="stories__head reveal">
-      {t('stories.kicker', 'p', 'kicker')}
-      {t('stories.title', 'h2', 'section-title', 'id="stories-title"')}
-    </div>
-    <div class="stories__grid">{stories}</div>
-    {t('stories.note', 'p', 'stories__note')}
   </div>
 </section>
 

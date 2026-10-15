@@ -1189,28 +1189,6 @@
     "seeAll": "See everything about this stay",
     "seeAllHint": "Map, bedrooms, reviews and similar places."
   },
-  "stories": {
-    "kicker": "Stories",
-    "title": "What stays with you after the trip.",
-    "note": "Illustrative stories written for this prototype.",
-    "items": [
-      {
-        "quote": "We woke up to fresh snow and never left the fireplace before noon.",
-        "name": "Hannah",
-        "stay": "Cabin in the mountains, Zermatt"
-      },
-      {
-        "quote": "Breakfast outside, cypress trees, and a whole afternoon with nothing planned.",
-        "name": "Luca and Sofia",
-        "stay": "Farmhouse in the hills, Val d'Orcia"
-      },
-      {
-        "quote": "The lake was all ours at seven in the morning. That alone was worth the trip.",
-        "name": "James",
-        "stay": "Lodge by the lake, Lago di Braies"
-      }
-    ]
-  },
   "fav": {
     "add": "Save to favorites",
     "remove": "Remove from favorites",

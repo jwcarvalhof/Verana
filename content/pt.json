@@ -1196,28 +1196,6 @@
     "seeAll": "Ver tudo sobre a hospedagem",
     "seeAllHint": "Mapa, quartos, avaliações e opções parecidas."
   },
-  "stories": {
-    "kicker": "Relatos",
-    "title": "O que fica depois da viagem.",
-    "note": "Relatos ilustrativos, escritos para este protótipo.",
-    "items": [
-      {
-        "quote": "Acordei com o barulho da chuva no telhado e fiquei mais uma hora na cama. Fazia tempo que eu não fazia isso.",
-        "name": "Marina",
-        "stay": "Cabana entre as montanhas, Urubici"
-      },
-      {
-        "quote": "O café da roça chegava quente na varanda. A gente só saía de lá para caminhar.",
-        "name": "Paulo e Rita",
-        "stay": "Fazenda no vale, Serra da Mantiqueira"
-      },
-      {
-        "quote": "Fomos a pé para a praia todos os dias e voltamos para o almoço sem olhar o relógio.",
-        "name": "Camila",
-        "stay": "Casa no Quadrado, Trancoso"
-      }
-    ]
-  },
   "fav": {
     "add": "Salvar nos favoritos",
     "remove": "Remover dos favoritos",

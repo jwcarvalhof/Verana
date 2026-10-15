@@ -33,7 +33,7 @@ VÉRANA/
 
 ## O que a página tem
 
-Abertura curta na primeira visita (logo e uma linha; some sozinha, toque para pular, não aparece com movimento reduzido), hero com busca, um dia no seu tempo (fotos em tela cheia), estações (com o clima do mês em cada card), explorar destinos (com filtros por serra, praia, campo, frio e calor), 6 hospedagens com favoritos (o coração fica salvo neste navegador e o botão Favoritos filtra a lista), relatos de hóspedes (marcados como ilustrativos), perguntas frequentes e encerramento.
+Abertura curta na primeira visita (logo e uma linha; some sozinha, toque para pular, não aparece com movimento reduzido), hero com busca, um dia no seu tempo (fotos em tela cheia), estações (com o clima do mês em cada card), explorar destinos (com filtros por serra, praia, campo, frio e calor), 6 hospedagens com favoritos (o coração fica salvo neste navegador e o botão Favoritos filtra a lista), perguntas frequentes e encerramento.
 
 Ao clicar numa hospedagem, abre um painel por cima do site, com a foto do lugar desfocada ao fundo. No topo, três palavras ligadas por uma linha fina mostram onde o hóspede está (O lugar · Seus dados · Confirmado). São 3 etapas: detalhes (galeria, o que tem, como chegar, datas e total), dados de quem vai viajar e confirmação com código. A reserva é simulada: nada é cobrado nem enviado.
 
