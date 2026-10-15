@@ -1,0 +1,1301 @@
+{
+  "lang": "pt-BR",
+  "locale": "pt-BR",
+  "currency": "BRL",
+  "meta": {
+    "title": "VÉRANA · Lugares para o momento da sua viagem",
+    "description": "Uma cabana entre as árvores, uma janela de frente para o mar ou alguns dias longe da rotina. Encontre um lugar que combine com o que você precisa agora."
+  },
+  "ui": {
+    "skip": "Ir para o conteúdo",
+    "nav": [
+      [
+        "Explorar destinos",
+        "#destinations"
+      ],
+      [
+        "Estações",
+        "#seasons"
+      ],
+      [
+        "Como funciona",
+        "#faq"
+      ]
+    ],
+    "navCta": "Encontrar hospedagem",
+    "menu": "Menu",
+    "closeMenu": "Fechar menu",
+    "langLabel": "Idioma",
+    "langCurrent": "PT",
+    "langOther": "EN",
+    "langOtherName": "English",
+    "perNight": "diária",
+    "viewStay": "Ver hospedagem",
+    "close": "Fechar",
+    "demoTag": "Demonstração",
+    "photoBy": "Foto",
+    "langSwitch": "Mudar idioma para English"
+  },
+  "hero": {
+    "kicker": "Encontre seu próximo destino",
+    "title": "Tem dias que pedem uma mudança de cenário.",
+    "text": "Uma cabana entre as árvores, uma janela de frente para o mar ou alguns dias longe da rotina. Encontre um lugar que combine com o que você precisa agora.",
+    "caption": "Gonçalves, Serra da Mantiqueira, MG",
+    "image": {
+      "src": "u:photo-1682347812423-45911f8e6ef1",
+      "alt": "Vale verde com montanhas em camadas sob nuvens claras, em Gonçalves, na Serra da Mantiqueira",
+      "pos": "50% 60%"
+    }
+  },
+  "form": {
+    "title": "Para onde você quer ir?",
+    "destination": "Destino",
+    "destinationPh": "Cidade, região ou tipo de lugar",
+    "checkin": "Entrada",
+    "checkout": "Saída",
+    "datePh": "Adicionar data",
+    "guests": "Hóspedes",
+    "guestsPh": "Quantas pessoas vão viajar?",
+    "adults": "Adultos",
+    "adultsHint": "13 anos ou mais",
+    "children": "Crianças",
+    "childrenHint": "2 a 12 anos",
+    "less": "Remover",
+    "more": "Adicionar",
+    "done": "Pronto",
+    "submit": "Encontrar hospedagem",
+    "suggestionsLabel": "Sugestões",
+    "suggestions": [
+      "Gramado e Canela, RS",
+      "Urubici, SC",
+      "Serra da Mantiqueira, MG",
+      "Trancoso, BA"
+    ],
+    "guestOne": "hóspede",
+    "guestMany": "hóspedes",
+    "adultOne": "adulto",
+    "adultMany": "adultos",
+    "childOne": "criança",
+    "childMany": "crianças",
+    "errDestination": "Conte para onde você quer ir, ou escolha uma das sugestões.",
+    "errDates": "A data de saída precisa vir depois da entrada.",
+    "nights1": "noite",
+    "nightsN": "noites"
+  },
+  "results": {
+    "kicker": "Sua busca",
+    "found": "Encontramos {n} lugares que podem combinar com {destination}.",
+    "foundOne": "Encontramos 1 lugar que pode combinar com {destination}.",
+    "empty": "Ainda não temos lugares de exemplo para essa busca. Que tal olhar as estações logo abaixo?",
+    "capacity": "Nenhum lugar de exemplo comporta esse número de pessoas. Estes são os mais próximos do que você procura.",
+    "seeSeasons": "Ver estações",
+    "clear": "Limpar busca"
+  },
+  "story": {
+    "label": "Um dia no seu tempo",
+    "scenes": [
+      {
+        "title": "Imagine acordar sem olhar as horas.",
+        "text": "Luz entrando pela janela, silêncio ao redor e uma manhã que começa no seu tempo.",
+        "image": {
+          "src": "u:photo-1542300058-849d3b08aa0f",
+          "alt": "Nascer do sol sobre a praia, com coqueiros ao fundo, em Praia do Forte",
+          "pos": "50% 55%"
+        },
+        "place": "Praia do Forte, Bahia"
+      },
+      {
+        "title": "Seu café pode esperar um pouco.",
+        "text": "Talvez você prefira ficar mais alguns minutos olhando a paisagem.",
+        "image": {
+          "src": "u:photo-1760067538559-49b2bfb5f42a",
+          "alt": "Varanda aberta de madeira com sofás claros e jardim tropical, em Praia do Forte",
+          "pos": "50% 55%"
+        },
+        "place": "Praia do Forte, Bahia"
+      },
+      {
+        "title": "Hoje, você não precisa chegar a lugar nenhum.",
+        "text": "Aproveite o espaço, escolha seu ritmo e deixe o dia acontecer sem tanta pressa.",
+        "image": {
+          "src": "u:photo-1760067537859-460c0d91cad9",
+          "alt": "Espreguiçadeiras brancas ao lado da piscina, cercadas de plantas, em Praia do Forte",
+          "pos": "50% 60%"
+        },
+        "place": "Praia do Forte, Bahia"
+      },
+      {
+        "title": "E se hoje terminasse um pouco mais devagar?",
+        "text": "Um ambiente acolhedor, uma conversa sem pressa ou simplesmente um tempo só seu.",
+        "image": {
+          "src": "u:photo-1536243571237-9f9218322827",
+          "alt": "Céu alaranjado do fim de tarde sobre o horizonte em Praia do Forte",
+          "pos": "50% 60%"
+        },
+        "place": "Praia do Forte, Bahia"
+      }
+    ],
+    "progress": "Momento {i} de {n}"
+  },
+  "seasons": {
+    "kicker": "Estações do ano",
+    "title": "Que tipo de viagem está passando pela sua cabeça?",
+    "text": "Talvez você queira o frio, o verde depois da chuva ou dias perto do mar. Escolha a estação e descubra lugares que combinam com ela.",
+    "button": "Encontrar meu refúgio",
+    "prev": "Estação anterior",
+    "next": "Próxima estação",
+    "progress": "Estação {i} de {n}",
+    "items": [
+      {
+        "key": "autumn",
+        "name": "Outono",
+        "where": "Gramado e Canela, RS",
+        "when": "abril a maio",
+        "search": "Gramado e Canela, RS",
+        "text": "Para quando você quer aconchego, paisagens douradas e tardes sem pressa.",
+        "image": {
+          "src": "u:photo-1754072175012-aa642d5ba459",
+          "alt": "Árvores de outono em tons de vermelho e laranja em Gramado",
+          "pos": "50% 50%"
+        },
+        "climate": "maio em Gramado: 10 a 18°C"
+      },
+      {
+        "key": "winter",
+        "name": "Inverno",
+        "where": "Urubici, SC",
+        "when": "junho a agosto",
+        "search": "Urubici, SC",
+        "text": "Para aproveitar o frio, ficar perto da lareira e dormir mais um pouco.",
+        "image": {
+          "src": "u:photo-1788543632159-d128c452d10a",
+          "alt": "Galpão de madeira entre araucárias e montanhas cobertas de névoa em Urubici",
+          "pos": "50% 55%"
+        },
+        "climate": "julho em Urubici: 1 a 15°C"
+      },
+      {
+        "key": "spring",
+        "name": "Primavera",
+        "where": "Serra da Mantiqueira, MG",
+        "when": "setembro a novembro",
+        "search": "Serra da Mantiqueira, MG",
+        "text": "Para passar mais tempo ao ar livre e descobrir paisagens que mudam a cada caminho.",
+        "image": {
+          "src": "u:photo-1705690011100-984bb9574eec",
+          "alt": "Encosta verde com flores vermelhas em primeiro plano no Vale da Mantiqueira",
+          "pos": "40% 50%"
+        },
+        "climate": "outubro na Mantiqueira: 12 a 24°C"
+      },
+      {
+        "key": "summer",
+        "name": "Verão",
+        "where": "Trancoso, BA",
+        "when": "dezembro a março",
+        "search": "Trancoso, BA",
+        "text": "Para aproveitar os dias longos, estar perto da água e fazer tudo sem tanta hora marcada.",
+        "image": {
+          "src": "u:photo-1732066811253-b34c81d58e45",
+          "alt": "Praia de areia clara e mar azul vistos do alto, em Trancoso",
+          "pos": "55% 50%"
+        },
+        "climate": "janeiro em Trancoso: 23 a 30°C"
+      }
+    ]
+  },
+  "stays": {
+    "title": "Lugares que podem combinar com seus planos.",
+    "text": "Veja algumas opções para começar a imaginar sua próxima viagem.",
+    "link": "Ver todas as hospedagens",
+    "items": [
+      {
+        "id": "urubici",
+        "name": "Cabana entre as montanhas",
+        "where": "Urubici, Serra Catarinense, SC",
+        "text": "Um espaço tranquilo para aproveitar o frio, a paisagem e o tempo livre.",
+        "features": [
+          [
+            "guests",
+            "2 hóspedes"
+          ],
+          [
+            "bed",
+            "1 quarto"
+          ],
+          [
+            "fireplace",
+            "Lareira"
+          ]
+        ],
+        "guests": 2,
+        "price": 480,
+        "rating": "4,9",
+        "reviews": 128,
+        "season": "winter",
+        "keywords": "urubici sc santa catarina serra catarinense inverno frio lareira araucaria montanha cabana chale",
+        "image": {
+          "src": "u:photo-1666886505087-fc64ec7a8be6",
+          "alt": "Pequena cabana de madeira entre araucárias e uma estrada de terra em Urubici",
+          "pos": "50% 60%"
+        },
+        "gallery": [
+          {
+            "src": "u:photo-1597409183003-bc5d77c668d3",
+            "alt": "Lago calmo cercado de araucárias e mata em Urubici",
+            "pos": "50% 50%"
+          },
+          {
+            "src": "u:photo-1788543632159-d128c452d10a",
+            "alt": "Galpão de madeira entre araucárias e montanhas com névoa em Urubici",
+            "pos": "50% 55%"
+          }
+        ],
+        "about": "Uma cabana pequena entre araucárias, feita para os dias frios da Serra Catarinense. A lareira fica acesa à noite e a janela dá para a névoa que desce pela manhã.",
+        "amenities": [
+          [
+            "fireplace",
+            "Lareira a lenha"
+          ],
+          [
+            "coffee",
+            "Café da manhã na cabana"
+          ],
+          [
+            "mountain",
+            "Vista para a serra"
+          ],
+          [
+            "bath",
+            "Banheira"
+          ],
+          [
+            "wifi",
+            "Wi Fi"
+          ],
+          [
+            "car",
+            "Estacionamento"
+          ]
+        ],
+        "arrive": "A cerca de 2h30 de Florianópolis, de carro, pela Serra do Corvo Branco ou pela BR 282.",
+        "geo": [
+          -28.015,
+          -49.592
+        ],
+        "rooms": [
+          [
+            "Quarto",
+            "1 cama de casal"
+          ],
+          [
+            "Sala com lareira",
+            "1 sofá para ler"
+          ]
+        ],
+        "host": {
+          "name": "Helena",
+          "years": 6,
+          "line": "Mora a dez minutos da cabana e deixa lenha cortada e um bolo na chegada."
+        },
+        "scores": [
+          5.0,
+          4.9,
+          4.8,
+          5.0,
+          4.9,
+          4.8
+        ],
+        "reviewsList": [
+          {
+            "name": "Marina",
+            "from": "Curitiba",
+            "date": "julho de 2026",
+            "text": "Fez 1°C de manhã e a cabana continuou quente o tempo todo. A Helena deixou lenha para três noites."
+          },
+          {
+            "name": "Rodrigo",
+            "from": "Porto Alegre",
+            "date": "junho de 2026",
+            "text": "A névoa subindo pelas araucárias vale a viagem. Estrada de terra no fim, mas tranquila."
+          },
+          {
+            "name": "Lívia",
+            "from": "Florianópolis",
+            "date": "agosto de 2026",
+            "text": "Silêncio de verdade. Levamos livros e quase não ligamos o celular."
+          }
+        ]
+      },
+      {
+        "id": "canela",
+        "name": "Cabana no campo",
+        "where": "Canela, Serra Gaúcha, RS",
+        "text": "Madeira antiga, campo aberto e tardes douradas no outono.",
+        "features": [
+          [
+            "guests",
+            "4 hóspedes"
+          ],
+          [
+            "bed",
+            "2 quartos"
+          ],
+          [
+            "garden",
+            "Jardim"
+          ]
+        ],
+        "guests": 4,
+        "price": 540,
+        "rating": "4,8",
+        "reviews": 96,
+        "season": "autumn",
+        "keywords": "canela gramado rs rio grande do sul serra gaucha outono platanos cabana campo",
+        "image": {
+          "src": "u:photo-1709908973023-65f285405792",
+          "alt": "Cabana antiga de madeira em um campo gramado, cercada de árvores, em Canela",
+          "pos": "50% 55%"
+        },
+        "gallery": [
+          {
+            "src": "u:photo-1598054806683-c73dd36daa55",
+            "alt": "Casa em estilo enxaimel vermelha e branca entre árvores em Canela",
+            "pos": "50% 50%"
+          },
+          {
+            "src": "u:photo-1754072175012-aa642d5ba459",
+            "alt": "Árvores de outono em tons de vermelho e laranja em Gramado",
+            "pos": "50% 50%"
+          }
+        ],
+        "about": "Uma cabana antiga, restaurada com cuidado, num campo aberto a poucos minutos do centro de Canela. No outono, as árvores em volta ficam douradas.",
+        "amenities": [
+          [
+            "fireplace",
+            "Lareira"
+          ],
+          [
+            "garden",
+            "Jardim e campo"
+          ],
+          [
+            "coffee",
+            "Cozinha completa"
+          ],
+          [
+            "wifi",
+            "Wi Fi"
+          ],
+          [
+            "car",
+            "Estacionamento"
+          ],
+          [
+            "paw",
+            "Aceita pets"
+          ]
+        ],
+        "arrive": "A cerca de 2h de Porto Alegre, de carro, pela Rota Romântica.",
+        "geo": [
+          -29.365,
+          -50.811
+        ],
+        "rooms": [
+          [
+            "Quarto 1",
+            "1 cama de casal"
+          ],
+          [
+            "Quarto 2",
+            "2 camas de solteiro"
+          ]
+        ],
+        "host": {
+          "name": "Otávio",
+          "years": 4,
+          "line": "Restaurou a cabana com o pai e conhece cada café da Rota Romântica."
+        },
+        "scores": [
+          4.9,
+          4.8,
+          4.9,
+          4.8,
+          4.8,
+          4.7
+        ],
+        "reviewsList": [
+          {
+            "name": "Fernanda",
+            "from": "São Paulo",
+            "date": "maio de 2026",
+            "text": "O campo em volta fica dourado no fim da tarde. As crianças passaram o dia inteiro lá fora."
+          },
+          {
+            "name": "Caio",
+            "from": "Porto Alegre",
+            "date": "abril de 2026",
+            "text": "Perto do centro e ao mesmo tempo longe do movimento. Cozinha bem equipada."
+          },
+          {
+            "name": "Patrícia",
+            "from": "Campinas",
+            "date": "maio de 2026",
+            "text": "Levamos o cachorro e ele foi recebido com tigela e manta. Detalhe que fez diferença."
+          }
+        ]
+      },
+      {
+        "id": "mantiqueira",
+        "name": "Fazenda no vale",
+        "where": "Virgínia, Serra da Mantiqueira, MG",
+        "text": "Cavalos no pasto, café da roça e trilhas entre as montanhas.",
+        "features": [
+          [
+            "guests",
+            "6 hóspedes"
+          ],
+          [
+            "bed",
+            "3 quartos"
+          ],
+          [
+            "coffee",
+            "Café incluso"
+          ]
+        ],
+        "guests": 6,
+        "price": 620,
+        "rating": "4,8",
+        "reviews": 74,
+        "season": "spring",
+        "keywords": "virginia mg minas gerais serra da mantiqueira mantiqueira goncalves primavera fazenda campo trilha cavalo montanha",
+        "image": {
+          "src": "u:photo-1705690421630-041459efe027",
+          "alt": "Cavalos pastando em um campo verde no Vale da Mantiqueira",
+          "pos": "50% 62%"
+        },
+        "gallery": [
+          {
+            "src": "u:photo-1705690011100-984bb9574eec",
+            "alt": "Encosta verde com flores vermelhas no Vale da Mantiqueira",
+            "pos": "50% 50%"
+          },
+          {
+            "src": "u:photo-1682347810591-be423d4ad8ba",
+            "alt": "Vale verde com montanhas ao fundo em Gonçalves",
+            "pos": "50% 50%"
+          }
+        ],
+        "about": "Uma fazenda no meio do vale, com cavalos no pasto, horta e café coado na hora. As trilhas começam na porteira.",
+        "amenities": [
+          [
+            "coffee",
+            "Café da roça incluso"
+          ],
+          [
+            "garden",
+            "Horta e pomar"
+          ],
+          [
+            "mountain",
+            "Trilhas a pé"
+          ],
+          [
+            "fireplace",
+            "Fogão a lenha"
+          ],
+          [
+            "wifi",
+            "Wi Fi"
+          ],
+          [
+            "car",
+            "Estacionamento"
+          ]
+        ],
+        "arrive": "A cerca de 4h de São Paulo e 5h do Rio de Janeiro, de carro.",
+        "geo": [
+          -22.333,
+          -45.093
+        ],
+        "rooms": [
+          [
+            "Quarto 1",
+            "1 cama de casal"
+          ],
+          [
+            "Quarto 2",
+            "1 cama de casal"
+          ],
+          [
+            "Quarto 3",
+            "2 camas de solteiro"
+          ]
+        ],
+        "host": {
+          "name": "Lúcia e José",
+          "years": 9,
+          "line": "Cuidam da fazenda há trinta anos e servem o café com queijo da região."
+        },
+        "scores": [
+          4.8,
+          4.8,
+          4.9,
+          5.0,
+          4.7,
+          4.9
+        ],
+        "reviewsList": [
+          {
+            "name": "Paulo e Rita",
+            "from": "Rio de Janeiro",
+            "date": "outubro de 2026",
+            "text": "O café da roça chegava quente na varanda. A gente só saía de lá para caminhar."
+          },
+          {
+            "name": "Tiago",
+            "from": "Belo Horizonte",
+            "date": "setembro de 2026",
+            "text": "As trilhas começam na porteira mesmo. Voltamos com as botas cheias de terra e felizes."
+          },
+          {
+            "name": "Juliana",
+            "from": "São Paulo",
+            "date": "novembro de 2026",
+            "text": "Viajamos em seis e ninguém disputou espaço. O fogão a lenha virou o centro da casa."
+          }
+        ]
+      },
+      {
+        "id": "trancoso",
+        "name": "Casa no Quadrado",
+        "where": "Trancoso, BA",
+        "text": "Uma casa colorida sob as árvores, a poucos passos do mar.",
+        "features": [
+          [
+            "guests",
+            "4 hóspedes"
+          ],
+          [
+            "bed",
+            "2 quartos"
+          ],
+          [
+            "wave",
+            "Perto da praia"
+          ]
+        ],
+        "guests": 4,
+        "price": 760,
+        "rating": "4,9",
+        "reviews": 112,
+        "season": "summer",
+        "keywords": "trancoso ba bahia porto seguro praia mar verao quadrado casa",
+        "image": {
+          "src": "u:photo-1483541954964-dfd427f3dac7",
+          "alt": "Casa verde e amarela sob árvores no Quadrado de Trancoso",
+          "pos": "50% 60%"
+        },
+        "gallery": [
+          {
+            "src": "u:photo-1732066811253-b34c81d58e45",
+            "alt": "Praia de areia clara e mar azul vistos do alto em Trancoso",
+            "pos": "50% 50%"
+          },
+          {
+            "src": "u:photo-1620045819541-66ad1cf09e07",
+            "alt": "Mar verde e calmo na Praia de Taípe, perto de Trancoso",
+            "pos": "50% 50%"
+          }
+        ],
+        "about": "Uma casa colorida no Quadrado, sob árvores antigas. Dá para ir à praia a pé e voltar para o almoço sem pressa.",
+        "amenities": [
+          [
+            "wave",
+            "Praia a pé"
+          ],
+          [
+            "garden",
+            "Varanda com redes"
+          ],
+          [
+            "coffee",
+            "Café da manhã"
+          ],
+          [
+            "sun",
+            "Ar condicionado"
+          ],
+          [
+            "wifi",
+            "Wi Fi"
+          ],
+          [
+            "bed",
+            "Roupa de cama de linho"
+          ]
+        ],
+        "arrive": "A cerca de 1h do aeroporto de Porto Seguro, de carro.",
+        "geo": [
+          -16.59,
+          -39.096
+        ],
+        "rooms": [
+          [
+            "Quarto 1",
+            "1 cama de casal"
+          ],
+          [
+            "Quarto 2",
+            "2 camas de solteiro"
+          ]
+        ],
+        "host": {
+          "name": "Bia",
+          "years": 5,
+          "line": "Nasceu em Trancoso e indica as barracas onde os moradores almoçam."
+        },
+        "scores": [
+          4.9,
+          4.9,
+          5.0,
+          4.9,
+          4.8,
+          4.7
+        ],
+        "reviewsList": [
+          {
+            "name": "Camila",
+            "from": "Salvador",
+            "date": "janeiro de 2026",
+            "text": "Fomos a pé para a praia todos os dias e voltamos para o almoço sem olhar o relógio."
+          },
+          {
+            "name": "Eduardo",
+            "from": "Brasília",
+            "date": "fevereiro de 2026",
+            "text": "A rede da varanda foi o lugar mais disputado da viagem. Casa fresca mesmo no calor."
+          },
+          {
+            "name": "Natália",
+            "from": "São Paulo",
+            "date": "dezembro de 2025",
+            "text": "Roupa de cama de linho e cheiro de mar. A Bia respondeu tudo em minutos."
+          }
+        ]
+      },
+      {
+        "id": "praiadoforte",
+        "name": "Casa com piscina",
+        "where": "Praia do Forte, Bahia",
+        "text": "Uma casa aberta para o jardim, com piscina e a praia logo ali.",
+        "features": [
+          [
+            "guests",
+            "6 hóspedes"
+          ],
+          [
+            "bed",
+            "3 quartos"
+          ],
+          [
+            "pool",
+            "Piscina"
+          ]
+        ],
+        "guests": 6,
+        "price": 980,
+        "rating": "4,9",
+        "reviews": 88,
+        "season": "summer",
+        "keywords": "praia do forte mata de sao joao ba bahia praia mar verao piscina casa",
+        "image": {
+          "src": "u:photo-1760068475547-5f3d3eda789e",
+          "alt": "Espreguiçadeiras ao lado da piscina, cercadas de plantas, em Praia do Forte",
+          "pos": "50% 60%"
+        },
+        "gallery": [
+          {
+            "src": "u:photo-1745681278433-4f45b29fb3c4",
+            "alt": "Praia larga com coqueiros em Praia do Forte",
+            "pos": "50% 50%"
+          },
+          {
+            "src": "u:photo-1779312142210-1e57a762d928",
+            "alt": "Coqueiros e areia clara à beira do mar em Praia do Forte",
+            "pos": "50% 50%"
+          }
+        ],
+        "about": "Uma casa com varanda aberta, piscina e jardim tropical, a poucos minutos da vila e da praia de Praia do Forte.",
+        "amenities": [
+          [
+            "pool",
+            "Piscina"
+          ],
+          [
+            "wave",
+            "Praia a 5 minutos"
+          ],
+          [
+            "garden",
+            "Jardim tropical"
+          ],
+          [
+            "sun",
+            "Ar condicionado"
+          ],
+          [
+            "wifi",
+            "Wi Fi"
+          ],
+          [
+            "car",
+            "Estacionamento"
+          ]
+        ],
+        "arrive": "A cerca de 1h do aeroporto de Salvador, de carro, pela Estrada do Coco.",
+        "geo": [
+          -12.579,
+          -38.0
+        ],
+        "rooms": [
+          [
+            "Quarto 1",
+            "1 cama de casal"
+          ],
+          [
+            "Quarto 2",
+            "1 cama de casal"
+          ],
+          [
+            "Quarto 3",
+            "2 camas de solteiro"
+          ]
+        ],
+        "host": {
+          "name": "Rafael",
+          "years": 3,
+          "line": "Mora na vila e mantém o jardim tropical do jeito que a avó plantou."
+        },
+        "scores": [
+          4.9,
+          4.9,
+          4.9,
+          4.8,
+          4.9,
+          4.8
+        ],
+        "reviewsList": [
+          {
+            "name": "Gabriela",
+            "from": "Recife",
+            "date": "março de 2026",
+            "text": "A piscina à sombra do jardim salvou as tardes mais quentes. Praia a cinco minutos andando."
+          },
+          {
+            "name": "Marcos",
+            "from": "Salvador",
+            "date": "janeiro de 2026",
+            "text": "Casa espaçosa para seis, com varanda aberta para o almoço durar a tarde toda."
+          },
+          {
+            "name": "Aline",
+            "from": "Goiânia",
+            "date": "fevereiro de 2026",
+            "text": "Vimos as tartarugas no Projeto Tamar e voltamos a pé. Organização impecável."
+          }
+        ]
+      },
+      {
+        "id": "goncalves",
+        "name": "Chalé com vista para o vale",
+        "where": "Gonçalves, Serra da Mantiqueira, MG",
+        "text": "Um chalé na encosta, com a serra inteira na janela.",
+        "features": [
+          [
+            "guests",
+            "2 hóspedes"
+          ],
+          [
+            "bed",
+            "1 quarto"
+          ],
+          [
+            "mountain",
+            "Vista para o vale"
+          ]
+        ],
+        "guests": 2,
+        "price": 520,
+        "rating": "4,9",
+        "reviews": 64,
+        "season": "spring",
+        "keywords": "goncalves mg minas gerais serra da mantiqueira mantiqueira primavera chale vale montanha",
+        "image": {
+          "src": "u:photo-1682347812366-9a7bd6b1d0bf",
+          "alt": "Vale verde e montanhas em camadas vistos do alto em Gonçalves",
+          "pos": "50% 55%"
+        },
+        "gallery": [
+          {
+            "src": "u:photo-1682347812423-45911f8e6ef1",
+            "alt": "Montanhas em camadas sob nuvens claras em Gonçalves",
+            "pos": "50% 60%"
+          },
+          {
+            "src": "u:photo-1705690011100-984bb9574eec",
+            "alt": "Encosta verde com flores vermelhas no Vale da Mantiqueira",
+            "pos": "50% 50%"
+          }
+        ],
+        "about": "Um chalé de madeira na encosta, com deck para o vale e silêncio de verdade. À noite o céu fica cheio de estrelas.",
+        "amenities": [
+          [
+            "mountain",
+            "Vista para o vale"
+          ],
+          [
+            "fireplace",
+            "Lareira"
+          ],
+          [
+            "bath",
+            "Banheira"
+          ],
+          [
+            "coffee",
+            "Café da manhã"
+          ],
+          [
+            "wifi",
+            "Wi Fi"
+          ],
+          [
+            "car",
+            "Estacionamento"
+          ]
+        ],
+        "arrive": "A cerca de 3h de São Paulo, de carro, pela Rodovia Fernão Dias.",
+        "geo": [
+          -22.659,
+          -45.856
+        ],
+        "rooms": [
+          [
+            "Quarto",
+            "1 cama de casal"
+          ],
+          [
+            "Deck",
+            "2 espreguiçadeiras para o vale"
+          ]
+        ],
+        "host": {
+          "name": "Teresa",
+          "years": 7,
+          "line": "Construiu o chalé na encosta pensando no pôr do sol sobre o vale."
+        },
+        "scores": [
+          5.0,
+          5.0,
+          4.8,
+          5.0,
+          4.9,
+          4.8
+        ],
+        "reviewsList": [
+          {
+            "name": "Renata",
+            "from": "São Paulo",
+            "date": "setembro de 2026",
+            "text": "O céu de noite ficou cheio de estrelas. Banheira com vista para a serra inteira."
+          },
+          {
+            "name": "Felipe",
+            "from": "Campinas",
+            "date": "outubro de 2026",
+            "text": "Fomos para descansar e conseguimos. O deck pega o sol da manhã inteiro."
+          },
+          {
+            "name": "Clara",
+            "from": "Ribeirão Preto",
+            "date": "novembro de 2026",
+            "text": "A Teresa deixou um mapa à mão das trilhas e cachoeiras. Usamos todos os dias."
+          }
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "title": "Antes de escolher, vale saber.",
+    "text": "Algumas informações ajudam você a planejar a viagem com mais tranquilidade.",
+    "items": [
+      [
+        "Como funciona a reserva?",
+        "Você escolhe o destino, informa as datas e o número de hóspedes para consultar as acomodações disponíveis."
+      ],
+      [
+        "Posso encontrar uma hospedagem para uma ocasião especial?",
+        "Sim. Você pode explorar lugares de acordo com a estação, o tipo de ambiente e as características que fazem sentido para sua viagem."
+      ],
+      [
+        "Como sei se uma acomodação está disponível?",
+        "Informe as datas desejadas para consultar a disponibilidade correspondente à sua estadia."
+      ],
+      [
+        "E se meus planos mudarem?",
+        "As condições de alteração e cancelamento dependem de cada hospedagem. Consulte as regras antes de confirmar sua reserva."
+      ]
+    ]
+  },
+  "closing": {
+    "title": "Você já tem uma ideia de como gostaria de passar esses dias?",
+    "text": "Agora falta encontrar um lugar que combine com ela.",
+    "button": "Vamos encontrar sua hospedagem",
+    "caption": "Vale do Quilombo, Gramado, RS",
+    "image": {
+      "src": "c:b/b6/Vale_do_Quilombo_-_Serra_Ga%C3%BAcha.jpg|3024",
+      "alt": "Vale do Quilombo visto do alto, com encostas verdes e montanhas em camadas",
+      "pos": "50% 55%"
+    }
+  },
+  "footer": {
+    "tagline": "Lugares para o momento da sua viagem.",
+    "cols": [
+      [
+        "Explorar",
+        [
+          [
+            "Destinos",
+            "#destinations"
+          ],
+          [
+            "Estações",
+            "#seasons"
+          ],
+          [
+            "Como funciona",
+            "#faq"
+          ]
+        ]
+      ],
+      [
+        "Estações",
+        [
+          [
+            "Outono",
+            "#seasons"
+          ],
+          [
+            "Inverno",
+            "#seasons"
+          ],
+          [
+            "Primavera",
+            "#seasons"
+          ],
+          [
+            "Verão",
+            "#seasons"
+          ]
+        ]
+      ],
+      [
+        "Contato (fictício)",
+        [
+          [
+            "ola@verana.exemplo",
+            "mailto:ola@verana.exemplo"
+          ],
+          [
+            "(00) 0000 0000",
+            "#"
+          ]
+        ]
+      ]
+    ],
+    "notice": "VÉRANA é uma marca conceitual criada para este protótipo. Hospedagens, preços, avaliações e contatos são demonstrativos. As fotos mostram os destinos reais citados e pertencem aos seus autores.",
+    "legal": [
+      [
+        "Privacidade (demonstração)",
+        "#"
+      ],
+      [
+        "Termos (demonstração)",
+        "#"
+      ]
+    ],
+    "credits": "Créditos das fotos",
+    "creditsIntro": "Fotos do Unsplash (licença Unsplash) e do Wikimedia Commons (licença indicada).",
+    "year": "2026"
+  },
+  "destinations": {
+    "kicker": "Explorar destinos",
+    "title": "Para onde a sua vontade aponta?",
+    "text": "Escolha o tipo de lugar e veja quando cada destino fica mais bonito.",
+    "all": "Todos",
+    "filters": [
+      [
+        "mountain",
+        "Serra"
+      ],
+      [
+        "beach",
+        "Praia"
+      ],
+      [
+        "countryside",
+        "Campo"
+      ],
+      [
+        "cold",
+        "Dias frios"
+      ],
+      [
+        "warm",
+        "Dias quentes"
+      ]
+    ],
+    "bestLabel": "Melhor época",
+    "tempLabel": "Temperatura média",
+    "button": "Ver hospedagens",
+    "filterLabel": "Filtrar destinos",
+    "count": "{n} destinos",
+    "count1": "1 destino",
+    "items": [
+      {
+        "name": "Gramado e Canela",
+        "region": "Serra Gaúcha, RS",
+        "tags": [
+          "mountain",
+          "cold"
+        ],
+        "best": "abril a julho",
+        "temp": "maio, 10 a 18°C",
+        "search": "Gramado e Canela, RS",
+        "image": {
+          "src": "u:photo-1598054806683-c73dd36daa55",
+          "alt": "Casa em estilo enxaimel entre árvores em Canela",
+          "pos": "50% 50%"
+        }
+      },
+      {
+        "name": "Urubici",
+        "region": "Serra Catarinense, SC",
+        "tags": [
+          "mountain",
+          "cold"
+        ],
+        "best": "junho a agosto",
+        "temp": "julho, 1 a 15°C",
+        "search": "Urubici, SC",
+        "image": {
+          "src": "u:photo-1597409183003-bc5d77c668d3",
+          "alt": "Lago calmo cercado de araucárias em Urubici",
+          "pos": "50% 50%"
+        }
+      },
+      {
+        "name": "Serra da Mantiqueira",
+        "region": "Gonçalves e Virgínia, MG",
+        "tags": [
+          "mountain",
+          "countryside"
+        ],
+        "best": "setembro a novembro",
+        "temp": "outubro, 12 a 24°C",
+        "search": "Serra da Mantiqueira, MG",
+        "image": {
+          "src": "u:photo-1682347810591-be423d4ad8ba",
+          "alt": "Vale verde com montanhas em Gonçalves",
+          "pos": "50% 50%"
+        }
+      },
+      {
+        "name": "Trancoso",
+        "region": "Sul da Bahia",
+        "tags": [
+          "beach",
+          "warm"
+        ],
+        "best": "dezembro a março",
+        "temp": "janeiro, 23 a 30°C",
+        "search": "Trancoso, BA",
+        "image": {
+          "src": "u:photo-1620045819541-66ad1cf09e07",
+          "alt": "Mar verde e calmo na Praia de Taípe",
+          "pos": "50% 50%"
+        }
+      },
+      {
+        "name": "Praia do Forte",
+        "region": "Litoral Norte da Bahia",
+        "tags": [
+          "beach",
+          "warm"
+        ],
+        "best": "setembro a março",
+        "temp": "janeiro, 24 a 30°C",
+        "search": "Praia do Forte, BA",
+        "image": {
+          "src": "u:photo-1779312142210-1e57a762d928",
+          "alt": "Coqueiros à beira do mar em Praia do Forte",
+          "pos": "50% 50%"
+        }
+      }
+    ]
+  },
+  "sheet": {
+    "gallery": "Fotos do lugar",
+    "about": "Sobre a hospedagem",
+    "amenities": "O que tem por lá",
+    "arrive": "Como chegar",
+    "dates": "Escolha as datas",
+    "checkin": "Entrada",
+    "checkout": "Saída",
+    "guests": "Hóspedes",
+    "pickDates": "Escolha as datas para ver o total.",
+    "nightsLine": "{price} × {n} {nights}",
+    "cleaning": "Taxa de limpeza",
+    "total": "Total",
+    "reserve": "Reservar",
+    "close": "Fechar",
+    "back": "Voltar",
+    "prev": "Foto anterior",
+    "next": "Próxima foto",
+    "photoOf": "Foto {i} de {n}",
+    "errDates": "Escolha a entrada e a saída para continuar.",
+    "errGuests": "Este lugar recebe até {n} pessoas.",
+    "checkoutTitle": "Quase lá.",
+    "checkoutText": "Confira a sua estadia e conte quem vai viajar.",
+    "yourStay": "Sua estadia",
+    "name": "Nome completo",
+    "email": "Email",
+    "phone": "Telefone (opcional)",
+    "message": "Mensagem para o anfitrião (opcional)",
+    "messagePh": "Horário de chegada, uma ocasião especial, o que quiser contar.",
+    "agree": "Li e concordo com as regras de alteração e cancelamento desta hospedagem.",
+    "confirm": "Confirmar reserva",
+    "errName": "Conte o seu nome completo.",
+    "errEmail": "Confira o seu e-mail.",
+    "errAgree": "Para continuar, confirme que leu as regras.",
+    "doneTitle": "Tudo certo, {name}.",
+    "doneText": "Sua estadia em {place} está reservada de {in} a {out}.",
+    "doneCode": "Código da reserva",
+    "doneNote": "Nenhum valor foi cobrado agora. Se quiser mudar algo, é só voltar quando precisar.",
+    "doneButton": "Voltar ao início",
+    "stepOf": "Etapa {i} de 3",
+    "cleaningFee": 90,
+    "steps": [
+      "Hospedagem",
+      "Seus dados",
+      "Confirmado"
+    ],
+    "stepsLabel": "Etapas da reserva",
+    "seeAll": "Ver tudo sobre a hospedagem",
+    "seeAllHint": "Mapa, quartos, avaliações e opções parecidas."
+  },
+  "stories": {
+    "kicker": "Relatos",
+    "title": "O que fica depois da viagem.",
+    "note": "Relatos ilustrativos, escritos para este protótipo.",
+    "items": [
+      {
+        "quote": "Acordei com o barulho da chuva no telhado e fiquei mais uma hora na cama. Fazia tempo que eu não fazia isso.",
+        "name": "Marina",
+        "stay": "Cabana entre as montanhas, Urubici"
+      },
+      {
+        "quote": "O café da roça chegava quente na varanda. A gente só saía de lá para caminhar.",
+        "name": "Paulo e Rita",
+        "stay": "Fazenda no vale, Serra da Mantiqueira"
+      },
+      {
+        "quote": "Fomos a pé para a praia todos os dias e voltamos para o almoço sem olhar o relógio.",
+        "name": "Camila",
+        "stay": "Casa no Quadrado, Trancoso"
+      }
+    ]
+  },
+  "fav": {
+    "add": "Salvar nos favoritos",
+    "remove": "Remover dos favoritos",
+    "nav": "Favoritos",
+    "title": "Seus favoritos",
+    "empty": "Você ainda não salvou nenhum lugar. Toque no coração de uma hospedagem para guardar.",
+    "saved": "Salvo nos favoritos",
+    "removed": "Removido dos favoritos"
+  },
+  "intro": {
+    "line": "Lugares reais, no seu tempo.",
+    "skip": "Pular abertura"
+  },
+  "notFound": {
+    "title": "Esta página não existe.",
+    "text": "O endereço pode ter mudado. A página inicial continua no mesmo lugar.",
+    "button": "Voltar ao início"
+  },
+  "stayPage": {
+    "title": "{name} em {place} · VÉRANA",
+    "back": "Voltar às hospedagens",
+    "share": "Compartilhar",
+    "copied": "Link copiado",
+    "save": "Salvar",
+    "saved": "Salvo",
+    "allPhotos": "Ver as {n} fotos",
+    "photos": "Fotos da hospedagem",
+    "bestTime": "Melhor época",
+    "hostedBy": "Quem recebe",
+    "rating": "Avaliação",
+    "choice": "Escolha dos hóspedes",
+    "hostYears": "Recebe hóspedes há {n} anos",
+    "about": "Sobre a hospedagem",
+    "sleep": "Onde você vai dormir",
+    "amenities": "O que a hospedagem oferece",
+    "reviews": "Avaliações",
+    "reviewsCount": "{n} avaliações",
+    "reviewsShowing": "Mostrando 3 de {n}",
+    "reviewsNote": "Avaliações ilustrativas, escritas para este protótipo.",
+    "scores": [
+      "Limpeza",
+      "Conforto",
+      "Localização",
+      "Comunicação",
+      "Chegada",
+      "Custo benefício"
+    ],
+    "map": "Onde você vai estar",
+    "mapNote": "A localização exata aparece depois da confirmação da reserva.",
+    "mapOpen": "Abrir no mapa",
+    "mapFail": "Não foi possível carregar o mapa agora.",
+    "arrive": "Como chegar",
+    "host": "Conheça quem recebe",
+    "hostResp": "Responde em até 1 hora",
+    "hostLang": "Fala português",
+    "know": "Bom saber",
+    "knowItems": [
+      [
+        "Chegada e saída",
+        "Entrada a partir das 15h e saída até as 11h. A entrega das chaves é combinada com o anfitrião."
+      ],
+      [
+        "Cancelamento",
+        "Sem custo até 7 dias antes da entrada. Depois disso, a primeira diária não é devolvida."
+      ],
+      [
+        "Na casa",
+        "Sem festas ou eventos. Silêncio a partir das 22h. Pets apenas onde estiver indicado."
+      ]
+    ],
+    "similar": "Outras hospedagens que combinam",
+    "similarText": "Lugares com o mesmo clima de viagem.",
+    "prev": "Anterior",
+    "next": "Próximas",
+    "noCharge": "Nenhum valor é cobrado agora.",
+    "notFound": "Não encontramos esta hospedagem.",
+    "notFoundLink": "Ver todas as hospedagens",
+    "photoBy": "Fotos",
+    "demo": "Hospedagem, anfitrião, avaliações e preços são demonstrativos. As fotos e os lugares são reais."
+  }
+}

@@ -1,0 +1,1294 @@
+{
+  "lang": "en",
+  "locale": "en-US",
+  "currency": "USD",
+  "meta": {
+    "title": "VÉRANA · Places for the moment of your trip",
+    "description": "A cabin among the trees, a window facing the sea, or a few days away from routine. Find a place that fits what you need right now."
+  },
+  "ui": {
+    "skip": "Skip to content",
+    "nav": [
+      [
+        "Explore destinations",
+        "#destinations"
+      ],
+      [
+        "Seasons",
+        "#seasons"
+      ],
+      [
+        "How it works",
+        "#faq"
+      ]
+    ],
+    "navCta": "Find a place to stay",
+    "menu": "Menu",
+    "closeMenu": "Close menu",
+    "langLabel": "Language",
+    "langCurrent": "EN",
+    "langOther": "PT",
+    "langOtherName": "Português",
+    "perNight": "night",
+    "viewStay": "View stay",
+    "close": "Close",
+    "demoTag": "Demo",
+    "photoBy": "Photo",
+    "langSwitch": "Switch language to Português"
+  },
+  "hero": {
+    "kicker": "Find your next destination",
+    "title": "Some days ask for a change of scenery.",
+    "text": "A cabin among the trees, a window facing the sea, or a few days away from routine. Find a place that fits what you need right now.",
+    "caption": "Corvara, Dolomites, Italy",
+    "image": {
+      "src": "u:photo-1600762516498-761775b86af7",
+      "alt": "Layered Dolomite ridges at sunset seen from above Corvara, in South Tyrol",
+      "pos": "50% 50%"
+    }
+  },
+  "form": {
+    "title": "Where would you like to go?",
+    "destination": "Destination",
+    "destinationPh": "City, region or kind of place",
+    "checkin": "Check in",
+    "checkout": "Check out",
+    "datePh": "Add date",
+    "guests": "Guests",
+    "guestsPh": "How many people are traveling?",
+    "adults": "Adults",
+    "adultsHint": "13 or older",
+    "children": "Children",
+    "childrenHint": "2 to 12",
+    "less": "Remove",
+    "more": "Add",
+    "done": "Done",
+    "submit": "Find a place to stay",
+    "suggestionsLabel": "Suggestions",
+    "suggestions": [
+      "Stowe, Vermont",
+      "Zermatt, Switzerland",
+      "Val d'Orcia, Tuscany",
+      "Mallorca, Spain"
+    ],
+    "guestOne": "guest",
+    "guestMany": "guests",
+    "adultOne": "adult",
+    "adultMany": "adults",
+    "childOne": "child",
+    "childMany": "children",
+    "errDestination": "Tell us where you'd like to go, or pick one of the suggestions.",
+    "errDates": "Check out needs to come after check in.",
+    "nights1": "night",
+    "nightsN": "nights"
+  },
+  "results": {
+    "kicker": "Your search",
+    "found": "We found {n} places that may fit {destination}.",
+    "foundOne": "We found 1 place that may fit {destination}.",
+    "empty": "We don't have sample places for that search yet. How about the seasons below?",
+    "capacity": "None of the sample places fits that many people. These are the closest to what you're looking for.",
+    "seeSeasons": "See seasons",
+    "clear": "Clear search"
+  },
+  "story": {
+    "label": "A day at your own pace",
+    "scenes": [
+      {
+        "title": "Imagine waking up without checking the time.",
+        "text": "Light coming through the window, quiet all around, and a morning that starts at your pace.",
+        "image": {
+          "src": "u:photo-1716551615753-f4bca8229b29",
+          "alt": "Misty morning over a lakeside lodge and forested mountains in Toblach, South Tyrol",
+          "pos": "50% 55%"
+        },
+        "place": "Toblach, South Tyrol, Italy"
+      },
+      {
+        "title": "Your coffee can wait a little.",
+        "text": "Maybe you'd rather spend a few more minutes looking at the view.",
+        "image": {
+          "src": "u:photo-1781458366698-6e4e52de9e54",
+          "alt": "Wooden terrace with tables facing snowy peaks at Allmendhubel, Switzerland",
+          "pos": "55% 55%"
+        },
+        "place": "Allmendhubel, Switzerland"
+      },
+      {
+        "title": "Today, you don't need to be anywhere.",
+        "text": "Enjoy the space, choose your rhythm and let the day happen without rushing.",
+        "image": {
+          "src": "u:photo-1783159649654-fb4f7a244c4a",
+          "alt": "Lake Misurina reflecting a grand hotel and Dolomite peaks",
+          "pos": "50% 55%"
+        },
+        "place": "Misurina, Dolomites, Italy"
+      },
+      {
+        "title": "What if today ended a little slower?",
+        "text": "A cozy room, an unhurried conversation, or simply some time of your own.",
+        "image": {
+          "src": "u:photo-1687522764355-ea6ad5d1bcab",
+          "alt": "Wooden hut on a grassy slope under pink evening clouds at Seceda",
+          "pos": "50% 60%"
+        },
+        "place": "Seceda, South Tyrol, Italy"
+      }
+    ],
+    "progress": "Moment {i} of {n}"
+  },
+  "seasons": {
+    "kicker": "Seasons",
+    "title": "What kind of trip is on your mind?",
+    "text": "Maybe you want the cold, the green after the rain, or days close to the sea. Pick a season and find places that match it.",
+    "button": "Find my getaway",
+    "prev": "Previous season",
+    "next": "Next season",
+    "progress": "Season {i} of {n}",
+    "items": [
+      {
+        "key": "autumn",
+        "name": "Autumn",
+        "where": "Stowe, Vermont",
+        "when": "late September to mid October",
+        "search": "Stowe, Vermont",
+        "text": "For when you want warmth, golden landscapes and slow afternoons.",
+        "image": {
+          "src": "u:photo-1668588778641-372a33b43d39",
+          "alt": "White church steeple surrounded by red and golden maples in Stowe, Vermont",
+          "pos": "50% 45%"
+        },
+        "climate": "October in Stowe: 1 to 14°C"
+      },
+      {
+        "key": "winter",
+        "name": "Winter",
+        "where": "Zermatt, Switzerland",
+        "when": "December to March",
+        "search": "Zermatt, Switzerland",
+        "text": "For enjoying the cold, staying close to the fireplace and sleeping in a little.",
+        "image": {
+          "src": "u:photo-1622513027693-3ef7c21b3dae",
+          "alt": "Snowy village of Zermatt with the Matterhorn rising behind it",
+          "pos": "60% 50%"
+        },
+        "climate": "January in Zermatt: −9 to −1°C"
+      },
+      {
+        "key": "spring",
+        "name": "Spring",
+        "where": "Val d'Orcia, Tuscany",
+        "when": "April to May",
+        "search": "Val d'Orcia, Tuscany",
+        "text": "For spending more time outdoors and finding landscapes that change with every path.",
+        "image": {
+          "src": "u:photo-1681210744266-c6a23b8ed176",
+          "alt": "Green rolling fields with trees and a winding road in Val d'Orcia",
+          "pos": "50% 55%"
+        },
+        "climate": "May in Val d'Orcia: 11 to 23°C"
+      },
+      {
+        "key": "summer",
+        "name": "Summer",
+        "where": "Mallorca, Spain",
+        "when": "June to September",
+        "search": "Mallorca, Spain",
+        "text": "For long days, staying close to the water and doing everything without a set schedule.",
+        "image": {
+          "src": "u:photo-1561369408-1e91d37fd2c5",
+          "alt": "Turquoise cove and stone boathouses at Cala s'Almunia, Mallorca",
+          "pos": "50% 55%"
+        },
+        "climate": "July in Mallorca: 20 to 30°C"
+      }
+    ]
+  },
+  "stays": {
+    "title": "Places that may fit your plans.",
+    "text": "Here are a few options to start picturing your next trip.",
+    "link": "View all stays",
+    "items": [
+      {
+        "id": "stowe",
+        "name": "Inn among the maples",
+        "where": "Stowe, Vermont, USA",
+        "text": "Golden hills, quiet roads and warm evenings by the window.",
+        "features": [
+          [
+            "guests",
+            "2 guests"
+          ],
+          [
+            "bed",
+            "1 bedroom"
+          ],
+          [
+            "fireplace",
+            "Fireplace"
+          ]
+        ],
+        "guests": 2,
+        "price": 210,
+        "rating": "4.9",
+        "reviews": 128,
+        "season": "autumn",
+        "keywords": "stowe vermont vt usa new england autumn fall maple foliage inn mountains",
+        "image": {
+          "src": "u:photo-1647553989014-776dfcfcbfa5",
+          "alt": "Aerial view of Stowe surrounded by autumn hills and mountains",
+          "pos": "50% 50%"
+        },
+        "gallery": [
+          {
+            "src": "u:photo-1729981059843-e0bfeabd9497",
+            "alt": "Golden autumn trees near the Trapp Family Lodge in Stowe",
+            "pos": "50% 50%"
+          },
+          {
+            "src": "u:photo-1591825729269-caeb344f6df2",
+            "alt": "Bright chalet living room with tall windows in Stowe",
+            "pos": "50% 50%"
+          }
+        ],
+        "about": "A small inn among the maples, a few minutes from the village of Stowe. In October the hills around turn red and gold.",
+        "amenities": [
+          [
+            "fireplace",
+            "Wood fireplace"
+          ],
+          [
+            "coffee",
+            "Breakfast included"
+          ],
+          [
+            "mountain",
+            "Mountain views"
+          ],
+          [
+            "bath",
+            "Bathtub"
+          ],
+          [
+            "wifi",
+            "Wi Fi"
+          ],
+          [
+            "car",
+            "Free parking"
+          ]
+        ],
+        "arrive": "About 45 minutes by car from Burlington airport.",
+        "geo": [
+          44.465,
+          -72.684
+        ],
+        "rooms": [
+          [
+            "Bedroom",
+            "1 queen bed"
+          ],
+          [
+            "Reading nook",
+            "1 window seat"
+          ]
+        ],
+        "host": {
+          "name": "Margaret",
+          "years": 8,
+          "line": "Runs the inn with her sister and bakes the maple scones every morning."
+        },
+        "scores": [
+          5.0,
+          4.9,
+          4.9,
+          5.0,
+          4.9,
+          4.7
+        ],
+        "reviewsList": [
+          {
+            "name": "Hannah",
+            "from": "Boston",
+            "date": "October 2026",
+            "text": "The hills turned red while we were there. Breakfast by the window every morning."
+          },
+          {
+            "name": "Daniel",
+            "from": "Montreal",
+            "date": "September 2026",
+            "text": "A short drive to the trails and quiet enough to hear the creek at night."
+          },
+          {
+            "name": "Priya",
+            "from": "New York",
+            "date": "October 2026",
+            "text": "Margaret gave us a hand drawn map of the back roads. Best part of the trip."
+          }
+        ]
+      },
+      {
+        "id": "zermatt",
+        "name": "Cabin in the mountains",
+        "where": "Zermatt, Switzerland",
+        "text": "A quiet place to enjoy the cold, the view and your free time.",
+        "features": [
+          [
+            "guests",
+            "2 guests"
+          ],
+          [
+            "bed",
+            "1 bedroom"
+          ],
+          [
+            "fireplace",
+            "Fireplace"
+          ]
+        ],
+        "guests": 2,
+        "price": 290,
+        "rating": "4.9",
+        "reviews": 96,
+        "season": "winter",
+        "keywords": "zermatt switzerland swiss alps matterhorn winter snow ski chalet cabin mountains",
+        "image": {
+          "src": "u:photo-1769029299328-31fa8472ef67",
+          "alt": "Old wooden chalets on a snowy slope in Zermatt",
+          "pos": "50% 55%"
+        },
+        "gallery": [
+          {
+            "src": "u:photo-1769029299006-82d59e37c746",
+            "alt": "Snowy wooden chalets on a slope in Zermatt",
+            "pos": "50% 50%"
+          },
+          {
+            "src": "u:photo-1533156202583-53a31d245207",
+            "alt": "The Matterhorn reflected in Lake Stellisee above Zermatt",
+            "pos": "50% 50%"
+          }
+        ],
+        "about": "An old larch chalet on a quiet slope above the village. The Matterhorn sits right in the window.",
+        "amenities": [
+          [
+            "fireplace",
+            "Fireplace"
+          ],
+          [
+            "mountain",
+            "Matterhorn view"
+          ],
+          [
+            "coffee",
+            "Breakfast included"
+          ],
+          [
+            "bath",
+            "Bathtub"
+          ],
+          [
+            "wifi",
+            "Wi Fi"
+          ],
+          [
+            "bed",
+            "Linen bedding"
+          ]
+        ],
+        "arrive": "Zermatt is car free: take the train from Täsch, or from Zurich in about 3h30.",
+        "geo": [
+          46.02,
+          7.749
+        ],
+        "rooms": [
+          [
+            "Bedroom",
+            "1 double bed"
+          ],
+          [
+            "Living room",
+            "1 sofa by the fire"
+          ]
+        ],
+        "host": {
+          "name": "Andreas",
+          "years": 6,
+          "line": "A mountain guide who grew up in the village and keeps the fire ready."
+        },
+        "scores": [
+          4.9,
+          5.0,
+          4.9,
+          4.9,
+          4.8,
+          4.7
+        ],
+        "reviewsList": [
+          {
+            "name": "Hannah",
+            "from": "London",
+            "date": "January 2026",
+            "text": "We woke up to fresh snow and never left the fireplace before noon."
+          },
+          {
+            "name": "Lukas",
+            "from": "Munich",
+            "date": "February 2026",
+            "text": "The Matterhorn fills the bedroom window. Ten minutes on foot to the station."
+          },
+          {
+            "name": "Sofia",
+            "from": "Milan",
+            "date": "March 2026",
+            "text": "Warm, quiet and simple. Andreas suggested a hut for lunch that we loved."
+          }
+        ]
+      },
+      {
+        "id": "orcia",
+        "name": "Farmhouse in the hills",
+        "where": "Val d'Orcia, Tuscany, Italy",
+        "text": "Stone walls, cypress trees and long lunches outside.",
+        "features": [
+          [
+            "guests",
+            "4 guests"
+          ],
+          [
+            "bed",
+            "2 bedrooms"
+          ],
+          [
+            "garden",
+            "Garden"
+          ]
+        ],
+        "guests": 4,
+        "price": 240,
+        "rating": "4.8",
+        "reviews": 74,
+        "season": "spring",
+        "keywords": "val d'orcia orcia tuscany toscana italy siena pienza spring farmhouse countryside hills",
+        "image": {
+          "src": "u:photo-1584605043414-e32fc1dc0566",
+          "alt": "Brick farmhouse framed by cypress trees in Val d'Orcia",
+          "pos": "50% 55%"
+        },
+        "gallery": [
+          {
+            "src": "u:photo-1681210744266-c6a23b8ed176",
+            "alt": "Green rolling fields and a winding road in Val d'Orcia",
+            "pos": "50% 50%"
+          },
+          {
+            "src": "u:photo-1653843034003-467e337f4c99",
+            "alt": "Cypress lined road across golden fields in Val d'Orcia",
+            "pos": "50% 50%"
+          }
+        ],
+        "about": "A brick farmhouse among cypress trees, with a garden, an old olive grove and long views over the valley.",
+        "amenities": [
+          [
+            "garden",
+            "Garden and olive grove"
+          ],
+          [
+            "pool",
+            "Pool"
+          ],
+          [
+            "coffee",
+            "Full kitchen"
+          ],
+          [
+            "sun",
+            "Air conditioning"
+          ],
+          [
+            "wifi",
+            "Wi Fi"
+          ],
+          [
+            "car",
+            "Free parking"
+          ]
+        ],
+        "arrive": "About 1h45 by car from Florence.",
+        "geo": [
+          43.077,
+          11.679
+        ],
+        "rooms": [
+          [
+            "Bedroom 1",
+            "1 double bed"
+          ],
+          [
+            "Bedroom 2",
+            "2 single beds"
+          ]
+        ],
+        "host": {
+          "name": "Giulia",
+          "years": 5,
+          "line": "Grows the olives on the farm and knows every cellar in the valley."
+        },
+        "scores": [
+          4.8,
+          4.8,
+          4.9,
+          4.9,
+          4.8,
+          4.8
+        ],
+        "reviewsList": [
+          {
+            "name": "Luca and Sofia",
+            "from": "Rome",
+            "date": "May 2026",
+            "text": "Breakfast outside, cypress trees, and a whole afternoon with nothing planned."
+          },
+          {
+            "name": "Emma",
+            "from": "Amsterdam",
+            "date": "April 2026",
+            "text": "Pienza is a short drive away. We came back every evening for sunset in the garden."
+          },
+          {
+            "name": "Tom",
+            "from": "Dublin",
+            "date": "May 2026",
+            "text": "Thick stone walls kept it cool. The pool overlooks the whole valley."
+          }
+        ]
+      },
+      {
+        "id": "mallorca",
+        "name": "House by the sea",
+        "where": "Mallorca, Spain",
+        "text": "A few steps from the water, with mornings that start slowly.",
+        "features": [
+          [
+            "guests",
+            "4 guests"
+          ],
+          [
+            "bed",
+            "2 bedrooms"
+          ],
+          [
+            "wave",
+            "Sea view"
+          ]
+        ],
+        "guests": 4,
+        "price": 320,
+        "rating": "4.9",
+        "reviews": 112,
+        "season": "summer",
+        "keywords": "mallorca majorca spain balearic islands beach sea cove summer house mediterranean",
+        "image": {
+          "src": "u:photo-1660809076720-1c756710677a",
+          "alt": "Small houses on a rocky slope above turquoise water in Mallorca",
+          "pos": "50% 50%"
+        },
+        "gallery": [
+          {
+            "src": "u:photo-1681038258249-539ee9bc490e",
+            "alt": "Stone steps and flowers in a village street in Mallorca",
+            "pos": "50% 50%"
+          },
+          {
+            "src": "u:photo-1728025716439-c0e693f270a0",
+            "alt": "Boats floating in the clear water of Cala Bóquer, Mallorca",
+            "pos": "50% 50%"
+          }
+        ],
+        "about": "A stone house on the rocks above a small cove, with the sea a few steps from the door.",
+        "amenities": [
+          [
+            "wave",
+            "Sea a few steps away"
+          ],
+          [
+            "garden",
+            "Terrace"
+          ],
+          [
+            "coffee",
+            "Full kitchen"
+          ],
+          [
+            "sun",
+            "Air conditioning"
+          ],
+          [
+            "wifi",
+            "Wi Fi"
+          ],
+          [
+            "bed",
+            "Linen bedding"
+          ]
+        ],
+        "arrive": "About 1h by car from Palma airport.",
+        "geo": [
+          39.756,
+          2.635
+        ],
+        "rooms": [
+          [
+            "Bedroom 1",
+            "1 double bed"
+          ],
+          [
+            "Bedroom 2",
+            "2 single beds"
+          ]
+        ],
+        "host": {
+          "name": "Toni",
+          "years": 7,
+          "line": "A fisherman’s son who knows which cove is calm on each windy day."
+        },
+        "scores": [
+          4.9,
+          4.9,
+          5.0,
+          4.9,
+          4.8,
+          4.7
+        ],
+        "reviewsList": [
+          {
+            "name": "Clara",
+            "from": "Barcelona",
+            "date": "July 2026",
+            "text": "We swam before breakfast every day. The terrace is the best seat on the island."
+          },
+          {
+            "name": "Oliver",
+            "from": "Berlin",
+            "date": "August 2026",
+            "text": "The steps down to the cove are steep but worth it. House stays cool all day."
+          },
+          {
+            "name": "Inés",
+            "from": "Madrid",
+            "date": "June 2026",
+            "text": "Toni left fresh bread and tomatoes from his garden. Simple and perfect."
+          }
+        ]
+      },
+      {
+        "id": "corvara",
+        "name": "Hut above the valley",
+        "where": "Corvara, Dolomites, Italy",
+        "text": "A wooden hut on the meadow, with the peaks all around.",
+        "features": [
+          [
+            "guests",
+            "2 guests"
+          ],
+          [
+            "bed",
+            "1 bedroom"
+          ],
+          [
+            "mountain",
+            "Valley view"
+          ]
+        ],
+        "guests": 2,
+        "price": 260,
+        "rating": "4.9",
+        "reviews": 71,
+        "season": "winter",
+        "keywords": "corvara alta badia dolomites dolomiti south tyrol italy alps mountains hut cabin winter summer",
+        "image": {
+          "src": "u:photo-1698235920600-69f8fd653374",
+          "alt": "Wooden hut with a picnic table on an alpine meadow in the Dolomites",
+          "pos": "50% 60%"
+        },
+        "gallery": [
+          {
+            "src": "u:photo-1576701583858-b51e55e53c2c",
+            "alt": "Corvara village under the Dolomite peaks",
+            "pos": "50% 50%"
+          },
+          {
+            "src": "u:photo-1576702219620-87b0d2615504",
+            "alt": "Snowy Dolomite peaks above Corvara",
+            "pos": "50% 50%"
+          }
+        ],
+        "about": "A small wooden hut on the meadows above Corvara. Trails start at the door in summer, ski slopes in winter.",
+        "amenities": [
+          [
+            "mountain",
+            "Peak views"
+          ],
+          [
+            "fireplace",
+            "Wood stove"
+          ],
+          [
+            "coffee",
+            "Breakfast included"
+          ],
+          [
+            "bath",
+            "Sauna nearby"
+          ],
+          [
+            "wifi",
+            "Wi Fi"
+          ],
+          [
+            "car",
+            "Parking"
+          ]
+        ],
+        "arrive": "About 2h by car from Innsbruck or Venice airports via the Val Badia.",
+        "geo": [
+          46.55,
+          11.873
+        ],
+        "rooms": [
+          [
+            "Bedroom",
+            "1 double bed"
+          ],
+          [
+            "Stube",
+            "1 bench by the wood stove"
+          ]
+        ],
+        "host": {
+          "name": "Lukas",
+          "years": 4,
+          "line": "Ski instructor in winter, trail runner in summer, always around the valley."
+        },
+        "scores": [
+          4.9,
+          4.9,
+          4.9,
+          5.0,
+          4.8,
+          4.8
+        ],
+        "reviewsList": [
+          {
+            "name": "Marco",
+            "from": "Verona",
+            "date": "February 2026",
+            "text": "Ski in the morning, wood stove in the afternoon. Exactly what we wanted."
+          },
+          {
+            "name": "Julia",
+            "from": "Vienna",
+            "date": "January 2026",
+            "text": "The peaks glow pink at sunset right in front of the hut."
+          },
+          {
+            "name": "Sam",
+            "from": "Zurich",
+            "date": "March 2026",
+            "text": "Small, warm and well thought out. The sauna nearby was a nice surprise."
+          }
+        ]
+      },
+      {
+        "id": "braies",
+        "name": "Lodge by the lake",
+        "where": "Lago di Braies, Dolomites, Italy",
+        "text": "Early mornings on a quiet lake, with the boathouse at your door.",
+        "features": [
+          [
+            "guests",
+            "4 guests"
+          ],
+          [
+            "bed",
+            "2 bedrooms"
+          ],
+          [
+            "wave",
+            "Lake view"
+          ]
+        ],
+        "guests": 4,
+        "price": 340,
+        "rating": "4.8",
+        "reviews": 93,
+        "season": "summer",
+        "keywords": "braies lago di braies prags pragser wildsee dolomites south tyrol italy lake lodge mountains summer",
+        "image": {
+          "src": "u:photo-1781511975540-96fdaebe3d25",
+          "alt": "Lodge and meadow by Lago di Braies under the Dolomites",
+          "pos": "50% 50%"
+        },
+        "gallery": [
+          {
+            "src": "u:photo-1476514525535-07fb3b4ae5f1",
+            "alt": "Wooden boat on the turquoise water of Lago di Braies",
+            "pos": "50% 50%"
+          },
+          {
+            "src": "u:photo-1535747790212-30c585ab4867",
+            "alt": "Boathouse on Lago di Braies with mountains behind",
+            "pos": "50% 50%"
+          }
+        ],
+        "about": "A family lodge on the shore of Lago di Braies. Row out before the day visitors arrive and come back for a long breakfast.",
+        "amenities": [
+          [
+            "wave",
+            "Lake access"
+          ],
+          [
+            "mountain",
+            "Mountain views"
+          ],
+          [
+            "coffee",
+            "Breakfast included"
+          ],
+          [
+            "fireplace",
+            "Fireplace"
+          ],
+          [
+            "wifi",
+            "Wi Fi"
+          ],
+          [
+            "car",
+            "Parking"
+          ]
+        ],
+        "arrive": "About 3h by car from Venice airport.",
+        "geo": [
+          46.694,
+          12.085
+        ],
+        "rooms": [
+          [
+            "Bedroom 1",
+            "1 double bed"
+          ],
+          [
+            "Bedroom 2",
+            "2 single beds"
+          ]
+        ],
+        "host": {
+          "name": "Anna and Paul",
+          "years": 9,
+          "line": "Third generation on the lake, they keep the boats ready at dawn."
+        },
+        "scores": [
+          4.8,
+          4.8,
+          5.0,
+          4.9,
+          4.7,
+          4.6
+        ],
+        "reviewsList": [
+          {
+            "name": "James",
+            "from": "Edinburgh",
+            "date": "July 2026",
+            "text": "The lake was all ours at seven in the morning. That alone was worth the trip."
+          },
+          {
+            "name": "Elena",
+            "from": "Bologna",
+            "date": "August 2026",
+            "text": "Rowing out before the crowds, then a long breakfast. We did it every day."
+          },
+          {
+            "name": "Max",
+            "from": "Hamburg",
+            "date": "September 2026",
+            "text": "The loop around the lake starts at the door. Rooms are simple and very warm."
+          }
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "title": "Good to know before you choose.",
+    "text": "A few details help you plan the trip with more peace of mind.",
+    "items": [
+      [
+        "How does booking work?",
+        "You choose the destination, add your dates and the number of guests to see the places available."
+      ],
+      [
+        "Can I find a place for a special occasion?",
+        "Yes. You can explore places by season, type of setting and the features that make sense for your trip."
+      ],
+      [
+        "How do I know if a place is available?",
+        "Add the dates you want to check availability for your stay."
+      ],
+      [
+        "What if my plans change?",
+        "Change and cancellation terms depend on each place. Check the rules before confirming your booking."
+      ]
+    ]
+  },
+  "closing": {
+    "title": "Do you already have an idea of how you'd like to spend these days?",
+    "text": "Now all that's left is finding a place that fits it.",
+    "button": "Let's find your place to stay",
+    "caption": "Douro Valley, Portugal",
+    "image": {
+      "src": "u:photo-1603657289433-e4983d2114b9",
+      "alt": "Terraced vineyards over the Douro river valley in soft light",
+      "pos": "50% 55%"
+    }
+  },
+  "footer": {
+    "tagline": "Places for the moment of your trip.",
+    "cols": [
+      [
+        "Explore",
+        [
+          [
+            "Destinations",
+            "#destinations"
+          ],
+          [
+            "Seasons",
+            "#seasons"
+          ],
+          [
+            "How it works",
+            "#faq"
+          ]
+        ]
+      ],
+      [
+        "Seasons",
+        [
+          [
+            "Autumn",
+            "#seasons"
+          ],
+          [
+            "Winter",
+            "#seasons"
+          ],
+          [
+            "Spring",
+            "#seasons"
+          ],
+          [
+            "Summer",
+            "#seasons"
+          ]
+        ]
+      ],
+      [
+        "Contact (fictional)",
+        [
+          [
+            "hello@verana.example",
+            "mailto:hello@verana.example"
+          ],
+          [
+            "+00 000 000 000",
+            "#"
+          ]
+        ]
+      ]
+    ],
+    "notice": "VÉRANA is a concept brand created for this prototype. Stays, prices, ratings and contacts are for demonstration. Photos show the real destinations named and belong to their authors.",
+    "legal": [
+      [
+        "Privacy (demo)",
+        "#"
+      ],
+      [
+        "Terms (demo)",
+        "#"
+      ]
+    ],
+    "credits": "Photo credits",
+    "creditsIntro": "Photos from Unsplash (Unsplash License).",
+    "year": "2026"
+  },
+  "destinations": {
+    "kicker": "Explore destinations",
+    "title": "Where is your mind heading?",
+    "text": "Pick a kind of place and see when each destination looks its best.",
+    "all": "All",
+    "filters": [
+      [
+        "mountain",
+        "Mountains"
+      ],
+      [
+        "beach",
+        "Beach"
+      ],
+      [
+        "countryside",
+        "Countryside"
+      ],
+      [
+        "cold",
+        "Cold days"
+      ],
+      [
+        "warm",
+        "Warm days"
+      ]
+    ],
+    "bestLabel": "Best time",
+    "tempLabel": "Average temperature",
+    "button": "View stays",
+    "filterLabel": "Filter destinations",
+    "count": "{n} destinations",
+    "count1": "1 destination",
+    "items": [
+      {
+        "name": "Stowe",
+        "region": "Vermont, USA",
+        "tags": [
+          "mountain",
+          "countryside",
+          "cold"
+        ],
+        "best": "September to October",
+        "temp": "October, 1 to 14°C",
+        "search": "Stowe, Vermont",
+        "image": {
+          "src": "u:photo-1665890759638-0feb402f77f2",
+          "alt": "Red and golden autumn hills around Stowe",
+          "pos": "50% 50%"
+        }
+      },
+      {
+        "name": "Zermatt",
+        "region": "Valais, Switzerland",
+        "tags": [
+          "mountain",
+          "cold"
+        ],
+        "best": "December to March",
+        "temp": "January, −9 to −1°C",
+        "search": "Zermatt, Switzerland",
+        "image": {
+          "src": "u:photo-1507039102241-5ec61d624406",
+          "alt": "Wooden houses of Zermatt with snowy peaks behind",
+          "pos": "50% 50%"
+        }
+      },
+      {
+        "name": "Val d'Orcia",
+        "region": "Tuscany, Italy",
+        "tags": [
+          "countryside",
+          "warm"
+        ],
+        "best": "April to May",
+        "temp": "May, 11 to 23°C",
+        "search": "Val d'Orcia, Tuscany",
+        "image": {
+          "src": "u:photo-1653843034003-467e337f4c99",
+          "alt": "Cypress lined road across fields in Val d'Orcia",
+          "pos": "50% 50%"
+        }
+      },
+      {
+        "name": "Mallorca",
+        "region": "Balearic Islands, Spain",
+        "tags": [
+          "beach",
+          "warm"
+        ],
+        "best": "June to September",
+        "temp": "July, 20 to 30°C",
+        "search": "Mallorca, Spain",
+        "image": {
+          "src": "u:photo-1728025716439-c0e693f270a0",
+          "alt": "Boats in the clear water of Cala Bóquer, Mallorca",
+          "pos": "50% 50%"
+        }
+      },
+      {
+        "name": "Dolomites",
+        "region": "South Tyrol, Italy",
+        "tags": [
+          "mountain",
+          "cold"
+        ],
+        "best": "June to September",
+        "temp": "July, 7 to 20°C",
+        "search": "Dolomites",
+        "image": {
+          "src": "u:photo-1713711903415-ba6b574fb935",
+          "alt": "The Tre Cime di Lavaredo peaks reflected in a mountain lake",
+          "pos": "50% 50%"
+        }
+      }
+    ]
+  },
+  "sheet": {
+    "gallery": "Photos of the place",
+    "about": "About the stay",
+    "amenities": "What's there",
+    "arrive": "Getting there",
+    "dates": "Choose your dates",
+    "checkin": "Check in",
+    "checkout": "Check out",
+    "guests": "Guests",
+    "pickDates": "Choose your dates to see the total.",
+    "nightsLine": "{price} × {n} {nights}",
+    "cleaning": "Cleaning fee",
+    "total": "Total",
+    "reserve": "Reserve",
+    "close": "Close",
+    "back": "Back",
+    "prev": "Previous photo",
+    "next": "Next photo",
+    "photoOf": "Photo {i} of {n}",
+    "errDates": "Choose check in and check out to continue.",
+    "errGuests": "This place hosts up to {n} people.",
+    "checkoutTitle": "Almost there.",
+    "checkoutText": "Review your stay and tell us who's traveling.",
+    "yourStay": "Your stay",
+    "name": "Full name",
+    "email": "Email",
+    "phone": "Phone (optional)",
+    "message": "Message for the host (optional)",
+    "messagePh": "Arrival time, a special occasion, anything you would like to share.",
+    "agree": "I have read and agree to the change and cancellation rules for this place.",
+    "confirm": "Confirm booking",
+    "errName": "Tell us your full name.",
+    "errEmail": "Please check your email.",
+    "errAgree": "To continue, confirm you have read the rules.",
+    "doneTitle": "You're all set, {name}.",
+    "doneText": "Your stay at {place} is booked from {in} to {out}.",
+    "doneCode": "Booking code",
+    "doneNote": "Nothing was charged now. If you need to change anything, just come back anytime.",
+    "doneButton": "Back to the start",
+    "stepOf": "Step {i} of 3",
+    "cleaningFee": 45,
+    "steps": [
+      "The stay",
+      "Your details",
+      "Confirmed"
+    ],
+    "stepsLabel": "Booking steps",
+    "seeAll": "See everything about this stay",
+    "seeAllHint": "Map, bedrooms, reviews and similar places."
+  },
+  "stories": {
+    "kicker": "Stories",
+    "title": "What stays with you after the trip.",
+    "note": "Illustrative stories written for this prototype.",
+    "items": [
+      {
+        "quote": "We woke up to fresh snow and never left the fireplace before noon.",
+        "name": "Hannah",
+        "stay": "Cabin in the mountains, Zermatt"
+      },
+      {
+        "quote": "Breakfast outside, cypress trees, and a whole afternoon with nothing planned.",
+        "name": "Luca and Sofia",
+        "stay": "Farmhouse in the hills, Val d'Orcia"
+      },
+      {
+        "quote": "The lake was all ours at seven in the morning. That alone was worth the trip.",
+        "name": "James",
+        "stay": "Lodge by the lake, Lago di Braies"
+      }
+    ]
+  },
+  "fav": {
+    "add": "Save to favorites",
+    "remove": "Remove from favorites",
+    "nav": "Favorites",
+    "title": "Your favorites",
+    "empty": "You haven't saved any place yet. Tap the heart on a stay to keep it here.",
+    "saved": "Saved to favorites",
+    "removed": "Removed from favorites"
+  },
+  "intro": {
+    "line": "Real places, at your own pace.",
+    "skip": "Skip intro"
+  },
+  "notFound": {
+    "title": "This page does not exist.",
+    "text": "The address may have changed. The home page is right where it was.",
+    "button": "Back to home"
+  },
+  "stayPage": {
+    "title": "{name} in {place} · VÉRANA",
+    "back": "Back to stays",
+    "share": "Share",
+    "copied": "Link copied",
+    "save": "Save",
+    "saved": "Saved",
+    "allPhotos": "See all {n} photos",
+    "photos": "Photos of the stay",
+    "bestTime": "Best time",
+    "hostedBy": "Hosted by",
+    "rating": "Rating",
+    "choice": "Guest favorite",
+    "hostYears": "Hosting for {n} years",
+    "about": "About the stay",
+    "sleep": "Where you will sleep",
+    "amenities": "What this stay offers",
+    "reviews": "Reviews",
+    "reviewsCount": "{n} reviews",
+    "reviewsShowing": "Showing 3 of {n}",
+    "reviewsNote": "Illustrative reviews written for this prototype.",
+    "scores": [
+      "Cleanliness",
+      "Comfort",
+      "Location",
+      "Communication",
+      "Arrival",
+      "Value"
+    ],
+    "map": "Where you will be",
+    "mapNote": "The exact location is shared once your booking is confirmed.",
+    "mapOpen": "Open in maps",
+    "mapFail": "The map could not be loaded right now.",
+    "arrive": "Getting there",
+    "host": "Meet your host",
+    "hostResp": "Replies within an hour",
+    "hostLang": "Speaks English",
+    "know": "Good to know",
+    "knowItems": [
+      [
+        "Arrival and departure",
+        "Check in from 3 pm and check out by 11 am. Key handover is arranged with the host."
+      ],
+      [
+        "Cancellation",
+        "Free until 7 days before check in. After that, the first night is not refunded."
+      ],
+      [
+        "House rules",
+        "No parties or events. Quiet hours from 10 pm. Pets only where noted."
+      ]
+    ],
+    "similar": "Other stays you may like",
+    "similarText": "Places with the same kind of trip in mind.",
+    "prev": "Previous",
+    "next": "Next",
+    "noCharge": "Nothing is charged now.",
+    "notFound": "We could not find this stay.",
+    "notFoundLink": "See all stays",
+    "photoBy": "Photos",
+    "demo": "Stays, hosts, reviews and prices are for demonstration. The photos and places are real."
+  }
+}

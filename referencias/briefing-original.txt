@@ -1,0 +1,526 @@
+# PROJETO: VÉRANA
+## Landing page de hotelaria, descoberta de destinos e reservas
+
+Quero que você desenvolva uma landing page completa, visualmente refinada e responsiva para VÉRANA, uma marca conceitual de descoberta e reserva de hospedagens.
+
+Não quero apenas um layout bonito. Quero um projeto de web design que demonstre domínio de direção de arte, hierarquia visual, UX/UI, composição fotográfica, responsividade e interações com propósito.
+
+Antes de começar, analise as referências visuais anexadas e a estrutura do projeto existente. Se estiver trabalhando em um repositório, inspecione a stack, os componentes e os estilos antes de alterar arquivos. Reaproveite o que fizer sentido e preserve funcionalidades já existentes. Não substitua a aplicação inteira sem necessidade.
+
+# 1. CONCEITO DA MARCA
+
+Nome: VÉRANA
+
+VÉRANA é uma marca conceitual de hospedagem e descoberta de destinos. A proposta é ajudar as pessoas a encontrar um lugar que combine com o momento da viagem, considerando o ambiente, a estação do ano e a experiência que desejam viver.
+
+A marca deve transmitir acolhimento, calma, naturalidade e cuidado visual. Não deve parecer uma rede hoteleira corporativa, um marketplace genérico ou uma marca de luxo excessivamente ostentosa.
+
+A comunicação deve conversar com o visitante como alguém que está ajudando a planejar uma viagem. Evite slogans genéricos, clichês publicitários e promessas exageradas.
+
+Não use expressões como:
+“Luxo à sua espera”
+“As melhores acomodações”
+“Experiência inesquecível”
+“Descubra o extraordinário”
+“Momentos únicos”
+“Seu refúgio perfeito”
+
+A linguagem deve ser natural, sensorial e próxima, mas sem infantilidade ou informalidade excessiva.
+
+Não use hífens na copy. Prefira frases naturais, pontuação simples e títulos que pareçam pensamentos ou perguntas reais.
+
+# 2. REFERÊNCIAS VISUAIS E DIREÇÃO DE ARTE
+
+Use a referência de interface do Airbnb para:
+• Clareza e simplicidade na busca de hospedagens.
+• Organização dos formulários.
+• Cards de acomodações.
+• Cantos arredondados.
+• Espaçamento generoso.
+• Facilidade de navegação.
+• Informações de preço e localização fáceis de encontrar.
+
+Não copie a identidade visual do Airbnb. A referência serve apenas para a organização e a usabilidade.
+
+A direção de arte deve se aproximar de um editorial contemporâneo de viagens, com fotografia natural, arquitetura acolhedora, luz do sol, materiais como madeira e pedra, linho, vegetação e paisagens.
+
+As imagens são as protagonistas da experiência. A interface deve apoiar a fotografia, não competir com ela.
+
+Utilize imagens de alta qualidade com iluminação coerente, enquadramento cuidadoso e tratamento visual consistente. Prefira fotografia realista a ilustrações, renders artificiais ou imagens com aparência de inteligência artificial.
+
+Evite:
+• Gradientes fortes.
+• Neon.
+• Excesso de sombras.
+• Glassmorphism.
+• Elementos 3D decorativos.
+• Bordas exageradamente arredondadas.
+• Ícones excessivos.
+• Animações gratuitas.
+• Muitos textos sobre as fotografias.
+• Layouts que pareçam um template genérico.
+
+A estética deve ser leve, natural, editorial e sofisticada sem exageros.
+
+# 3. DESIGN SYSTEM
+
+## Paleta principal
+
+Branco quente: #FFFEFA
+Creme natural: #F2ECD8
+Amarelo outonal: #D9C252
+Dourado suave: #F2C063
+Terracota: #8C2F0D
+Marrom acinzentado: #655D52
+
+Uso das cores:
+• Branco quente como fundo predominante.
+• Creme para superfícies secundárias e áreas de apoio.
+• Amarelo e dourado em detalhes e iluminação ambiente.
+• Terracota para ações principais e estados selecionados.
+• Marrom acinzentado para textos secundários e elementos discretos.
+
+Mantenha a página predominantemente clara. A terracota não deve ocupar grandes áreas. As cores sazonais devem ser aplicadas com sutileza, especialmente na seção interativa.
+
+A seção de estações pode adaptar levemente a cor ambiente ao estado ativo, mantendo a identidade geral da marca.
+
+## Tipografia
+
+Fonte principal: Apfel Grotesk.
+Utilize em títulos, frases editoriais, chamadas das estações e elementos de identidade.
+
+Fonte secundária: DM Sans.
+Utilize em navegação, textos corridos, formulários, labels, preços, botões e informações funcionais.
+
+Verifique a disponibilidade dos arquivos licenciados da Apfel Grotesk. Não finja que a fonte foi carregada se ela não estiver disponível. Se necessário, utilize uma alternativa próxima, como Manrope, e mantenha a DM Sans para textos funcionais.
+
+Escala de referência para desktop:
+• Hero: 56 a 72 px.
+• Títulos de seção: 36 a 44 px.
+• Títulos de cards: 20 a 24 px.
+• Texto introdutório: 17 a 19 px.
+• Texto corrido: 15 a 16 px.
+• Labels: 12 a 14 px.
+
+No mobile, reduza os títulos proporcionalmente, evitando quebras de linha ruins ou textos muito grandes.
+
+## Layout e espaçamento
+
+• Conteúdo máximo aproximado de 1440 px.
+• Margens laterais de 32 a 64 px em telas grandes.
+• Margens de 20 a 24 px em dispositivos móveis.
+• Espaçamento vertical entre seções de 96 a 144 px em desktop, adaptado ao conteúdo.
+• Cards com bordas entre 14 e 20 px.
+• Imagem principal com bordas entre 20 e 28 px.
+• Campos e botões com bordas entre 8 e 12 px.
+• Sombras suaves, somente quando necessárias.
+• Ícones lineares e discretos.
+
+Mantenha uma grade consistente, boa legibilidade e espaço negativo suficiente. Não deixe os elementos excessivamente próximos nem crie grandes vazios sem propósito.
+
+# 4. ESTRUTURA DA LANDING PAGE
+
+A página deve seguir esta sequência narrativa:
+
+1. Navegação e hero com formulário de reserva.
+2. Experiência fotográfica com scroll.
+3. Seção interativa de estações.
+4. Acomodações em destaque.
+5. Perguntas frequentes.
+6. Encerramento com chamada para encontrar hospedagem.
+7. Rodapé.
+
+# 5. NAVEGAÇÃO E HERO
+
+Crie uma navegação minimalista.
+
+O logotipo VÉRANA deve ficar à esquerda. À direita, utilize links discretos como “Explorar destinos”, “Estações” e “Como funciona”, além de uma ação para encontrar hospedagem.
+
+O hero deve utilizar uma fotografia panorâmica de um hotel boutique ou refúgio de natureza. A imagem deve mostrar arquitetura, interior acolhedor ou vista de paisagem com luz natural. Evite imagens genéricas de prédios corporativos.
+
+A fotografia deve ocupar uma área ampla e ser o elemento dominante da primeira dobra.
+
+Utilize esta copy:
+
+Título:
+“Tem dias que pedem uma mudança de cenário.”
+
+Texto:
+“Uma cabana entre as árvores, uma janela de frente para o mar ou alguns dias longe da rotina. Encontre um lugar que combine com o que você precisa agora.”
+
+Formulário de reserva:
+• Destino: “Cidade, região ou tipo de lugar”
+• Entrada: “Adicionar data”
+• Saída: “Adicionar data”
+• Hóspedes: “Quantas pessoas vão viajar?”
+
+Botão principal:
+“Encontrar hospedagem”
+
+O formulário deve aparecer logo no início da experiência. Pode ficar sobreposto à fotografia ou em uma composição próxima, desde que não esconda o principal ponto de interesse da imagem.
+
+Os campos devem possuir labels visíveis, estados de foco e uma hierarquia clara. O formulário precisa funcionar como uma interface real de protótipo. Se não houver backend, use dados demonstrativos coerentes e apresente resultados simulados claramente identificados.
+
+# 6. EXPERIÊNCIA FOTOGRÁFICA COM SCROLL
+
+Esta seção deve transmitir a sensação de percorrer um ambiente com calma.
+
+Utilize uma imagem grande, com enquadramento cinematográfico e espaço para a copy.
+
+Conforme o usuário rola a página, a fotografia muda gradualmente, mostrando diferentes partes de uma hospedagem: quarto, varanda, vista, banheira ou área de convivência.
+
+A cada mudança, uma frase curta acompanha a imagem. Utilize as seguintes frases:
+
+Cena 1:
+“Imagine acordar sem olhar as horas.”
+
+Texto complementar:
+“Luz entrando pela janela, silêncio ao redor e uma manhã que começa no seu tempo.”
+
+Cena 2:
+“Seu café pode esperar um pouco.”
+
+Texto complementar:
+“Talvez você prefira ficar mais alguns minutos olhando a paisagem.”
+
+Cena 3:
+“Hoje, você não precisa chegar a lugar nenhum.”
+
+Texto complementar:
+“Aproveite o espaço, escolha seu ritmo e deixe o dia acontecer sem tanta pressa.”
+
+Cena 4:
+“E se hoje terminasse um pouco mais devagar?”
+
+Texto complementar:
+“Um ambiente acolhedor, uma conversa sem pressa ou simplesmente um tempo só seu.”
+
+## Comportamento técnico
+
+A seção pode utilizar uma área temporariamente fixa durante o scroll, enquanto as cenas avançam de maneira progressiva.
+
+Utilize transições suaves de opacidade, mudanças de imagem e movimentos sutis. Evite zoom agressivo, parallax exagerado ou animações que provoquem desconforto.
+
+A rolagem deve continuar natural. O visitante precisa conseguir sair da seção sem sentir que perdeu o controle.
+
+As imagens devem mudar de maneira sincronizada com a copy. Não permita que a frase de uma cena apareça sobre a fotografia errada.
+
+No mobile, simplifique a interação se necessário. Respeite a preferência por movimento reduzido.
+
+# 7. SEÇÃO PRINCIPAL: ESTAÇÕES DO ANO
+
+Esta é a interação mais importante e diferenciada do projeto. Não transforme essa seção em um carrossel horizontal comum.
+
+Título:
+“Que tipo de viagem está passando pela sua cabeça?”
+
+Texto:
+“Talvez você queira o frio, o verde depois da chuva ou dias perto do mar. Escolha a estação e descubra lugares que combinam com ela.”
+
+## Conceito de interação
+
+A seção deve ocupar o foco visual da tela durante uma sequência controlada pelo scroll vertical.
+
+O usuário rola verticalmente, mas a experiência visual apresenta uma sequência de cards de estações. Cada card avança para o centro e se torna o protagonista da tela.
+
+A composição deve mostrar:
+• Um card ativo grande e centralizado.
+• Uma parte do próximo card visível, sugerindo continuidade.
+• Espaço negativo nas bordas.
+• Uma iluminação ambiente difusa ao redor do card ativo.
+• Um fundo que muda suavemente conforme a estação.
+• Um indicador discreto de progresso.
+• Uma frase curta relacionada à estação.
+• Um botão para explorar as hospedagens correspondentes.
+
+A próxima estação deve aparecer parcialmente, mas sem roubar a atenção da estação ativa.
+
+## Como deve funcionar o scroll
+
+1. Quando a seção entra na área principal da tela, o primeiro card se centraliza e recebe destaque.
+2. A rolagem vertical avança gradualmente a sequência.
+3. O card atual perde destaque enquanto o próximo se move para o centro.
+4. A cor ambiente muda suavemente de acordo com a estação selecionada.
+5. A iluminação difusa acompanha o card ativo.
+6. A fotografia, a frase e a seleção mudam em conjunto.
+7. Após a quarta estação, o scroll vertical continua normalmente para a seção seguinte.
+
+Implemente uma seção temporariamente fixa durante a progressão, com uma distância de scroll suficiente para que cada transição seja percebida. Não mantenha a página presa por tempo excessivo.
+
+A interação precisa ser fluida, responsiva e acessível. Considere teclado, indicadores de estado, alternativa sem animações e um comportamento simplificado para telas menores.
+
+## Estação 1: Outono
+
+Descrição:
+“Para quando você quer aconchego, paisagens douradas e tardes sem pressa.”
+
+Direção visual:
+Cabana de madeira, folhas douradas, luz de fim de tarde e tons terrosos.
+
+Cor ambiente:
+Creme com iluminação dourada suave, derivada de #F2C063 e #F2ECD8.
+
+Botão:
+“Encontrar meu refúgio”
+
+## Estação 2: Inverno
+
+Descrição:
+“Para aproveitar o frio, ficar perto da lareira e dormir mais um pouco.”
+
+Direção visual:
+Chalé acolhedor, montanhas, janela ampla, tecidos naturais e luz quente contrastando com o exterior frio.
+
+Cor ambiente:
+Neutros suaves e tons levemente acinzentados.
+
+Botão:
+“Encontrar meu refúgio”
+
+## Estação 3: Primavera
+
+Descrição:
+“Para passar mais tempo ao ar livre e descobrir paisagens que mudam a cada caminho.”
+
+Direção visual:
+Jardins, vegetação, flores discretas, luz natural e paisagens verdes.
+
+Cor ambiente:
+Creme com um toque suave de verde natural, sem criar uma nova paleta dominante.
+
+Botão:
+“Encontrar meu refúgio”
+
+## Estação 4: Verão
+
+Descrição:
+“Para aproveitar os dias longos, estar perto da água e fazer tudo sem tanta hora marcada.”
+
+Direção visual:
+Retiro costeiro, piscina, mar, arquitetura natural e luz solar suave.
+
+Cor ambiente:
+Creme aquecido por tons de areia e dourado.
+
+Botão:
+“Encontrar meu refúgio”
+
+## Regras de destaque
+
+O card ativo deve ter maior escala visual, nitidez e contraste.
+
+A iluminação deve ficar atrás do card, com baixa opacidade, bordas amplas e difusão suave. Não utilize neon ou um halo excessivamente visível.
+
+O fundo não deve piscar nem mudar de cor abruptamente. Utilize transições graduais.
+
+A prévia do próximo card precisa ser visível sem parecer um erro de alinhamento. Garanta que a composição funcione em diferentes larguras de tela.
+
+A seção precisa comunicar quatro atmosferas diferentes. Não deve parecer apenas uma lista de opções.
+
+# 8. ACOMODAÇÕES EM DESTAQUE
+
+Título:
+“Lugares que podem combinar com seus planos.”
+
+Texto:
+“Veja algumas opções para começar a imaginar sua próxima viagem.”
+
+Crie uma grade de cards com fotografias grandes, consistentes e arredondadas.
+
+Cada card deve apresentar:
+• Fotografia.
+• Nome da acomodação.
+• Localização.
+• Avaliação, somente quando houver dados demonstrativos identificados.
+• Características relevantes.
+• Preço por diária.
+• Botão para consultar a hospedagem.
+
+Exemplo de conteúdo demonstrativo:
+
+Nome:
+“Cabana entre as montanhas”
+
+Localização:
+“Serra da Mantiqueira”
+
+Descrição:
+“Um espaço tranquilo para aproveitar o frio, a paisagem e o tempo livre.”
+
+Preço ilustrativo:
+“R$ 480 por diária”
+
+CTA:
+“Ver hospedagem”
+
+Não apresente valores, avaliações ou disponibilidade simulados como informações reais. Se utilizar dados fictícios, deixe claro que fazem parte do protótipo.
+
+A grade deve ser responsiva. Em desktop, utilize até quatro cards por linha quando houver espaço suficiente. Em telas menores, reduza a quantidade de colunas.
+
+As imagens precisam ter proporções consistentes, sem cortes que prejudiquem a compreensão da acomodação.
+
+# 9. PERGUNTAS FREQUENTES
+
+Título:
+“Antes de escolher, vale saber.”
+
+Texto:
+“Algumas informações ajudam você a planejar a viagem com mais tranquilidade.”
+
+Pergunta 1:
+“Como funciona a reserva?”
+
+Resposta:
+“Você escolhe o destino, informa as datas e o número de hóspedes para consultar as acomodações disponíveis.”
+
+Pergunta 2:
+“Posso encontrar uma hospedagem para uma ocasião especial?”
+
+Resposta:
+“Sim. Você pode explorar lugares de acordo com a estação, o tipo de ambiente e as características que fazem sentido para sua viagem.”
+
+Pergunta 3:
+“Como sei se uma acomodação está disponível?”
+
+Resposta:
+“Informe as datas desejadas para consultar a disponibilidade correspondente à sua estadia.”
+
+Pergunta 4:
+“E se meus planos mudarem?”
+
+Resposta:
+“As condições de alteração e cancelamento dependem de cada hospedagem. Consulte as regras antes de confirmar sua reserva.”
+
+Utilize um accordion discreto, com linhas finas, ícones simples e transições suaves.
+
+# 10. ENCERRAMENTO
+
+Utilize uma fotografia panorâmica de uma hospedagem cercada por montanhas, vegetação ou uma paisagem acolhedora no fim da tarde.
+
+Título:
+“Você já tem uma ideia de como gostaria de passar esses dias?”
+
+Texto:
+“Agora falta encontrar um lugar que combine com ela.”
+
+Botão:
+“Vamos encontrar sua hospedagem”
+
+O encerramento deve retomar a atmosfera da marca sem repetir o hero literalmente.
+
+# 11. RODAPÉ
+
+Crie um rodapé discreto com:
+• Logotipo VÉRANA.
+• Links para explorar destinos e estações.
+• Informações institucionais.
+• Contato demonstrativo, claramente identificado como fictício quando necessário.
+• Privacidade e termos como links de demonstração.
+• Ano atual.
+
+Não invente certificações, parcerias ou garantias reais.
+
+# 12. DIREÇÃO FOTOGRÁFICA E ASSETS
+
+Utilize as imagens de referência fornecidas para compreender o estilo desejado.
+
+Se os arquivos de imagem individuais estiverem disponíveis, utilize-os no projeto. Não substitua imagens fornecidas por alternativas sem necessidade.
+
+Organize os assets com nomes claros, como:
+• hero-retreat
+• scene-bedroom
+• scene-balcony
+• scene-bath
+• scene-lounge
+• season-autumn
+• season-winter
+• season-spring
+• season-summer
+• stay-mountain-cabin
+• stay-countryside
+• stay-coastal
+• stay-forest
+
+Se for necessário obter imagens adicionais, procure fotografias de hospedagens reais e paisagens naturais com uma direção visual consistente. Evite repetir a mesma fotografia em diferentes seções.
+
+Otimize o carregamento e utilize imagens responsivas. Dê prioridade de carregamento à imagem principal e carregamento tardio às imagens que estão abaixo da dobra.
+
+Não use imagens com texto incorporado. Os textos devem ser elementos reais da interface.
+
+# 13. RESPONSIVIDADE E ACESSIBILIDADE
+
+Desenvolva para desktop, tablet e mobile.
+
+No desktop:
+• Hero amplo.
+• Formulário de reserva claramente visível.
+• Cards com alinhamento consistente.
+• Seção de estações centralizada com prévia do próximo card.
+
+No mobile:
+• Formulário reorganizado verticalmente.
+• Botões com áreas de toque adequadas.
+• Títulos sem cortes.
+• Cards acessíveis por toque.
+• Seção de estações adaptada sem comprometer o scroll natural.
+• Imagens com enquadramentos apropriados.
+
+Garanta contraste suficiente entre textos e fundos, foco visível, navegação por teclado, labels acessíveis e descrição alternativa das imagens.
+
+Respeite prefers-reduced-motion. Não dependa apenas de cores para comunicar a estação ativa.
+
+# 14. IMPLEMENTAÇÃO
+
+Analise a stack existente antes de escolher como implementar.
+
+Se o projeto já possuir uma estrutura, preserve-a e adapte os componentes existentes. Se estiver começando do zero, escolha uma solução moderna compatível com o ambiente atual.
+
+Crie componentes reutilizáveis para:
+• Header.
+• BookingForm.
+• ScrollStory.
+• SeasonExperience.
+• SeasonCard.
+• AccommodationCard.
+• FAQ.
+• Footer.
+
+Centralize as cores, tipografia, espaçamentos, raios e demais tokens em um sistema de estilos coerente.
+
+A seção de estações precisa funcionar de verdade. Não crie apenas uma animação visual que não responde ao scroll.
+
+Evite bibliotecas pesadas se a interação puder ser implementada com recursos mais simples. Se usar uma biblioteca de animação, utilize-a de maneira controlada e garanta que a experiência não prejudique o desempenho.
+
+Os formulários e botões precisam ter comportamentos claros. Se a reserva não tiver integração com backend, apresente uma busca demonstrativa com resultados simulados e informe que são dados de protótipo.
+
+Não invente integrações, reservas confirmadas ou funcionalidades que não existem.
+
+# 15. CRITÉRIOS DE QUALIDADE
+
+Antes de concluir, verifique:
+
+1. A primeira dobra transmite a proposta da marca imediatamente?
+2. A fotografia é protagonista?
+3. A copy parece humana e natural?
+4. O formulário é simples de compreender?
+5. A seção de estações centraliza cada card durante o scroll?
+6. A prévia da próxima estação é claramente perceptível?
+7. O brilho ambiente é suave e acompanha a estação ativa?
+8. As quatro estações possuem fotografias e atmosferas distintas?
+9. As acomodações apresentam informações legíveis?
+10. A página funciona em dispositivos móveis?
+11. Os botões, campos, accordions e seleções possuem comportamento real?
+12. A interface mantém consistência de espaçamento, tipografia e bordas?
+13. As animações são suaves sem comprometer a navegação?
+14. O resultado parece uma marca própria, e não uma cópia do Airbnb?
+15. Não existem textos clichês, placeholders esquecidos ou dados fictícios apresentados como reais?
+
+# INSTRUÇÃO FINAL
+
+Implemente a landing page completa, não apenas uma demonstração estática ou um wireframe.
+
+Priorize primeiro a estrutura visual, a direção fotográfica, a qualidade do hero e a seção interativa de estações. Depois refine as demais seções e os detalhes.
+
+Não acrescente seções extras apenas para preencher espaço. Não altere a copy sem necessidade. Se algum detalhe não estiver definido, tome a decisão mais coerente com o conceito e mantenha a consistência do projeto.
+
+Ao finalizar, informe de forma breve o que foi implementado, quais interações estão funcionais e quais integrações continuam sendo demonstrativas.

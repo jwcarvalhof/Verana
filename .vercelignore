@@ -1,0 +1,9 @@
+# Fica no projeto, não vai para o ar
+docs/
+referencias/
+content/
+tools/
+Imagens/
+README.md
+review/
+**/.gitkeep
