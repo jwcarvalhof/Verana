@@ -182,7 +182,7 @@
         <span class="mpin"><span>${icon('leaf')}</span></span>
         <span class="smap__north" aria-hidden="true">N</span>
         <p class="smap__coords"><small>${esc(P.mapCoords)}</small><span>${dms(s.geo[0], 'N', 'S')} · ${dms(s.geo[1], LANG === 'en' ? 'E' : 'L', LANG === 'en' ? 'W' : 'O')}</span></p>
-        <p class="smap__attr">© OpenStreetMap · © CARTO</p>
+        <p class="smap__attr">Esri, USGS, NOAA, OpenStreetMap</p>
       </div>
       <div class="mapbox__card">
         <p class="kicker">${esc(P.arrive)}</p>
@@ -323,11 +323,12 @@
   }));
 
   /* ---------- Mapa: uma imagem fixa da região, nas cores da marca ----------
-     Monta os quadros do OpenStreetMap (estilo claro, sem nomes) ao redor do ponto e tinge com a paleta. */
+     Monta os quadros da Esri (base clara e relevo, sem nomes) ao redor do ponto e tinge com a paleta. */
+  const ESRI = 'https://server.arcgisonline.com/ArcGIS/rest/services';
   const mapEl = $('[data-map]'), tilesEl = $('[data-tiles]');
   function drawMap() {
     const W = mapEl.clientWidth, H = mapEl.clientHeight; if (!W || !H) return;
-    const z = W > 720 ? 12 : 11, n = 2 ** z, T = 256;
+    const z = W > 720 ? 11 : 10, n = 2 ** z, T = 256;
     const [lat, lon] = s.geo, r = lat * Math.PI / 180;
     const cx = (lon + 180) / 360 * n * T, cy = (1 - Math.log(Math.tan(r) + 1 / Math.cos(r)) / Math.PI) / 2 * n * T;
     // o ponto fica um pouco à direita, longe do card de "Como chegar"
@@ -336,8 +337,10 @@
     for (let tx = Math.floor(x0 / T); tx <= Math.floor((x0 + W) / T); tx++) {
       for (let ty = Math.floor(y0 / T); ty <= Math.floor((y0 + H) / T); ty++) {
         if (ty < 0 || ty >= n) continue;
-        const wx = ((tx % n) + n) % n, sub = 'abcd'[(wx + ty) % 4];
-        out += `<img src="https://${sub}.basemaps.cartocdn.com/light_nolabels/${z}/${wx}/${ty}@2x.png" style="left:${Math.round(tx * T - x0)}px;top:${Math.round(ty * T - y0)}px" alt="" decoding="async" onerror="this.remove()">`;
+        const wx = ((tx % n) + n) % n, pos = `left:${Math.round(tx * T - x0)}px;top:${Math.round(ty * T - y0)}px`;
+        // base clara (água, costa, estradas) + relevo sombreado por cima
+        out += `<img src="${ESRI}/Canvas/World_Light_Gray_Base/MapServer/tile/${z}/${ty}/${wx}" style="${pos}" alt="" decoding="async" onerror="this.remove()">`
+             + `<img class="relief" src="${ESRI}/World_Shaded_Relief/MapServer/tile/${z}/${ty}/${wx}" style="${pos}" alt="" decoding="async" onerror="this.remove()">`;
       }
     }
     tilesEl.innerHTML = out;

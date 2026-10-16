@@ -101,8 +101,9 @@
 .mapbox{position:relative;height:min(64svh,560px);min-height:380px;border-radius:var(--r-media);overflow:hidden;background:var(--surface);isolation:isolate}
 .mapbox__map{position:absolute;inset:0;z-index:0;background:#EDE5CC}
 /* mapa fixo tingido com a paleta: quadros em cinza, multiplicados pelo creme e pelo ocre */
-.smap__tiles{position:absolute;inset:0;overflow:hidden;filter:grayscale(1) contrast(1.25) brightness(1.03)}
+.smap__tiles{position:absolute;inset:0;overflow:hidden;filter:grayscale(1) contrast(1.15) brightness(1.06)}
 .smap__tiles img{position:absolute;width:256px;height:256px;max-width:none;user-select:none;pointer-events:none}
+.smap__tiles img.relief{mix-blend-mode:multiply;opacity:.9}
 .smap__tint{position:absolute;inset:0;pointer-events:none;mix-blend-mode:multiply;background:radial-gradient(70% 90% at var(--px,62%) 50%,#F4ECD6 0%,#EADBB4 55%,#D9C79A 100%)}
 .smap__tint::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 120% at var(--px,62%) 50%,transparent 55%,rgba(101,93,82,.28) 100%)}
 .smap__area{position:absolute;left:var(--px,62%);top:50%;width:min(34vw,260px);aspect-ratio:1;max-width:none;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(242,192,99,.42) 0%,rgba(242,192,99,.18) 60%,rgba(242,192,99,0) 72%);border:1.5px dashed rgba(140,47,13,.55);animation:breathe 4.5s var(--ease-soft) infinite}
