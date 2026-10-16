@@ -12,7 +12,7 @@ import json, html, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 load = lambda n: json.load(open(os.path.join(ROOT, 'content', n), encoding='utf-8'))
 PT, EN, CREDITS = load('pt.json'), load('en.json'), load('credits.json')
-VERSION = '7'
+VERSION = '8'
 DOMAIN = 'https://SEU-DOMINIO'  # DEPLOY STEP: endereço final do Vercel, sem barra no fim
 e = lambda s: html.escape(str(s), quote=True)
 
