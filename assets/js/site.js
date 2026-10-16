@@ -13,7 +13,8 @@
   const icon = (n, cls = 'icon') => `<svg class="${cls}" aria-hidden="true" focusable="false"><use href="#i-${n}"/></svg>`;
   const get = (o, p) => p.split('.').reduce((a, k) => (a == null ? a : a[k]), o);
 
-  let LANG = document.documentElement.dataset.lang === 'en' ? 'en' : 'pt';
+  const html0 = document.documentElement;
+  let LANG = html0.dataset.lang === 'en' ? 'en' : 'pt';
   // reserva vinda da página completa: #book=id&in=...&out=...&g=...
   const BOOKQ = new URLSearchParams(location.hash.indexOf('book=') > 0 ? location.hash.slice(1) : location.search);
   const BOOK = { id: BOOKQ.get('book') || '', in: BOOKQ.get('in') || '', out: BOOKQ.get('out') || '', g: BOOKQ.get('g') || '' };
@@ -295,9 +296,31 @@
   $$('[data-focus-search]').forEach(a => a.addEventListener('click', e => {
     e.preventDefault(); setMenu(false);
     closeSheet();
-    form.scrollIntoView({ behavior: isStatic() ? 'auto' : 'smooth', block: 'center' });
-    setTimeout(() => dest.focus({ preventScroll: true }), 500);
+    const r = form.getBoundingClientRect();
+    windTo(scrollY + r.top - Math.max(90, (innerHeight - r.height) / 2), () => dest.focus({ preventScroll: true }));
   }));
+
+  /* ---------- Saltos para seções: a tela se desfaz no vento e reaparece no destino ---------- */
+  function windTo(y, after) {
+    const land = () => {
+      updateHeader();
+      if (armed) { readScroll(); shown.s = target.s; shown.z = target.z; storyFrame(shown.s); seasonFrame(shown.z); }
+      // o que está no destino já chega pronto, sem esperar a própria entrada
+      $$('.reveal:not(.in)').forEach(el => { const b = el.getBoundingClientRect(); if (b.top < innerHeight && b.bottom > 0) { el.classList.add('in', 'done'); io.unobserve(el); } });
+      after && after();
+    };
+    if (window.VRWind) VRWind.jump(y, land); else { window.scrollTo(0, y); land(); }
+  }
+  document.addEventListener('click', e => {
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey) return;
+    const a = e.target.closest('a[href^="#"]'); if (!a || a.hasAttribute('data-focus-search')) return;
+    const id = a.getAttribute('href').slice(1); if (!id || id === 'main') return;
+    const el = id === 'top' ? document.body : document.getElementById(id); if (!el) return;
+    e.preventDefault(); setMenu(false); closeSheet();
+    const y = id === 'top' ? 0 : scrollY + el.getBoundingClientRect().top - (id === 'seasons' || id === 'moments' ? 0 : 76);
+    windTo(y);
+    history.replaceState(null, '', location.pathname + location.search + (id === 'top' ? '' : '#' + id));
+  });
   $$('[data-season-search]').forEach(b => b.addEventListener('click', () => { dest.value = C.seasons.items[+b.dataset.seasonSearch].search; runSearch(); }));
 
   /* ---------- Painel da hospedagem: detalhes, reserva e confirmação ---------- */
@@ -466,7 +489,7 @@
       if (!nightsOf()) { err.textContent = C.sheet.errDates; ($('#bk-in', shBody).value ? $('#bk-out', shBody) : $('#bk-in', shBody)).focus(); return; }
       return setView('checkout');
     }
-    if (e.target.closest('[data-done-home]')) { closeSheet(); window.scrollTo({ top: 0, behavior: isStatic() ? 'auto' : 'smooth' }); }
+    if (e.target.closest('[data-done-home]')) { closeSheet(); windTo(0); }
   });
   sheet.addEventListener('keydown', e => {
     if (SH.view === 'details' && (e.key === 'ArrowLeft' || e.key === 'ArrowRight') && !e.target.matches('input,select,textarea')) showPhoto(SH.g + (e.key === 'ArrowRight' ? 1 : -1));
@@ -766,6 +789,23 @@
   applyLang(LANG, { save: false });
   updateHeader();
 
+  // chegando de outra página (vento) ou de um link com seção: vai direto, sem percorrer o caminho
+  (() => {
+    const fromWind = window.VRWind && VRWind.pending();
+    const id = location.hash.slice(1);
+    const el = id && !id.includes('=') ? document.getElementById(id) : null;
+    if (!fromWind && !el) return;
+    html0.classList.remove('intro-on'); html0.classList.add('intro-done');
+    if (el) {
+      const sb = html0.style.scrollBehavior; html0.style.scrollBehavior = 'auto';
+      window.scrollTo(0, scrollY + el.getBoundingClientRect().top - 76);
+      html0.style.scrollBehavior = sb;
+      if (armed) { readScroll(); shown.s = target.s; shown.z = target.z; storyFrame(shown.s); seasonFrame(shown.z); }
+      $$('.reveal:not(.in)').forEach(r => { const b = r.getBoundingClientRect(); if (b.top < innerHeight && b.bottom > 0) { r.classList.add('in', 'done'); io.unobserve(r); } });
+    }
+    if (fromWind) VRWind.arrive();
+  })();
+
   // vindo da página completa da hospedagem: abre direto em "Seus dados"
   (() => {
     const q = new URLSearchParams(location.search), id = BOOK.id; if (!id) return;
@@ -778,7 +818,7 @@
     if (iso.test(vin) && iso.test(vout) && vout > vin) { fin.value = vin; fout.value = vout; paintDate(fin); paintDate(fout); }
     const g = +BOOK.g; if (g > 0) { B.guests = Math.min(g, C.stays.items[i].guests); }
     document.documentElement.classList.remove('intro-on'); document.documentElement.classList.add('intro-done');
-    $('#stays').scrollIntoView({ behavior: 'auto' });
+    { const sb = html0.style.scrollBehavior; html0.style.scrollBehavior = 'auto'; $('#stays').scrollIntoView(); html0.style.scrollBehavior = sb; }
     openSheet(i, null);
     if (fin.value && fout.value) setView('checkout', { instant: true });
   })();

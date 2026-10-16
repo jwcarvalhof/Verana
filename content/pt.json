@@ -296,7 +296,10 @@
         "host": {
           "name": "Helena",
           "years": 6,
-          "line": "Mora a dez minutos da cabana e deixa lenha cortada e um bolo na chegada."
+          "line": "Mora a dez minutos da cabana e deixa lenha cortada e um bolo na chegada.",
+          "photo": [
+            "women/44"
+          ]
         },
         "scores": [
           5.0,
@@ -311,19 +314,28 @@
             "name": "Marina",
             "from": "Curitiba",
             "date": "julho de 2026",
-            "text": "Fez 1°C de manhã e a cabana continuou quente o tempo todo. A Helena deixou lenha para três noites."
+            "text": "Fez 1°C de manhã e a cabana continuou quente o tempo todo. A Helena deixou lenha para três noites.",
+            "photo": [
+              "women/65"
+            ]
           },
           {
             "name": "Rodrigo",
             "from": "Porto Alegre",
             "date": "junho de 2026",
-            "text": "A névoa subindo pelas araucárias vale a viagem. Estrada de terra no fim, mas tranquila."
+            "text": "A névoa subindo pelas araucárias vale a viagem. Estrada de terra no fim, mas tranquila.",
+            "photo": [
+              "men/32"
+            ]
           },
           {
             "name": "Lívia",
             "from": "Florianópolis",
             "date": "agosto de 2026",
-            "text": "Silêncio de verdade. Levamos livros e quase não ligamos o celular."
+            "text": "Silêncio de verdade. Levamos livros e quase não ligamos o celular.",
+            "photo": [
+              "women/68"
+            ]
           }
         ]
       },
@@ -414,7 +426,10 @@
         "host": {
           "name": "Otávio",
           "years": 4,
-          "line": "Restaurou a cabana com o pai e conhece cada café da Rota Romântica."
+          "line": "Restaurou a cabana com o pai e conhece cada café da Rota Romântica.",
+          "photo": [
+            "men/46"
+          ]
         },
         "scores": [
           4.9,
@@ -429,19 +444,28 @@
             "name": "Fernanda",
             "from": "São Paulo",
             "date": "maio de 2026",
-            "text": "O campo em volta fica dourado no fim da tarde. As crianças passaram o dia inteiro lá fora."
+            "text": "O campo em volta fica dourado no fim da tarde. As crianças passaram o dia inteiro lá fora.",
+            "photo": [
+              "women/12"
+            ]
           },
           {
             "name": "Caio",
             "from": "Porto Alegre",
             "date": "abril de 2026",
-            "text": "Perto do centro e ao mesmo tempo longe do movimento. Cozinha bem equipada."
+            "text": "Perto do centro e ao mesmo tempo longe do movimento. Cozinha bem equipada.",
+            "photo": [
+              "men/52"
+            ]
           },
           {
             "name": "Patrícia",
             "from": "Campinas",
             "date": "maio de 2026",
-            "text": "Levamos o cachorro e ele foi recebido com tigela e manta. Detalhe que fez diferença."
+            "text": "Levamos o cachorro e ele foi recebido com tigela e manta. Detalhe que fez diferença.",
+            "photo": [
+              "women/26"
+            ]
           }
         ]
       },
@@ -536,7 +560,11 @@
         "host": {
           "name": "Lúcia e José",
           "years": 9,
-          "line": "Cuidam da fazenda há trinta anos e servem o café com queijo da região."
+          "line": "Cuidam da fazenda há trinta anos e servem o café com queijo da região.",
+          "photo": [
+            "women/33",
+            "men/75"
+          ]
         },
         "scores": [
           4.8,
@@ -551,19 +579,29 @@
             "name": "Paulo e Rita",
             "from": "Rio de Janeiro",
             "date": "outubro de 2026",
-            "text": "O café da roça chegava quente na varanda. A gente só saía de lá para caminhar."
+            "text": "O café da roça chegava quente na varanda. A gente só saía de lá para caminhar.",
+            "photo": [
+              "men/11",
+              "women/47"
+            ]
           },
           {
             "name": "Tiago",
             "from": "Belo Horizonte",
             "date": "setembro de 2026",
-            "text": "As trilhas começam na porteira mesmo. Voltamos com as botas cheias de terra e felizes."
+            "text": "As trilhas começam na porteira mesmo. Voltamos com as botas cheias de terra e felizes.",
+            "photo": [
+              "men/22"
+            ]
           },
           {
             "name": "Juliana",
             "from": "São Paulo",
             "date": "novembro de 2026",
-            "text": "Viajamos em seis e ninguém disputou espaço. O fogão a lenha virou o centro da casa."
+            "text": "Viajamos em seis e ninguém disputou espaço. O fogão a lenha virou o centro da casa.",
+            "photo": [
+              "women/57"
+            ]
           }
         ]
       },
@@ -654,7 +692,10 @@
         "host": {
           "name": "Bia",
           "years": 5,
-          "line": "Nasceu em Trancoso e indica as barracas onde os moradores almoçam."
+          "line": "Nasceu em Trancoso e indica as barracas onde os moradores almoçam.",
+          "photo": [
+            "women/63"
+          ]
         },
         "scores": [
           4.9,
@@ -669,19 +710,28 @@
             "name": "Camila",
             "from": "Salvador",
             "date": "janeiro de 2026",
-            "text": "Fomos a pé para a praia todos os dias e voltamos para o almoço sem olhar o relógio."
+            "text": "Fomos a pé para a praia todos os dias e voltamos para o almoço sem olhar o relógio.",
+            "photo": [
+              "women/72"
+            ]
           },
           {
             "name": "Eduardo",
             "from": "Brasília",
             "date": "fevereiro de 2026",
-            "text": "A rede da varanda foi o lugar mais disputado da viagem. Casa fresca mesmo no calor."
+            "text": "A rede da varanda foi o lugar mais disputado da viagem. Casa fresca mesmo no calor.",
+            "photo": [
+              "men/36"
+            ]
           },
           {
             "name": "Natália",
             "from": "São Paulo",
             "date": "dezembro de 2025",
-            "text": "Roupa de cama de linho e cheiro de mar. A Bia respondeu tudo em minutos."
+            "text": "Roupa de cama de linho e cheiro de mar. A Bia respondeu tudo em minutos.",
+            "photo": [
+              "women/79"
+            ]
           }
         ]
       },
@@ -776,7 +826,10 @@
         "host": {
           "name": "Rafael",
           "years": 3,
-          "line": "Mora na vila e mantém o jardim tropical do jeito que a avó plantou."
+          "line": "Mora na vila e mantém o jardim tropical do jeito que a avó plantou.",
+          "photo": [
+            "men/41"
+          ]
         },
         "scores": [
           4.9,
@@ -791,19 +844,28 @@
             "name": "Gabriela",
             "from": "Recife",
             "date": "março de 2026",
-            "text": "A piscina à sombra do jardim salvou as tardes mais quentes. Praia a cinco minutos andando."
+            "text": "A piscina à sombra do jardim salvou as tardes mais quentes. Praia a cinco minutos andando.",
+            "photo": [
+              "women/82"
+            ]
           },
           {
             "name": "Marcos",
             "from": "Salvador",
             "date": "janeiro de 2026",
-            "text": "Casa espaçosa para seis, com varanda aberta para o almoço durar a tarde toda."
+            "text": "Casa espaçosa para seis, com varanda aberta para o almoço durar a tarde toda.",
+            "photo": [
+              "men/54"
+            ]
           },
           {
             "name": "Aline",
             "from": "Goiânia",
             "date": "fevereiro de 2026",
-            "text": "Vimos as tartarugas no Projeto Tamar e voltamos a pé. Organização impecável."
+            "text": "Vimos as tartarugas no Projeto Tamar e voltamos a pé. Organização impecável.",
+            "photo": [
+              "women/85"
+            ]
           }
         ]
       },
@@ -894,7 +956,10 @@
         "host": {
           "name": "Teresa",
           "years": 7,
-          "line": "Construiu o chalé na encosta pensando no pôr do sol sobre o vale."
+          "line": "Construiu o chalé na encosta pensando no pôr do sol sobre o vale.",
+          "photo": [
+            "women/90"
+          ]
         },
         "scores": [
           5.0,
@@ -909,19 +974,28 @@
             "name": "Renata",
             "from": "São Paulo",
             "date": "setembro de 2026",
-            "text": "O céu de noite ficou cheio de estrelas. Banheira com vista para a serra inteira."
+            "text": "O céu de noite ficou cheio de estrelas. Banheira com vista para a serra inteira.",
+            "photo": [
+              "women/94"
+            ]
           },
           {
             "name": "Felipe",
             "from": "Campinas",
             "date": "outubro de 2026",
-            "text": "Fomos para descansar e conseguimos. O deck pega o sol da manhã inteiro."
+            "text": "Fomos para descansar e conseguimos. O deck pega o sol da manhã inteiro.",
+            "photo": [
+              "men/60"
+            ]
           },
           {
             "name": "Clara",
             "from": "Ribeirão Preto",
             "date": "novembro de 2026",
-            "text": "A Teresa deixou um mapa à mão das trilhas e cachoeiras. Usamos todos os dias."
+            "text": "A Teresa deixou um mapa à mão das trilhas e cachoeiras. Usamos todos os dias.",
+            "photo": [
+              "women/8"
+            ]
           }
         ]
       }
@@ -1274,6 +1348,7 @@
     "notFound": "Não encontramos esta hospedagem.",
     "notFoundLink": "Ver todas as hospedagens",
     "photoBy": "Fotos",
-    "demo": "Hospedagem, anfitrião, avaliações e preços são demonstrativos. As fotos e os lugares são reais."
+    "demo": "Hospedagem, anfitrião, avaliações e preços são demonstrativos. As fotos e os lugares são reais.",
+    "mapCoords": "Coordenadas aproximadas"
   }
 }

@@ -56,7 +56,8 @@
     b.addEventListener('click', () => {
       if (b.dataset.langBtn === LANG) return;
       try { localStorage.setItem('verana-lang', b.dataset.langBtn); } catch (_) {}
-      location.href = ROOT + (b.dataset.langBtn === 'en' ? '?lang=en' : '') + '#stays';
+      const url = ROOT + (b.dataset.langBtn === 'en' ? '?lang=en' : '') + '#stays';
+      if (window.VRWind) VRWind.go(url); else location.href = url;
     });
   });
 
@@ -79,6 +80,13 @@
   const photos = [s.image, ...(s.gallery || [])];
   const rating = parseFloat(String(s.rating).replace(',', '.'));
   const initial = n => esc(n.trim().charAt(0).toUpperCase());
+  // fotos de perfil (modelos genéricos); se a foto não carregar, fica a inicial
+  const people = n => n.split(/\s+(?:e|and)\s+/);
+  const av = (name, photos, cls = '') => {
+    const ns = people(name), ps = photos && photos.length ? photos : ns.map(() => '');
+    return `<span class="av ${cls}${ps.length > 1 ? ' av--duo' : ''}" aria-hidden="true" data-noph>${ps.map((p, k) => `<span class="av__one"><b>${initial(ns[k] || ns[0])}</b>${p ? `<img src="https://randomuser.me/api/portraits/${esc(p)}.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()">` : ''}</span>`).join('')}</span>`;
+  };
+  const dms = (v, pos, neg) => { const a = Math.abs(v), d = Math.floor(a), m = Math.round((a - d) * 60); return `${d}°${String(m === 60 ? 0 : m).padStart(2, '0')}′ ${v >= 0 ? pos : neg}`; };
   const reviewsN = fmt(P.reviewsCount, { n: s.reviews });
   const FKEY = 'verana-favs';
   const favs = new Set((() => { try { return JSON.parse(localStorage.getItem(FKEY) || '[]'); } catch (_) { return []; } })());
@@ -120,7 +128,7 @@
       <p class="sp__lead reveal">${esc(s.text)}</p>
       <ul class="sp__facts reveal">
         <li><span class="sp__fi">${icon('calendar')}</span><div><small>${esc(P.bestTime)}</small><strong>${esc(season.name)}</strong><span>${esc(season.when)}</span></div></li>
-        <li><span class="sp__fi sp__fi--av">${initial(s.host.name)}</span><div><small>${esc(P.hostedBy)}</small><strong>${esc(s.host.name)}</strong><span>${esc(fmt(P.hostYears, { n: s.host.years }))}</span></div></li>
+        <li>${av(s.host.name, s.host.photo, 'av--fact')}<div><small>${esc(P.hostedBy)}</small><strong>${esc(s.host.name)}</strong><span>${esc(fmt(P.hostYears, { n: s.host.years }))}</span></div></li>
         <li><span class="sp__fi">${icon('star')}</span><div><small>${esc(P.rating)}</small><strong>${esc(s.rating)}</strong><span>${esc(rating >= 4.9 ? P.choice : reviewsN)}</span></div></li>
       </ul>
       <section class="sp__sec reveal"><h2 class="sp__h">${esc(P.about)}</h2><p class="sp__about">${esc(s.about)}</p></section>
@@ -159,7 +167,7 @@
       <ul class="rv__bars">${s.scores.map((v, k) => `<li><span>${esc(P.scores[k])}</span><span class="rv__bar"><span style="--v:${(v / 5).toFixed(3)}"></span></span><strong>${num(v)}</strong></li>`).join('')}</ul>
     </div>
     <div class="rv__list">${s.reviewsList.map(r => `<figure class="rcard reveal">
-      <figcaption><span class="rcard__av" aria-hidden="true">${initial(r.name)}</span><span><strong>${esc(r.name)}</strong><small>${esc(r.from)} · ${esc(r.date)}</small></span></figcaption>
+      <figcaption>${av(r.name, r.photo, 'av--review')}<span><strong>${esc(r.name)}</strong><small>${esc(r.from)} · ${esc(r.date)}</small></span></figcaption>
       <blockquote><p>${esc(r.text)}</p></blockquote></figure>`).join('')}</div>
     <p class="sp__note">${esc(fmt(P.reviewsShowing, { n: s.reviews }))} · ${esc(P.reviewsNote)}</p>
   </section>
@@ -167,7 +175,15 @@
   <section class="container sp__sec2" aria-labelledby="map-title">
     <div class="sp__sechead reveal"><h2 class="sp__h2" id="map-title">${esc(P.map)}</h2><p class="sp__sub">${icon('pin', 'icon icon--sm')}${esc(s.where)}</p></div>
     <div class="mapbox reveal">
-      <div class="mapbox__map" data-map role="region" aria-label="${esc(P.map)}"></div>
+      <div class="mapbox__map smap" data-map data-noph role="img" aria-label="${esc(P.map)}: ${esc(s.where)}">
+        <div class="smap__tiles" data-tiles></div>
+        <div class="smap__tint"></div>
+        <span class="smap__area"></span>
+        <span class="mpin"><span>${icon('leaf')}</span></span>
+        <span class="smap__north" aria-hidden="true">N</span>
+        <p class="smap__coords"><small>${esc(P.mapCoords)}</small><span>${dms(s.geo[0], 'N', 'S')} · ${dms(s.geo[1], LANG === 'en' ? 'E' : 'L', LANG === 'en' ? 'W' : 'O')}</span></p>
+        <p class="smap__attr">© OpenStreetMap · © CARTO</p>
+      </div>
       <div class="mapbox__card">
         <p class="kicker">${esc(P.arrive)}</p>
         <p>${esc(s.arrive)}</p>
@@ -181,7 +197,7 @@
     <div class="host reveal">
       <h2 class="sp__h2">${esc(P.host)}</h2>
       <div class="host__card">
-        <div class="host__id"><span class="host__av" aria-hidden="true">${initial(s.host.name)}</span><strong>${esc(s.host.name)}</strong><small>${esc(fmt(P.hostYears, { n: s.host.years }))}</small></div>
+        <div class="host__id">${av(s.host.name, s.host.photo, 'av--host')}<strong>${esc(s.host.name)}</strong><small>${esc(fmt(P.hostYears, { n: s.host.years }))}</small></div>
         <dl class="host__stats">
           <div><dt>${esc(P.reviews)}</dt><dd>${s.reviews}</dd></div>
           <div><dt>${esc(P.rating)}</dt><dd>${esc(s.rating)}</dd></div>
@@ -264,7 +280,8 @@
     if (!nights()) { err.textContent = S.errDates; (fin.value ? fout : fin).focus(); return; }
     const q = new URLSearchParams();
     q.set('book', s.id); q.set('in', fin.value); q.set('out', fout.value); q.set('g', fg.value);
-    location.href = HOME + '#' + q.toString();
+    const url = HOME + '#' + q.toString();
+    if (window.VRWind) VRWind.go(url); else location.href = url;
   });
 
   /* ---------- Fotos em tela cheia ---------- */
@@ -305,23 +322,31 @@
     track.scrollBy({ left: +b.dataset.sim * step * 2, behavior: calm() ? 'auto' : 'smooth' });
   }));
 
-  /* ---------- Mapa (Leaflet + OpenStreetMap), carregado quando aparece na tela ---------- */
-  const mapEl = $('[data-map]');
+  /* ---------- Mapa: uma imagem fixa da região, nas cores da marca ----------
+     Monta os quadros do OpenStreetMap (estilo claro, sem nomes) ao redor do ponto e tinge com a paleta. */
+  const mapEl = $('[data-map]'), tilesEl = $('[data-tiles]');
   function drawMap() {
-    if (!window.L) { mapEl.innerHTML = `<p class="mapbox__fail">${esc(P.mapFail)}</p>`; return; }
-    const L = window.L;
-    const map = L.map(mapEl, { scrollWheelZoom: false, zoomControl: false, attributionControl: true }).setView(s.geo, 12);
-    L.control.zoom({ position: 'topright' }).addTo(map);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-      subdomains: 'abcd', maxZoom: 18, attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> · © <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>'
-    }).addTo(map);
-    L.circle(s.geo, { radius: 1400, color: '#8C2F0D', weight: 1.5, opacity: .7, fillColor: '#F2C063', fillOpacity: .28 }).addTo(map);
-    L.marker(s.geo, { keyboard: false, icon: L.divIcon({ className: 'mpin', html: `<span>${icon('leaf')}</span>`, iconSize: [48, 48], iconAnchor: [24, 24] }) }).addTo(map);
-    // no celular, só arrasta com dois dedos para não prender a rolagem da página
-    if (matchMedia('(pointer: coarse)').matches) map.dragging.disable();
+    const W = mapEl.clientWidth, H = mapEl.clientHeight; if (!W || !H) return;
+    const z = W > 720 ? 12 : 11, n = 2 ** z, T = 256;
+    const [lat, lon] = s.geo, r = lat * Math.PI / 180;
+    const cx = (lon + 180) / 360 * n * T, cy = (1 - Math.log(Math.tan(r) + 1 / Math.cos(r)) / Math.PI) / 2 * n * T;
+    // o ponto fica um pouco à direita, longe do card de "Como chegar"
+    const ox = W < 640 ? W / 2 : W * .62, x0 = cx - ox, y0 = cy - H / 2;
+    let out = '';
+    for (let tx = Math.floor(x0 / T); tx <= Math.floor((x0 + W) / T); tx++) {
+      for (let ty = Math.floor(y0 / T); ty <= Math.floor((y0 + H) / T); ty++) {
+        if (ty < 0 || ty >= n) continue;
+        const wx = ((tx % n) + n) % n, sub = 'abcd'[(wx + ty) % 4];
+        out += `<img src="https://${sub}.basemaps.cartocdn.com/light_nolabels/${z}/${wx}/${ty}@2x.png" style="left:${Math.round(tx * T - x0)}px;top:${Math.round(ty * T - y0)}px" alt="" decoding="async" onerror="this.remove()">`;
+      }
+    }
+    tilesEl.innerHTML = out;
+    mapEl.style.setProperty('--px', ox + 'px');
   }
-  const mo = new IntersectionObserver(en => { if (en[0].isIntersecting) { mo.disconnect(); if (document.readyState === 'complete') drawMap(); else addEventListener('load', drawMap, { once: true }); } }, { rootMargin: '300px' });
+  let mapOn = false, mT;
+  const mo = new IntersectionObserver(en => { if (en[0].isIntersecting) { mo.disconnect(); mapOn = true; drawMap(); } }, { rootMargin: '400px' });
   mo.observe(mapEl);
+  addEventListener('resize', () => { if (!mapOn) return; clearTimeout(mT); mT = setTimeout(drawMap, 150); });
 
   /* ---------- Barra fixa no celular: some quando a reserva está na tela ---------- */
   const bar = $('[data-bar]'), aside = $('#book');
@@ -340,5 +365,6 @@
 
   const header = $('[data-header]');
   addEventListener('scroll', () => header.classList.toggle('is-scrolled', scrollY > 8), { passive: true });
-  requestAnimationFrame(() => html.classList.remove('sp-pending'));
+  const viaWind = window.VRWind && VRWind.pending();
+  requestAnimationFrame(() => { html.classList.remove('sp-pending'); if (viaWind) VRWind.arrive(); });
 })();

@@ -7,7 +7,7 @@ OUT = sys.argv[1]
 PH = r'''<script>window.VR_PREVIEW=1;(function(){var P=[['#D9C252','#8C2F0D'],['#F2C063','#655D52'],['#E9DFC2','#C9A64A'],['#8C2F0D','#F2C063'],['#655D52','#E9DFC2'],['#B98A3E','#4E3A2A']];
 function ph(t){var h=0;for(var i=0;i<t.length;i++)h=(h*31+t.charCodeAt(i))|0;var c=P[Math.abs(h)%P.length];
 return 'data:image/svg+xml;utf8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="'+c[0]+'"/><stop offset="1" stop-color="'+c[1]+'"/></linearGradient></defs><rect width="1600" height="1000" fill="url(#g)"/><circle cx="1180" cy="320" r="140" fill="#F2C063" opacity=".5"/><ellipse cx="420" cy="1120" rx="900" ry="400" fill="#4E3A2A" opacity=".28"/><ellipse cx="1320" cy="1160" rx="820" ry="380" fill="#8C2F0D" opacity=".3"/></svg>')}
-document.addEventListener('error',function(e){var t=e.target;if(t&&t.tagName==='IMG'&&(t.getAttribute('src')||'').indexOf('data:')!==0){t.removeAttribute('srcset');t.dataset.fallback='1';t.src=ph(t.alt||t.getAttribute('src')||'v')}},true)})();</script>'''
+document.addEventListener('error',function(e){var t=e.target;if(t&&t.tagName==='IMG'&&!t.closest('[data-noph]')&&(t.getAttribute('src')||'').indexOf('data:')!==0){t.removeAttribute('srcset');t.dataset.fallback='1';t.src=ph(t.alt||t.getAttribute('src')||'v')}},true)})();</script>'''
 ANALYTICS = re.compile(r'<script>\s*(// Vercel Web Analytics[^\n]*\n)?\s*window\.va=.*?</script>\s*', re.S)
 LEAF_CSS = '<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">'
 

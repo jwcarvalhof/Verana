@@ -296,7 +296,10 @@
         "host": {
           "name": "Margaret",
           "years": 8,
-          "line": "Runs the inn with her sister and bakes the maple scones every morning."
+          "line": "Runs the inn with her sister and bakes the maple scones every morning.",
+          "photo": [
+            "women/17"
+          ]
         },
         "scores": [
           5.0,
@@ -311,19 +314,28 @@
             "name": "Hannah",
             "from": "Boston",
             "date": "October 2026",
-            "text": "The hills turned red while we were there. Breakfast by the window every morning."
+            "text": "The hills turned red while we were there. Breakfast by the window every morning.",
+            "photo": [
+              "women/21"
+            ]
           },
           {
             "name": "Daniel",
             "from": "Montreal",
             "date": "September 2026",
-            "text": "A short drive to the trails and quiet enough to hear the creek at night."
+            "text": "A short drive to the trails and quiet enough to hear the creek at night.",
+            "photo": [
+              "men/67"
+            ]
           },
           {
             "name": "Priya",
             "from": "New York",
             "date": "October 2026",
-            "text": "Margaret gave us a hand drawn map of the back roads. Best part of the trip."
+            "text": "Margaret gave us a hand drawn map of the back roads. Best part of the trip.",
+            "photo": [
+              "women/24"
+            ]
           }
         ]
       },
@@ -414,7 +426,10 @@
         "host": {
           "name": "Andreas",
           "years": 6,
-          "line": "A mountain guide who grew up in the village and keeps the fire ready."
+          "line": "A mountain guide who grew up in the village and keeps the fire ready.",
+          "photo": [
+            "men/71"
+          ]
         },
         "scores": [
           4.9,
@@ -429,19 +444,28 @@
             "name": "Hannah",
             "from": "London",
             "date": "January 2026",
-            "text": "We woke up to fresh snow and never left the fireplace before noon."
+            "text": "We woke up to fresh snow and never left the fireplace before noon.",
+            "photo": [
+              "women/29"
+            ]
           },
           {
             "name": "Lukas",
             "from": "Munich",
             "date": "February 2026",
-            "text": "The Matterhorn fills the bedroom window. Ten minutes on foot to the station."
+            "text": "The Matterhorn fills the bedroom window. Ten minutes on foot to the station.",
+            "photo": [
+              "men/77"
+            ]
           },
           {
             "name": "Sofia",
             "from": "Milan",
             "date": "March 2026",
-            "text": "Warm, quiet and simple. Andreas suggested a hut for lunch that we loved."
+            "text": "Warm, quiet and simple. Andreas suggested a hut for lunch that we loved.",
+            "photo": [
+              "women/31"
+            ]
           }
         ]
       },
@@ -532,7 +556,10 @@
         "host": {
           "name": "Giulia",
           "years": 5,
-          "line": "Grows the olives on the farm and knows every cellar in the valley."
+          "line": "Grows the olives on the farm and knows every cellar in the valley.",
+          "photo": [
+            "women/36"
+          ]
         },
         "scores": [
           4.8,
@@ -547,19 +574,29 @@
             "name": "Luca and Sofia",
             "from": "Rome",
             "date": "May 2026",
-            "text": "Breakfast outside, cypress trees, and a whole afternoon with nothing planned."
+            "text": "Breakfast outside, cypress trees, and a whole afternoon with nothing planned.",
+            "photo": [
+              "men/81",
+              "women/39"
+            ]
           },
           {
             "name": "Emma",
             "from": "Amsterdam",
             "date": "April 2026",
-            "text": "Pienza is a short drive away. We came back every evening for sunset in the garden."
+            "text": "Pienza is a short drive away. We came back every evening for sunset in the garden.",
+            "photo": [
+              "women/40"
+            ]
           },
           {
             "name": "Tom",
             "from": "Dublin",
             "date": "May 2026",
-            "text": "Thick stone walls kept it cool. The pool overlooks the whole valley."
+            "text": "Thick stone walls kept it cool. The pool overlooks the whole valley.",
+            "photo": [
+              "men/85"
+            ]
           }
         ]
       },
@@ -650,7 +687,10 @@
         "host": {
           "name": "Toni",
           "years": 7,
-          "line": "A fisherman’s son who knows which cove is calm on each windy day."
+          "line": "A fisherman’s son who knows which cove is calm on each windy day.",
+          "photo": [
+            "men/91"
+          ]
         },
         "scores": [
           4.9,
@@ -665,19 +705,28 @@
             "name": "Clara",
             "from": "Barcelona",
             "date": "July 2026",
-            "text": "We swam before breakfast every day. The terrace is the best seat on the island."
+            "text": "We swam before breakfast every day. The terrace is the best seat on the island.",
+            "photo": [
+              "women/50"
+            ]
           },
           {
             "name": "Oliver",
             "from": "Berlin",
             "date": "August 2026",
-            "text": "The steps down to the cove are steep but worth it. House stays cool all day."
+            "text": "The steps down to the cove are steep but worth it. House stays cool all day.",
+            "photo": [
+              "men/3"
+            ]
           },
           {
             "name": "Inés",
             "from": "Madrid",
             "date": "June 2026",
-            "text": "Toni left fresh bread and tomatoes from his garden. Simple and perfect."
+            "text": "Toni left fresh bread and tomatoes from his garden. Simple and perfect.",
+            "photo": [
+              "women/53"
+            ]
           }
         ]
       },
@@ -768,7 +817,10 @@
         "host": {
           "name": "Lukas",
           "years": 4,
-          "line": "Ski instructor in winter, trail runner in summer, always around the valley."
+          "line": "Ski instructor in winter, trail runner in summer, always around the valley.",
+          "photo": [
+            "men/8"
+          ]
         },
         "scores": [
           4.9,
@@ -783,19 +835,28 @@
             "name": "Marco",
             "from": "Verona",
             "date": "February 2026",
-            "text": "Ski in the morning, wood stove in the afternoon. Exactly what we wanted."
+            "text": "Ski in the morning, wood stove in the afternoon. Exactly what we wanted.",
+            "photo": [
+              "men/14"
+            ]
           },
           {
             "name": "Julia",
             "from": "Vienna",
             "date": "January 2026",
-            "text": "The peaks glow pink at sunset right in front of the hut."
+            "text": "The peaks glow pink at sunset right in front of the hut.",
+            "photo": [
+              "women/44"
+            ]
           },
           {
             "name": "Sam",
             "from": "Zurich",
             "date": "March 2026",
-            "text": "Small, warm and well thought out. The sauna nearby was a nice surprise."
+            "text": "Small, warm and well thought out. The sauna nearby was a nice surprise.",
+            "photo": [
+              "men/18"
+            ]
           }
         ]
       },
@@ -886,7 +947,11 @@
         "host": {
           "name": "Anna and Paul",
           "years": 9,
-          "line": "Third generation on the lake, they keep the boats ready at dawn."
+          "line": "Third generation on the lake, they keep the boats ready at dawn.",
+          "photo": [
+            "women/65",
+            "men/27"
+          ]
         },
         "scores": [
           4.8,
@@ -901,19 +966,28 @@
             "name": "James",
             "from": "Edinburgh",
             "date": "July 2026",
-            "text": "The lake was all ours at seven in the morning. That alone was worth the trip."
+            "text": "The lake was all ours at seven in the morning. That alone was worth the trip.",
+            "photo": [
+              "men/29"
+            ]
           },
           {
             "name": "Elena",
             "from": "Bologna",
             "date": "August 2026",
-            "text": "Rowing out before the crowds, then a long breakfast. We did it every day."
+            "text": "Rowing out before the crowds, then a long breakfast. We did it every day.",
+            "photo": [
+              "women/68"
+            ]
           },
           {
             "name": "Max",
             "from": "Hamburg",
             "date": "September 2026",
-            "text": "The loop around the lake starts at the door. Rooms are simple and very warm."
+            "text": "The loop around the lake starts at the door. Rooms are simple and very warm.",
+            "photo": [
+              "men/35"
+            ]
           }
         ]
       }
@@ -1267,6 +1341,7 @@
     "notFound": "We could not find this stay.",
     "notFoundLink": "See all stays",
     "photoBy": "Photos",
-    "demo": "Stays, hosts, reviews and prices are for demonstration. The photos and places are real."
+    "demo": "Stays, hosts, reviews and prices are for demonstration. The photos and places are real.",
+    "mapCoords": "Approximate coordinates"
   }
 }

@@ -599,3 +599,23 @@ html.sheet-open{overflow:hidden}
 .sd__more-go{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--white-warm);transition:transform .5s var(--ease-out)}
 .sd__more:hover{border-color:var(--text-primary);background:var(--panel)}
 .sd__more:hover .sd__more-go{transform:translateX(4px)}
+
+/* ---------- Vento entre lugares (saltos para seções e troca de página) ---------- */
+@property --wv{syntax:'<percentage>';inherits:false;initial-value:0%}
+.gust{position:fixed;inset:0;z-index:150;pointer-events:none;visibility:hidden;overflow:hidden}
+.gust::before{content:"";position:absolute;inset:0;background:var(--canvas);opacity:0}
+.gust i{position:absolute;left:0;top:var(--t);width:var(--w);height:var(--h);border-radius:2px;background:linear-gradient(90deg,transparent,rgba(184,137,46,.6) 40%,rgba(140,47,13,.35) 70%,transparent);opacity:0;transform:translateX(105vw)}
+.wind-out .gust,.wind-in .gust{visibility:visible}
+.wind-out .gust::before{animation:veilIn .52s var(--ease-soft) forwards}
+.wind-in .gust::before{opacity:1;animation:veilOut .8s var(--ease-out) forwards}
+.wind-out .gust i{animation:streak .6s var(--dl) var(--ease-soft) forwards}
+.wind-in .gust i{animation:streak .75s var(--dl) var(--ease-out) forwards}
+@keyframes streak{0%{opacity:0;transform:translateX(105vw)}30%{opacity:1}100%{opacity:0;transform:translateX(-70vw)}}
+@keyframes veilIn{60%{opacity:.6}to{opacity:1}}
+@keyframes veilOut{to{opacity:0}}
+/* o conteúdo some da direita para a esquerda, levado pelo sopro, e volta do mesmo jeito */
+.wind-out main,.wind-out .footer{--wv:100%;-webkit-mask-image:linear-gradient(90deg,#000 0,#000 var(--wv),transparent calc(var(--wv) + 22%));mask-image:linear-gradient(90deg,#000 0,#000 var(--wv),transparent calc(var(--wv) + 22%));animation:blowOut .52s var(--ease-in) forwards}
+.wind-in main,.wind-in .footer{--wv:100%;-webkit-mask-image:linear-gradient(90deg,transparent 0,transparent var(--wv),#000 calc(var(--wv) + 22%));mask-image:linear-gradient(90deg,transparent 0,transparent var(--wv),#000 calc(var(--wv) + 22%));animation:blowIn .82s var(--ease-out) forwards}
+@keyframes blowOut{to{--wv:-22%;opacity:.15;transform:translateX(-3vw)}}
+@keyframes blowIn{from{--wv:100%;opacity:.3;transform:translateX(3vw)}to{--wv:-22%;opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.gust{display:none}.wind-out main,.wind-in main,.wind-out .footer,.wind-in .footer{animation:none;-webkit-mask-image:none;mask-image:none}}

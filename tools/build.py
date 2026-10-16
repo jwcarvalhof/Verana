@@ -12,7 +12,7 @@ import json, html, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 load = lambda n: json.load(open(os.path.join(ROOT, 'content', n), encoding='utf-8'))
 PT, EN, CREDITS = load('pt.json'), load('en.json'), load('credits.json')
-VERSION = '5'
+VERSION = '6'
 DOMAIN = 'https://SEU-DOMINIO'  # DEPLOY STEP: endereço final do Vercel, sem barra no fim
 e = lambda s: html.escape(str(s), quote=True)
 
@@ -27,7 +27,7 @@ def check_parallel(a, b, path=''):
     """PT e EN precisam ter a mesma estrutura (mesmas listas, mesmos tamanhos)."""
     if isinstance(a, dict):
         for k in a:
-            if k in b and k not in ('tags', 'rooms'):
+            if k in b and k not in ('tags', 'rooms', 'photo'):
                 check_parallel(a[k], b[k], f'{path}.{k}')
     elif isinstance(a, list):
         assert isinstance(b, list) and len(a) == len(b), f'Tamanho diferente em {path}: {len(a)} x {len(b)}'
@@ -256,7 +256,7 @@ def build():
   // idioma escolhido antes da primeira pintura: ?lang=en, escolha salva, ou idioma do navegador
   (function(){{try{{var q=new URLSearchParams(location.search).get('lang');var s=null;try{{s=localStorage.getItem('verana-lang')}}catch(_){{}}
   var l=q||s||((navigator.language||'pt').toLowerCase().indexOf('pt')===0?'pt':'en');if(l!=='pt'&&l!=='en')l='pt';
-  document.documentElement.dataset.lang=l;try{{if(!sessionStorage.getItem('verana-intro')&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('intro-on')}}catch(_){{}}
+  document.documentElement.dataset.lang=l;try{{if(!sessionStorage.getItem('verana-intro')&&sessionStorage.getItem('verana-wind')!=='1'&&!location.hash&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('intro-on')}}catch(_){{}}
   if(l==='en'){{document.documentElement.lang='en';document.documentElement.classList.add('lang-pending');setTimeout(function(){{document.documentElement.classList.remove('lang-pending')}},2500)}}}}catch(_){{}}}})();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -492,6 +492,7 @@ def build():
 </dialog>
 
 <script id="page-data" type="application/json">{data_json}</script>
+<script src="assets/js/wind.js?v={VERSION}" defer></script>
 <script src="assets/js/site.js?v={VERSION}" defer></script>
 <script>
   // Vercel Web Analytics: só carrega no site publicado (ative em Project, Analytics)
@@ -537,9 +538,9 @@ def stay_page():
   setTimeout(function(){{document.documentElement.classList.remove('sp-pending')}},3000)}})();
 </script>
 <link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://a.basemaps.cartocdn.com">
 <link rel="preload" href="/assets/fonts/ApfelGrotezk-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 <link rel="stylesheet" href="/assets/css/tokens.css?v={VERSION}">
 <link rel="stylesheet" href="/assets/css/site.css?v={VERSION}">
 <link rel="stylesheet" href="/assets/css/stay.css?v={VERSION}">
@@ -587,7 +588,7 @@ def stay_page():
 <div class="toast" role="status" aria-live="polite" data-toast></div>
 
 <script id="page-data" type="application/json">{data_json}</script>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="" defer></script>
+<script src="/assets/js/wind.js?v={VERSION}" defer></script>
 <script src="/assets/js/stay.js?v={VERSION}" defer></script>
 <script>
   window.va=window.va||function(){{(window.vaq=window.vaq||[]).push(arguments)}};
