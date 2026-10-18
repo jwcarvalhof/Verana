@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="pt-BR" data-lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VÉRANA · Case</title>
+<meta name="description" content="Case VÉRANA: ideia, processo e sistema visual de um site de hospedagens em português e inglês.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FFFEFA">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<script>
+  (function(){try{var q=new URLSearchParams(location.search).get('lang'),s=null;try{s=localStorage.getItem('verana-case-lang')}catch(_){}
+  var l=q||s||((navigator.language||'pt').toLowerCase().indexOf('pt')===0?'pt':'en');if(l!=='en')l='pt';
+  document.documentElement.dataset.lang=l;document.documentElement.lang=l==='en'?'en':'pt-BR'}catch(_){}})();
+</script>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap">
+<style>
+/* Case VÉRANA: a página do case usa a própria identidade do projeto.
+   Layout: coluna editorial larga, fotos sangradas entre os blocos de texto. */
+@font-face{font-family:"Apfel Grotezk";src:url("assets/ApfelGrotezk-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Apfel Grotezk";src:url("assets/ApfelGrotezk-Mittel.woff2") format("woff2");font-weight:500;font-display:swap}
+:root{
+  --white:#FFFEFA; --cream:#F2ECD8; --ochre:#D9C252; --gold:#F2C063; --terra:#8C2F0D; --brown:#655D52;
+  --ink:#2B2621; --panel:#FBF7EC; --line:rgba(101,93,82,.16); --line-2:rgba(101,93,82,.3);
+  --display:"Apfel Grotezk","DM Sans",ui-sans-serif,system-ui,sans-serif;
+  --body:"DM Sans",ui-sans-serif,system-ui,sans-serif;
+  --out:cubic-bezier(.16,1,.3,1); --soft:cubic-bezier(.65,0,.35,1);
+  --wrap:1200px; --g:max(20px,4vw);
+}
+*{box-sizing:border-box;margin:0}
+html{background:var(--white);color:var(--ink);-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--white);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--terra);outline-offset:3px;border-radius:6px}
+[data-lang="pt"] [data-l="en"],[data-lang="en"] [data-l="pt"]{display:none!important}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(var(--g),env(safe-area-inset-left,0px));padding-right:max(var(--g),env(safe-area-inset-right,0px))}
+.icon{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.icon--sm{width:16px;height:16px}
+.kicker{font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--brown)}
+.h2{font-family:var(--display);font-weight:400;font-size:clamp(2rem,1.3rem + 2.6vw,3.5rem);line-height:1.04;letter-spacing:-.03em;text-wrap:balance}
+.h3{font-family:var(--display);font-weight:500;font-size:20px;line-height:1.25;letter-spacing:-.01em}
+.lead{font-size:clamp(1.0625rem,1rem + .3vw,1.25rem);color:var(--brown);max-width:58ch;text-wrap:pretty}
+.sec{padding-block:clamp(72px,10vw,140px)}
+.sec__head{display:grid;gap:16px;max-width:760px;margin-bottom:clamp(36px,5vw,64px)}
+
+/* topo */
+.bar{position:sticky;top:0;z-index:20;background:rgba(255,254,250,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar .wrap{height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:24px;height:24px;fill:none;stroke:#B8892E;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.logo b{font-family:var(--display);font-weight:500;font-size:15px;letter-spacing:.2em}
+.logo small{font-size:13px;color:var(--brown);padding-left:10px;margin-left:2px;border-left:1px solid var(--line-2)}
+.bar__right{display:flex;align-items:center;gap:18px}
+.lang{display:flex;align-items:center;gap:6px;font-size:14px}
+.lang button{border:0;background:none;padding:6px 3px;opacity:.6}
+.lang button[aria-pressed="true"]{opacity:1;font-weight:500;text-decoration:underline;text-underline-offset:5px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 20px;border-radius:12px;border:1px solid transparent;font-weight:500;font-size:15px;text-decoration:none;white-space:nowrap;transition:background-color .2s,border-color .2s}
+.btn--primary{background:var(--terra);color:var(--white)}
+.btn--primary:hover{background:#73260A}
+.btn--light{background:rgba(255,254,250,.94);color:var(--ink)}
+.btn--ghost{border-color:var(--line-2);background:transparent}
+.btn--ghost:hover{border-color:var(--ink)}
+.btn--sm{min-height:38px;padding:0 14px;font-size:14px}
+
+/* abertura */
+.hero{padding:12px}
+.hero__frame{position:relative;height:min(84svh,820px);min-height:520px;border-radius:28px;overflow:hidden;background:#3a3228;color:var(--white);isolation:isolate}
+.hero__frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transform:scale(1.04);animation:settle 2.4s var(--out) forwards}
+@keyframes settle{to{transform:none}}
+.hero__frame::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(24,18,12,.72) 0%,rgba(24,18,12,.2) 45%,rgba(24,18,12,.05) 70%),linear-gradient(90deg,rgba(24,18,12,.35),rgba(24,18,12,0) 60%)}
+.hero__copy{position:absolute;left:0;right:0;bottom:clamp(28px,5vw,64px)}
+.hero__copy .wrap{display:grid;gap:18px}
+.hero__title{font-family:var(--display);font-weight:400;font-size:clamp(4rem,2rem + 10vw,11rem);line-height:.86;letter-spacing:-.05em;opacity:0;transform:translateY(14px);animation:rise 1.2s .15s var(--out) forwards}
+.hero__line{font-family:var(--display);font-size:clamp(1.25rem,1rem + 1.2vw,2rem);line-height:1.2;max-width:24ch;opacity:0;transform:translateY(14px);animation:rise 1.2s .3s var(--out) forwards}
+.hero .kicker{color:rgba(255,254,250,.86);opacity:0;animation:rise 1s var(--out) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.hero__place{position:absolute;right:clamp(20px,3vw,40px);top:clamp(20px,3vw,32px);display:inline-flex;align-items:center;gap:6px;font-size:13px;color:rgba(255,254,250,.88)}
+.meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;padding-block:40px 8px}
+.meta dt{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--brown);margin-bottom:6px}
+.meta dd{margin:0;font-size:16px}
+.meta a{color:var(--terra);font-weight:500;text-underline-offset:4px}
+
+/* ideia */
+.idea{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,6vw,96px);align-items:start}
+.idea__quote{font-family:var(--display);font-weight:400;font-size:clamp(1.75rem,1.2rem + 2vw,3rem);line-height:1.12;letter-spacing:-.025em;text-wrap:balance}
+.idea__quote em{font-style:normal;color:var(--terra)}
+.idea__text{display:grid;gap:18px;color:var(--brown);padding-top:8px}
+
+/* princípios */
+.rules{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.rule{display:grid;gap:12px;align-content:start;padding:28px 24px;border-radius:20px;background:var(--panel);border:1px solid var(--line)}
+.rule__i{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--cream);color:var(--terra);margin-bottom:6px}
+.rule p{font-size:15px;color:var(--brown)}
+
+/* caminho */
+.path{display:grid;gap:0;border-top:1px solid var(--line-2)}
+.step{display:grid;grid-template-columns:72px minmax(0,4fr) minmax(0,7fr);gap:clamp(16px,3vw,40px);padding:28px 0;border-bottom:1px solid var(--line-2);align-items:baseline}
+.step__n{font-family:var(--display);font-size:15px;color:var(--terra);font-variant-numeric:tabular-nums}
+.step p{color:var(--brown)}
+
+/* telas: composições na própria identidade */
+.band{background:var(--cream)}
+.screens{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
+.shot{grid-column:span 12;display:grid;gap:14px}
+.shot--half{grid-column:span 6}
+.shot figcaption{display:flex;justify-content:space-between;gap:16px;font-size:14px;color:var(--brown)}
+.shot figcaption b{font-weight:500;color:var(--ink)}
+.frame{position:relative;border-radius:22px;overflow:hidden;background:#3a3228;box-shadow:0 30px 80px -40px rgba(60,40,18,.5);isolation:isolate}
+.frame>img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+
+/* tela 1: início */
+.f-home{aspect-ratio:16/9;color:var(--white)}
+.f-home::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(28,21,14,.62) 0%,rgba(28,21,14,.3) 40%,rgba(28,21,14,0) 70%)}
+.f-home .nav{position:absolute;left:4%;right:4%;top:5%;display:flex;justify-content:space-between;align-items:center;font-size:clamp(9px,1vw,13px)}
+.f-home .nav span{display:inline-flex;gap:clamp(8px,1.6vw,22px);opacity:.9}
+.f-home .copy{position:absolute;left:5%;top:30%;width:44%;display:grid;gap:clamp(6px,1vw,14px)}
+.f-home .copy .k{font-size:clamp(7px,.75vw,11px);letter-spacing:.16em;text-transform:uppercase;opacity:.85}
+.f-home .copy h3{font-family:var(--display);font-weight:400;font-size:clamp(1.25rem,.6rem + 2.6vw,3.25rem);line-height:1.02;letter-spacing:-.03em}
+.f-home .book{position:absolute;right:5%;top:26%;width:30%;background:var(--white);color:var(--ink);border-radius:clamp(10px,1.4vw,18px);padding:clamp(10px,1.6vw,22px);display:grid;gap:clamp(5px,.7vw,10px);box-shadow:0 20px 50px -20px rgba(0,0,0,.4)}
+.f-home .book b{font-family:var(--display);font-weight:400;font-size:clamp(10px,1.2vw,17px)}
+.fld{border:1px solid var(--line-2);border-radius:clamp(6px,.8vw,11px);padding:clamp(5px,.7vw,10px) clamp(7px,.9vw,12px);font-size:clamp(7px,.75vw,11px);color:var(--brown);display:grid;gap:1px}
+.fld i{font-style:normal;color:var(--ink);font-size:clamp(6px,.65vw,10px)}
+.fld-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(4px,.6vw,8px)}
+.f-home .go{background:var(--terra);color:var(--white);border-radius:clamp(6px,.8vw,11px);padding:clamp(6px,.8vw,11px);font-size:clamp(7px,.8vw,12px);text-align:center;font-weight:500}
+
+/* tela 2: momento */
+.f-moment{aspect-ratio:16/9;color:var(--white)}
+.f-moment::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(20,14,8,.6) 0%,rgba(20,14,8,0) 55%)}
+.f-moment .t{position:absolute;right:6%;bottom:12%;width:46%;display:grid;gap:8px;text-shadow:0 2px 20px rgba(20,14,8,.35)}
+.f-moment .t h3{font-family:var(--display);font-weight:400;font-size:clamp(1.25rem,.5rem + 2.6vw,3rem);line-height:1.04;letter-spacing:-.03em}
+.f-moment .t small{font-size:clamp(8px,.85vw,13px);opacity:.85;display:inline-flex;gap:6px;align-items:center}
+.f-moment .ticks{position:absolute;left:6%;bottom:7%;display:flex;gap:6px;width:30%}
+.f-moment .ticks i{flex:1;height:2px;border-radius:2px;background:rgba(255,254,250,.3)}
+.f-moment .ticks i:first-child{background:var(--gold)}
+
+/* tela 3: estação */
+.f-season{aspect-ratio:4/3;color:var(--white)}
+.f-season::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(24,18,12,.35) 0%,rgba(24,18,12,0) 30%,rgba(24,18,12,0) 50%,rgba(24,18,12,.66) 100%)}
+.f-season h3{position:absolute;left:7%;top:7%;font-family:var(--display);font-weight:400;font-size:clamp(2rem,1rem + 3vw,4rem);letter-spacing:-.03em;line-height:1}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:7px 14px 7px 10px;border-radius:999px;background:rgba(24,18,12,.32);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:13px;color:var(--white);font-variant-numeric:tabular-nums}
+.f-season .pill{position:absolute;right:6%;top:8%}
+.f-season p{position:absolute;left:7%;right:7%;bottom:8%;font-size:clamp(13px,1.2vw,16px)}
+
+/* tela 4: card de hospedagem */
+.f-stay{aspect-ratio:4/3;background:var(--white);display:grid;place-items:center;padding:6%}
+.card{width:min(100%,340px);background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:10px;box-shadow:0 18px 40px -24px rgba(60,40,18,.35)}
+.card__m{position:relative;aspect-ratio:3/2;border-radius:12px;overflow:hidden;background:var(--cream)}
+.card__m img{width:100%;height:100%;object-fit:cover}
+.heart{position:absolute;top:10px;right:10px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:rgba(255,254,250,.9);color:var(--terra)}
+.heart .icon{fill:currentColor;width:17px;height:17px}
+.card__b{display:grid;gap:8px;padding:14px 6px 6px}
+.card__h{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.card__h b{font-family:var(--display);font-weight:500;font-size:18px;line-height:1.2}
+.card__h span{display:inline-flex;align-items:center;gap:4px;font-size:13px;white-space:nowrap}
+.star{color:#B8892E;fill:currentColor;stroke:none;width:14px;height:14px}
+.card__w{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--brown)}
+.card__f{display:flex;justify-content:space-between;align-items:center;padding-top:10px;font-size:14px;color:var(--brown)}
+.card__f strong{color:var(--ink);font-weight:500;font-size:17px}
+
+/* tela 5: painel com o lugar desfocado */
+.f-sheet{aspect-ratio:16/9;display:grid;place-items:center}
+.f-sheet>img.bg{filter:blur(28px) saturate(1.1);transform:scale(1.15)}
+.f-sheet::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(80% 70% at 50% 40%,rgba(30,22,15,.2),rgba(30,22,15,.55))}
+.panel{width:76%;background:var(--white);border-radius:clamp(12px,1.6vw,22px);overflow:hidden;box-shadow:0 40px 100px -30px rgba(20,14,8,.6)}
+.panel__top{display:flex;align-items:center;justify-content:center;gap:clamp(6px,1vw,12px);padding:clamp(8px,1.1vw,14px);border-bottom:1px solid var(--line);font-size:clamp(8px,.85vw,12px);color:var(--brown)}
+.panel__top .dot{width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.5}
+.panel__top .now{color:var(--ink);display:inline-flex;align-items:center;gap:6px}
+.panel__top .now .dot{background:var(--terra);opacity:1;box-shadow:0 0 0 3px rgba(140,47,13,.14)}
+.panel__top .ln{width:clamp(16px,3vw,40px);height:1px;background:var(--line-2)}
+.panel__top .off{display:inline-flex;align-items:center;gap:6px;opacity:.55}
+.panel__body{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(10px,1.6vw,22px);padding:clamp(10px,1.6vw,22px)}
+.panel__body .ph{aspect-ratio:16/10;border-radius:clamp(8px,1vw,14px);overflow:hidden}
+.panel__body .ph img{width:100%;height:100%;object-fit:cover}
+.panel__info{display:grid;gap:clamp(5px,.7vw,10px);align-content:start}
+.panel__info b{font-family:var(--display);font-weight:400;font-size:clamp(13px,1.6vw,24px);line-height:1.1;letter-spacing:-.02em}
+.panel__info p{font-size:clamp(8px,.85vw,12px);color:var(--brown);line-height:1.5}
+.panel__more{margin-top:4px;display:flex;justify-content:space-between;align-items:center;gap:8px;border:1px solid var(--line-2);border-radius:clamp(8px,1vw,14px);padding:clamp(6px,.9vw,12px);font-size:clamp(8px,.85vw,12px);font-weight:500}
+.panel__more span:last-child{width:clamp(18px,2vw,28px);height:clamp(18px,2vw,28px);border-radius:50%;display:grid;place-items:center;background:var(--terra);color:var(--white)}
+.panel__more .icon{width:12px;height:12px}
+
+/* tela 6: mapa fixo tingido */
+.f-map{aspect-ratio:16/9;background:#EDE5CC}
+.f-map .tiles{position:absolute;inset:0;overflow:hidden;filter:grayscale(1) contrast(1.05) brightness(1.12)}
+.f-map .tiles img{position:absolute;width:256px;height:256px;max-width:none}
+.f-map .tiles img.r{mix-blend-mode:multiply;opacity:.75}
+.f-map .tint{position:absolute;inset:0;mix-blend-mode:multiply;background:radial-gradient(70% 90% at 62% 50%,#F4ECD6 0%,#EADBB4 55%,#D9C79A 100%)}
+.f-map .area{position:absolute;left:62%;top:50%;width:24%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;border:1.5px dashed rgba(140,47,13,.55);background:radial-gradient(circle,rgba(242,192,99,.42),rgba(242,192,99,0) 72%)}
+.pin{position:absolute;left:62%;top:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--terra);box-shadow:0 0 0 6px rgba(255,254,250,.85),0 10px 24px -6px rgba(60,20,4,.55)}
+.pin svg{width:22px;height:22px;fill:none;stroke:var(--white);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.f-map .arr{position:absolute;left:4%;bottom:7%;width:38%;max-width:300px;background:rgba(255,254,250,.94);border-radius:16px;padding:clamp(10px,1.4vw,18px);display:grid;gap:6px;box-shadow:0 20px 40px -20px rgba(40,24,8,.35)}
+.f-map .arr p{font-size:clamp(9px,.95vw,13px);color:var(--brown);line-height:1.45}
+.f-map .co{position:absolute;right:4%;bottom:9%;display:grid;justify-items:end;padding:8px 12px;border-radius:12px;background:rgba(255,254,250,.86);font-size:clamp(9px,1vw,14px);font-variant-numeric:tabular-nums}
+.f-map .co small{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--brown)}
+.f-map .attr{position:absolute;right:4%;bottom:3%;font-size:9px;color:var(--white);text-shadow:0 1px 2px rgba(0,0,0,.5);opacity:.85}
+
+/* sistema visual */
+.ds{display:grid;gap:clamp(56px,7vw,96px)}
+.ds__block{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(24px,5vw,72px);align-items:start}
+.ds__label{display:grid;gap:10px;position:sticky;top:96px}
+.ds__label p{font-size:15px;color:var(--brown)}
+.swatches{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.sw{border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+.sw__c{height:120px}
+.sw__t{padding:14px 16px;display:grid;gap:2px;background:var(--white)}
+.sw__t b{font-weight:500;font-size:15px}
+.sw__t code{font-family:var(--body);font-size:13px;color:var(--brown);font-variant-numeric:tabular-nums}
+.sw__t span{font-size:13px;color:var(--brown)}
+.ratio{display:flex;height:14px;border-radius:999px;overflow:hidden;margin-top:18px;border:1px solid var(--line)}
+.ratio i{display:block}
+.ratio-note{font-size:13px;color:var(--brown);margin-top:8px}
+.type{display:grid;gap:18px}
+.type__face{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;padding:24px;border-radius:20px;background:var(--panel);border:1px solid var(--line)}
+.type__aa{font-size:clamp(4rem,3rem + 3vw,6.5rem);line-height:.9;letter-spacing:-.04em}
+.type__face p{font-size:15px;color:var(--brown)}
+.type__face b{display:block;font-weight:500;font-size:17px;color:var(--ink);margin-bottom:4px}
+.scale{display:grid;border-top:1px solid var(--line)}
+.scale div{display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line);min-width:0}
+.scale small{font-size:12px;color:var(--brown);font-variant-numeric:tabular-nums}
+.scale span{min-width:0;overflow-wrap:anywhere}
+.s-hero{font-family:var(--display);font-size:clamp(2rem,1.4rem + 2.4vw,3.5rem);line-height:1.02;letter-spacing:-.03em}
+.s-sec{font-family:var(--display);font-size:clamp(1.5rem,1.2rem + 1.2vw,2.25rem);line-height:1.1;letter-spacing:-.02em}
+.s-card{font-family:var(--display);font-weight:500;font-size:20px}
+.s-body{font-size:16px}
+.s-kick{font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--brown)}
+.shapes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.shape{display:grid;gap:10px;font-size:14px;color:var(--brown)}
+.shape i{display:block;height:96px;background:var(--cream);border:1px solid var(--line-2)}
+.kit{display:grid;gap:22px;padding:28px;border-radius:24px;background:var(--panel);border:1px solid var(--line)}
+.kit__row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.kit__row+.kit__row{padding-top:22px;border-top:1px solid var(--line)}
+.chip{min-height:38px;padding:0 16px;border-radius:999px;border:1px solid var(--line-2);background:transparent;font-size:14px;display:inline-flex;align-items:center}
+.chip.on{background:var(--ink);border-color:var(--ink);color:var(--white)}
+.field{display:flex;align-items:center;gap:12px;min-height:58px;padding:10px 14px;border:1px solid var(--line-2);border-radius:12px;background:var(--white);min-width:240px;flex:1}
+.field div{display:grid;font-size:12px;color:var(--brown)}
+.field div span{font-size:15px;color:var(--ink)}
+.steps{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--brown);flex-wrap:wrap}
+.steps .ln{width:36px;height:1px;background:var(--line-2);position:relative;overflow:hidden}
+.steps .ln.on::after{content:"";position:absolute;inset:0;background:var(--ink)}
+.steps .s{display:inline-flex;align-items:center;gap:8px;opacity:.5}
+.steps .s i{width:6px;height:6px;border-radius:50%;background:currentColor}
+.steps .s.done{opacity:.85}
+.steps .s.now{opacity:1;color:var(--ink)}
+.steps .s.now i{background:var(--terra);box-shadow:0 0 0 4px rgba(140,47,13,.12)}
+.avs{display:inline-flex;align-items:center}
+.av{width:46px;height:46px;border-radius:50%;overflow:hidden;background:var(--cream);box-shadow:0 0 0 2px var(--panel)}
+.av img{width:100%;height:100%;object-fit:cover}
+.av+.av{margin-left:-14px}
+.climate{display:inline-flex;align-items:center;gap:6px;padding:7px 14px 7px 10px;border-radius:999px;background:var(--ink);color:var(--white);font-size:13px}
+.icons{display:flex;flex-wrap:wrap;gap:10px}
+.icons span{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--white);border:1px solid var(--line);color:var(--ink)}
+.motion{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.curve{display:grid;gap:12px;padding:22px;border-radius:20px;background:var(--panel);border:1px solid var(--line)}
+.curve svg{width:100%;height:auto}
+.curve p{font-size:14px;color:var(--brown)}
+.curve b{font-weight:500;color:var(--ink)}
+.demo{grid-column:1/-1;display:flex;align-items:center;gap:22px;flex-wrap:wrap;padding:22px;border-radius:20px;background:var(--cream)}
+.demo__stage{position:relative;flex:1;min-width:240px;height:120px;border-radius:14px;background:var(--white);overflow:hidden;display:grid;place-items:center}
+.demo__card{width:62%;height:64px;border-radius:12px;background:var(--panel);border:1px solid var(--line-2);display:flex;align-items:center;gap:12px;padding:0 14px}
+.demo__card i{width:36px;height:36px;border-radius:8px;background:var(--gold)}
+.demo__card span{height:8px;flex:1;border-radius:4px;background:var(--cream)}
+.demo__stage.play .demo__card{animation:demoIn 1.1s var(--out) both}
+@keyframes demoIn{from{opacity:0;transform:translateY(14px)}}
+.write{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.write div{padding:22px;border-radius:20px;border:1px solid var(--line)}
+.write .no{background:transparent}
+.write .yes{background:var(--panel)}
+.write small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--brown);margin-bottom:10px}
+.write .no p{color:var(--brown);text-decoration:line-through;text-decoration-color:rgba(140,47,13,.5)}
+.write .yes p{font-family:var(--display);font-size:20px;line-height:1.3}
+
+/* números e aprendizados */
+.nums{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px;border-top:1px solid var(--line-2);padding-top:32px}
+.num b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(2.5rem,1.8rem + 2.4vw,4.25rem);line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.num span{font-size:14px;color:var(--brown)}
+.learn{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.learn div{display:grid;gap:10px;padding-top:20px;border-top:2px solid var(--terra)}
+.learn p{color:var(--brown);font-size:15px}
+
+/* fim */
+.end{padding:12px}
+.end__frame{position:relative;min-height:min(70svh,640px);border-radius:28px;overflow:hidden;color:var(--white);display:flex;align-items:flex-end;isolation:isolate;background:#3a3228}
+.end__frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.end__frame::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(24,18,12,.66),rgba(24,18,12,.1) 60%)}
+.end__copy{display:grid;gap:18px;justify-items:start;padding-block:clamp(40px,7vw,80px)}
+.end__copy h2{font-family:var(--display);font-weight:400;font-size:clamp(2.25rem,1.4rem + 3vw,4.25rem);line-height:1.04;letter-spacing:-.03em;max-width:16ch}
+.foot{padding-block:36px 48px;display:grid;gap:10px;font-size:13px;color:var(--brown)}
+.foot a{color:var(--ink)}
+
+/* entradas suaves: tudo já visível; só desliza um pouco ao chegar */
+.rv{transition:opacity 1s var(--out),transform 1.1s var(--out)}
+.js .rv:not(.in){opacity:.001;transform:translateY(14px)}
+
+@media (max-width:1024px){
+  .rules{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .meta{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nums{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ds__block{grid-template-columns:1fr}
+  .ds__label{position:static}
+}
+@media (max-width:760px){
+  .bar .logo small{display:none}
+  .idea,.learn,.motion,.write{grid-template-columns:1fr}
+  .step{grid-template-columns:44px minmax(0,1fr)}
+  .step p{grid-column:2}
+  .shot--half{grid-column:span 12}
+  .swatches{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .shapes{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nums{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .type__face{grid-template-columns:1fr;gap:12px}
+  .scale div{grid-template-columns:1fr;gap:4px}
+  .f-home,.f-sheet,.f-map,.f-moment{aspect-ratio:4/5}
+  .f-home .copy{width:84%;top:16%}
+  .f-home .book{left:5%;right:5%;width:auto;top:auto;bottom:6%}
+  .f-moment .t{left:6%;width:auto}
+  .panel{width:88%}
+  .panel__body{grid-template-columns:1fr}
+  .f-map .arr{width:auto;right:4%;max-width:none}
+  .f-map .co{bottom:auto;top:5%}
+  .field{min-width:0}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-delay:0s!important;transition-duration:.001ms!important}
+  .js .rv:not(.in){opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+<symbol id="i-guests" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19.5c.6-3.4 3-5.3 6-5.3s5.4 1.9 6 5.3"/><circle cx="17" cy="9" r="2.4"/><path d="M16.5 14.3c2.4.2 4 1.8 4.5 4.6"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+<symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+<symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 18.5V6.5M3 14h18v4.5M21 14v-2.5a3 3 0 0 0-3-3h-7V14"/><circle cx="7" cy="11" r="1.8"/></symbol>
+<symbol id="i-fireplace" viewBox="0 0 24 24"><path d="M12 21c-3.3 0-5.5-2.2-5.5-5.1 0-3.2 2.6-4.7 3.4-7.9 1.7 1.3 2.1 3 2 4.4 1-.6 1.7-1.7 1.9-2.9 2 1.6 3.7 3.8 3.7 6.4 0 2.9-2.2 5.1-5.5 5.1z"/></symbol>
+<symbol id="i-garden" viewBox="0 0 24 24"><path d="M12 21v-8M12 13c0-3.5 2.5-6 6-6 0 3.5-2.5 6-6 6zM12 15c0-2.8-2-4.8-4.8-4.8 0 2.8 2 4.8 4.8 4.8z"/></symbol>
+<symbol id="i-coffee" viewBox="0 0 24 24"><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9zM16 10.5h1.5a2.5 2.5 0 0 1 0 5H16M8 3.5c-.6.9.6 1.6 0 2.5M12 3.5c-.6.9.6 1.6 0 2.5"/></symbol>
+<symbol id="i-wave" viewBox="0 0 24 24"><path d="M3 9c1.5 0 1.5-1 3-1s1.5 1 3 1 1.5-1 3-1 1.5 1 3 1 1.5-1 3-1 1.5 1 3 1M3 14c1.5 0 1.5-1 3-1s1.5 1 3 1 1.5-1 3-1 1.5 1 3 1 1.5-1 3-1 1.5 1 3 1M3 19c1.5 0 1.5-1 3-1s1.5 1 3 1 1.5-1 3-1 1.5 1 3 1 1.5-1 3-1 1.5 1 3 1"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.8l2.5 5.1 5.6.8-4 3.9.9 5.6-5-2.6-5 2.6.9-5.6-4-3.9 5.6-.8z"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
+<symbol id="i-mountain" viewBox="0 0 24 24"><path d="M3 19l6.5-10 4 6 2.5-3.5L21 19z"/><path d="M8 11.3l1.5 1.2 1.5-1"/></symbol>
+<symbol id="i-bath" viewBox="0 0 24 24"><path d="M3 12h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5v-2zM6 12V6a2 2 0 0 1 3.7-1M7 19l-1 2M17 19l1 2"/></symbol>
+<symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r=".8"/></symbol>
+<symbol id="i-car" viewBox="0 0 24 24"><path d="M4 16v-4l2-5h12l2 5v4M4 16h16v2.5M4 16v2.5M3 12h18"/><circle cx="7.5" cy="14" r=".6"/><circle cx="16.5" cy="14" r=".6"/></symbol>
+<symbol id="i-paw" viewBox="0 0 24 24"><circle cx="7" cy="10" r="1.8"/><circle cx="17" cy="10" r="1.8"/><circle cx="10" cy="6.3" r="1.8"/><circle cx="14" cy="6.3" r="1.8"/><path d="M12 12.5c-2.8 0-5 3.2-5 5.2 0 1.7 1.5 2.3 2.7 1.8 1-.4 1.6-.6 2.3-.6s1.3.2 2.3.6c1.2.5 2.7-.1 2.7-1.8 0-2-2.2-5.2-5-5.2z"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol>
+<symbol id="i-pool" viewBox="0 0 24 24"><path d="M3 17c1.5 0 1.5 1 3 1s1.5-1 3-1 1.5 1 3 1 1.5-1 3-1 1.5 1 3 1 1.5-1 3-1M8 14V5a2 2 0 0 1 4 0M16 14V5a2 2 0 0 0-4 0M8 8h8M8 11.5h8"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+<symbol id="i-share" viewBox="0 0 24 24"><path d="M12 15V4M8 8l4-4 4 4"/><path d="M5 12v6.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V12"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol>
+<symbol id="i-thermo" viewBox="0 0 24 24"><path d="M10 13.5V5a2 2 0 0 1 4 0v8.5a4 4 0 1 1-4 0z"/><path d="M12 9v7"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 32 32"><path d="M16 28V12"/><path d="M16 22c-6.5-1-9.5-6-9-13 6 .6 9 4.6 9 10"/><path d="M16 18c5.5-.8 8.5-5 8-11-5 .5-8 3.8-8 8.6"/></symbol>
+</svg>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="VÉRANA"><svg aria-hidden="true"><use href="#i-leaf"/></svg><b>VÉRANA</b><small>Case</small></a>
+    <div class="bar__right">
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" data-set="pt" aria-pressed="true" lang="pt-BR">PT</button><span aria-hidden="true">·</span><button type="button" data-set="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+      <a class="btn btn--primary btn--sm" href="https://verana-jet.vercel.app/" target="_blank" rel="noopener" data-site><span data-l="pt">Ver o site</span><span data-l="en">See the site</span><svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero__frame">
+    <img data-img="hero" alt="" fetchpriority="high">
+    <p class="hero__place"><svg class="icon icon--sm" aria-hidden="true"><use href="#i-pin"/></svg><span data-l="pt">Gonçalves, Serra da Mantiqueira, MG</span><span data-l="en">Corvara, Dolomites, Italy</span></p>
+    <div class="hero__copy"><div class="wrap">
+      <p class="kicker"><span data-l="pt">Case de produto · 2026</span><span data-l="en">Product case · 2026</span></p>
+      <h1 class="hero__title">VÉRANA</h1>
+      <p class="hero__line"><span data-l="pt">Um site de hospedagens que começa pelo lugar.</span><span data-l="en">A stay discovery site that starts with the place.</span></p>
+    </div></div>
+  </div>
+  <div class="wrap">
+    <dl class="meta">
+      <div><dt><span data-l="pt">Meu papel</span><span data-l="en">My role</span></dt><dd><span data-l="pt">Conceito, direção de arte e design de interface</span><span data-l="en">Concept, art direction and interface design</span></dd></div>
+      <div><dt><span data-l="pt">Ano</span><span data-l="en">Year</span></dt><dd>2026</dd></div>
+      <div><dt><span data-l="pt">O que entreguei</span><span data-l="en">What I delivered</span></dt><dd><span data-l="pt">Marca, site em português e inglês, página de cada hospedagem e sistema visual</span><span data-l="en">Brand, a site in Portuguese and English, a page for each stay and a visual system</span></dd></div>
+      <div><dt>Site</dt><dd><a href="https://verana-jet.vercel.app/" target="_blank" rel="noopener" data-site>verana-jet.vercel.app</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sec wrap" aria-labelledby="idea-t">
+  <div class="idea">
+    <div class="rv">
+      <p class="kicker" id="idea-t"><span data-l="pt">A ideia</span><span data-l="en">The idea</span></p>
+      <p class="idea__quote" style="margin-top:18px"><span data-l="pt">Quem procura onde ficar não está atrás de um quarto. Está atrás de <em>um lugar onde o tempo passa diferente</em>.</span><span data-l="en">People looking for a place to stay are not after a room. They are after <em>a place where time moves differently</em>.</span></p>
+    </div>
+    <div class="idea__text rv">
+      <p><span data-l="pt">VÉRANA é uma marca conceitual que criei para descobrir hospedagens. O ponto de partida foi um briefing curto: uma experiência aconchegante e humana.</span><span data-l="en">VÉRANA is a concept brand I created for discovering places to stay. It started from a short brief: a cozy, human experience.</span></p>
+      <p><span data-l="pt">Os sites de reserva costumam abrir com filtros, preços e listas. Eu quis inverter a ordem: primeiro o lugar, a luz e o clima. Depois, com calma, os detalhes para decidir.</span><span data-l="en">Booking sites usually open with filters, prices and lists. I wanted to flip that order: the place first, its light and its weather. Then, calmly, the details needed to decide.</span></p>
+      <p><span data-l="pt">O resultado é um site em duas línguas, com seis hospedagens em cada uma, uma reserva em três passos curtos e uma página completa para cada lugar.</span><span data-l="en">The result is a site in two languages, with six stays in each, a booking in three short steps and a full page for every place.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec wrap" style="padding-top:0" aria-labelledby="rules-t">
+  <div class="sec__head rv">
+    <p class="kicker"><span data-l="pt">O que guiou as decisões</span><span data-l="en">What guided the decisions</span></p>
+    <h2 class="h2" id="rules-t"><span data-l="pt">Quatro regras que levei do começo ao fim.</span><span data-l="en">Four rules I kept from start to finish.</span></h2>
+  </div>
+  <div class="rules">
+    <article class="rule rv"><span class="rule__i"><svg class="icon" aria-hidden="true"><use href="#i-mountain"/></svg></span><h3 class="h3"><span data-l="pt">O lugar vem primeiro</span><span data-l="en">The place comes first</span></h3><p><span data-l="pt">Fotos ocupam a tela inteira. O texto é curto e passa por cima, sem disputar atenção.</span><span data-l="en">Photos fill the screen. Text is short and sits on top without competing.</span></p></article>
+    <article class="rule rv"><span class="rule__i"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span><h3 class="h3"><span data-l="pt">Só lugares reais</span><span data-l="en">Only real places</span></h3><p><span data-l="pt">Cada foto mostra o lugar escrito na legenda. Nenhuma imagem genérica ou inventada.</span><span data-l="en">Every photo shows the place named in its caption. No generic or made up images.</span></p></article>
+    <article class="rule rv"><span class="rule__i"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span><h3 class="h3"><span data-l="pt">Ritmo calmo</span><span data-l="en">A calm pace</span></h3><p><span data-l="pt">Tudo aparece devagar e com suavidade, mas sem fazer ninguém esperar.</span><span data-l="en">Everything appears slowly and softly, without making anyone wait.</span></p></article>
+    <article class="rule rv"><span class="rule__i"><svg class="icon" aria-hidden="true"><use href="#i-wave"/></svg></span><h3 class="h3"><span data-l="pt">Cada idioma, seu mapa</span><span data-l="en">Each language, its own map</span></h3><p><span data-l="pt">Em português, só destinos no Brasil. Em inglês, só destinos fora dele.</span><span data-l="en">In Portuguese, only destinations in Brazil. In English, only places outside it.</span></p></article>
+  </div>
+</section>
+
+<section class="sec band" aria-labelledby="screens-t">
+  <div class="wrap">
+    <div class="sec__head rv">
+      <p class="kicker"><span data-l="pt">As telas</span><span data-l="en">The screens</span></p>
+      <h2 class="h2" id="screens-t"><span data-l="pt">Um percurso que vai do sonho à reserva.</span><span data-l="en">A path that goes from daydream to booking.</span></h2>
+      <p class="lead"><span data-l="pt">Cada tela foi pensada para uma pergunta de quem está planejando a viagem: para onde ir, quando ir, onde ficar e como chegar.</span><span data-l="en">Each screen answers one question a traveler has: where to go, when to go, where to stay and how to get there.</span></p>
+    </div>
+    <div class="screens">
+      <figure class="shot rv">
+        <div class="frame f-home">
+          <img class="bg" data-img="hero" alt="">
+          <div class="nav"><b style="display:inline-flex;gap:8px;align-items:center;letter-spacing:.18em;font-weight:500"><svg class="icon icon--sm" aria-hidden="true" style="stroke:var(--gold)"><use href="#i-leaf"/></svg>VÉRANA</b><span><span data-l="pt">Explorar destinos</span><span data-l="en">Explore destinations</span><span data-l="pt">Estações</span><span data-l="en">Seasons</span><span>PT · EN</span></span></div>
+          <div class="copy"><span class="k"><span data-l="pt">Encontre seu próximo destino</span><span data-l="en">Find your next destination</span></span><h3><span data-l="pt">Tem dias que pedem uma mudança de cenário.</span><span data-l="en">Some days ask for a change of scenery.</span></h3></div>
+          <div class="book"><b><span data-l="pt">Para onde você quer ir?</span><span data-l="en">Where would you like to go?</span></b>
+            <div class="fld"><i><span data-l="pt">Destino</span><span data-l="en">Destination</span></i><span data-l="pt">Cidade, região ou tipo de lugar</span><span data-l="en">City, region or kind of place</span></div>
+            <div class="fld-row"><div class="fld"><i><span data-l="pt">Entrada</span><span data-l="en">Check in</span></i><span data-l="pt">Adicionar data</span><span data-l="en">Add date</span></div><div class="fld"><i><span data-l="pt">Saída</span><span data-l="en">Check out</span></i><span data-l="pt">Adicionar data</span><span data-l="en">Add date</span></div></div>
+            <div class="go"><span data-l="pt">Encontrar hospedagem</span><span data-l="en">Find a place to stay</span></div>
+          </div>
+        </div>
+        <figcaption><span><b><span data-l="pt">Início.</span><span data-l="en">Home.</span></b> <span data-l="pt">A foto é o cenário e a busca fica ao alcance, sem tomar a tela.</span><span data-l="en">The photo sets the scene and search is within reach without taking over.</span></span></figcaption>
+      </figure>
+
+      <figure class="shot rv">
+        <div class="frame f-moment">
+          <img class="bg" data-img="moment" alt="">
+          <div class="t"><h3><span data-l="pt">Imagine acordar sem olhar as horas.</span><span data-l="en">Imagine waking up without checking the time.</span></h3><small><svg class="icon icon--sm" aria-hidden="true"><use href="#i-pin"/></svg><span data-l="pt">Praia do Forte, Bahia</span><span data-l="en">Toblach, South Tyrol, Italy</span></small></div>
+          <div class="ticks"><i></i><i></i><i></i><i></i></div>
+        </div>
+        <figcaption><span><b><span data-l="pt">Um dia no seu tempo.</span><span data-l="en">A day at your own pace.</span></b> <span data-l="pt">Quatro momentos de um mesmo dia. Ao rolar, a foto troca e a frase entra pela direita.</span><span data-l="en">Four moments of a single day. As you scroll, the photo changes and the line slides in from the right.</span></span></figcaption>
+      </figure>
+
+      <figure class="shot shot--half rv">
+        <div class="frame f-season">
+          <img class="bg" data-img="season" alt="">
+          <h3><span data-l="pt">Inverno</span><span data-l="en">Winter</span></h3>
+          <span class="pill"><svg class="icon icon--sm" aria-hidden="true"><use href="#i-thermo"/></svg><span data-l="pt">julho em Urubici: 1 a 15°C</span><span data-l="en">January in Zermatt: −9 to −1°C</span></span>
+          <p><span data-l="pt">Para quando você quer frio de verdade, lareira e silêncio.</span><span data-l="en">For when you want real cold, a fireplace and quiet.</span></p>
+        </div>
+        <figcaption><span><b><span data-l="pt">Estações.</span><span data-l="en">Seasons.</span></b> <span data-l="pt">Escolher pela época, com o clima do mês para saber o que levar.</span><span data-l="en">Choose by season, with the month's weather so you know what to pack.</span></span></figcaption>
+      </figure>
+
+      <figure class="shot shot--half rv">
+        <div class="frame f-stay">
+          <article class="card">
+            <div class="card__m"><img data-img="stay" alt=""><span class="heart"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></span></div>
+            <div class="card__b">
+              <div class="card__h"><b><span data-l="pt">Cabana entre as montanhas</span><span data-l="en">Cabin in the mountains</span></b><span><svg class="star" aria-hidden="true"><use href="#i-star"/></svg><span data-l="pt">4,9</span><span data-l="en">4.9</span></span></div>
+              <p class="card__w"><svg class="icon icon--sm" aria-hidden="true"><use href="#i-pin"/></svg><span data-l="pt">Urubici, Serra Catarinense, SC</span><span data-l="en">Zermatt, Switzerland</span></p>
+              <div class="card__f"><span><strong><span data-l="pt">R$ 480</span><span data-l="en">US$ 290</span></strong> / <span data-l="pt">diária</span><span data-l="en">night</span></span><span class="btn btn--ghost btn--sm"><span data-l="pt">Ver hospedagem</span><span data-l="en">View stay</span></span></div>
+            </div>
+          </article>
+        </div>
+        <figcaption><span><b><span data-l="pt">Hospedagens.</span><span data-l="en">Stays.</span></b> <span data-l="pt">O essencial em um card, com o coração para guardar nos favoritos.</span><span data-l="en">The essentials in one card, with a heart to save favorites.</span></span></figcaption>
+      </figure>
+
+      <figure class="shot rv">
+        <div class="frame f-sheet">
+          <img class="bg" data-img="stay" alt="">
+          <div class="panel">
+            <div class="panel__top"><span class="now"><span class="dot"></span><span data-l="pt">Hospedagem</span><span data-l="en">The stay</span></span><span class="ln"></span><span class="off"><span class="dot"></span><span data-l="pt">Seus dados</span><span data-l="en">Your details</span></span><span class="ln"></span><span class="off"><span class="dot"></span><span data-l="pt">Confirmado</span><span data-l="en">Confirmed</span></span></div>
+            <div class="panel__body">
+              <div class="ph"><img data-img="stay2" alt=""></div>
+              <div class="panel__info">
+                <b><span data-l="pt">Cabana entre as montanhas</span><span data-l="en">Cabin in the mountains</span></b>
+                <p><span data-l="pt">Uma cabana pequena entre araucárias, feita para os dias frios da Serra Catarinense.</span><span data-l="en">An old larch chalet on a quiet slope above the village. The Matterhorn sits right in the window.</span></p>
+                <div class="panel__more"><span><span data-l="pt">Ver tudo sobre a hospedagem</span><span data-l="en">See everything about this stay</span></span><span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <figcaption><span><b><span data-l="pt">Reserva.</span><span data-l="en">Booking.</span></b> <span data-l="pt">O site fica desfocado ao fundo com a foto do próprio lugar. Três palavras no topo mostram em que passo a pessoa está.</span><span data-l="en">The site blurs in the background using the place's own photo. Three words at the top show which step you are on.</span></span></figcaption>
+      </figure>
+
+      <figure class="shot rv">
+        <div class="frame f-map" data-map>
+          <div class="tiles" data-tiles></div>
+          <div class="tint"></div>
+          <span class="area"></span>
+          <span class="pin"><svg aria-hidden="true"><use href="#i-leaf"/></svg></span>
+          <div class="arr"><p class="kicker"><span data-l="pt">Como chegar</span><span data-l="en">Getting there</span></p><p><span data-l="pt">A cerca de 2h30 de Florianópolis, de carro, pela Serra do Corvo Branco ou pela BR 282.</span><span data-l="en">Zermatt is car free: take the train from Täsch, or from Zurich in about 3h30.</span></p></div>
+          <p class="co"><small><span data-l="pt">Coordenadas aproximadas</span><span data-l="en">Approximate coordinates</span></small><span data-l="pt">28°01′ S · 49°36′ O</span><span data-l="en">46°01′ N · 7°45′ E</span></p>
+          <p class="attr">Esri, USGS, NOAA, OpenStreetMap</p>
+        </div>
+        <figcaption><span><b><span data-l="pt">Onde você vai estar.</span><span data-l="en">Where you will be.</span></b> <span data-l="pt">Em vez de um mapa comum, uma imagem fixa do relevo tingida com as cores da marca. Mostra a região, não o endereço.</span><span data-l="en">Instead of a generic map, a still image of the terrain tinted in the brand colors. It shows the area, not the address.</span></span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec wrap" aria-labelledby="path-t">
+  <div class="sec__head rv">
+    <p class="kicker"><span data-l="pt">Como chegou aqui</span><span data-l="en">How it came together</span></p>
+    <h2 class="h2" id="path-t"><span data-l="pt">Cada versão deixou o lugar mais presente.</span><span data-l="en">Each version made the place more present.</span></h2>
+  </div>
+  <ol class="path">
+    <li class="step rv"><span class="step__n">01</span><h3 class="h3"><span data-l="pt">Referências e primeira versão</span><span data-l="en">References and a first version</span></h3><p><span data-l="pt">Juntei as referências do briefing e montei uma primeira página com busca, estações e hospedagens.</span><span data-l="en">I gathered the brief's references and built a first page with search, seasons and stays.</span></p></li>
+    <li class="step rv"><span class="step__n">02</span><h3 class="h3"><span data-l="pt">A foto ganhou a tela</span><span data-l="en">The photo took the screen</span></h3><p><span data-l="pt">Na revisão, o texto ocupava quase tudo e a foto ficava pequena. Inverti: a foto ocupa a tela e o texto passa por cima.</span><span data-l="en">In review, text took up most of the space and the photo was small. I flipped it: the photo fills the screen and text sits on top.</span></p></li>
+    <li class="step rv"><span class="step__n">03</span><h3 class="h3"><span data-l="pt">Um site, dois idiomas</span><span data-l="en">One site, two languages</span></h3><p><span data-l="pt">Português e inglês viraram uma página só. Ao trocar o idioma, mudam textos, fotos, destinos e moeda.</span><span data-l="en">Portuguese and English became a single page. Switching language changes the text, photos, destinations and currency.</span></p></li>
+    <li class="step rv"><span class="step__n">04</span><h3 class="h3"><span data-l="pt">Reservar sem sair do lugar</span><span data-l="en">Booking without leaving the place</span></h3><p><span data-l="pt">Ao abrir uma hospedagem, a foto do lugar fica desfocada ao fundo e a reserva acontece em três passos curtos.</span><span data-l="en">When you open a stay, its photo blurs in the background and booking happens in three short steps.</span></p></li>
+    <li class="step rv"><span class="step__n">05</span><h3 class="h3"><span data-l="pt">Resumo e página completa</span><span data-l="en">A summary and a full page</span></h3><p><span data-l="pt">O painel virou um resumo. Quem quer saber mais abre a página completa, com quartos, avaliações, mapa e opções parecidas.</span><span data-l="en">The panel became a summary. Anyone who wants more opens the full page, with rooms, reviews, a map and similar places.</span></p></li>
+    <li class="step rv"><span class="step__n">06</span><h3 class="h3"><span data-l="pt">Os detalhes</span><span data-l="en">The details</span></h3><p><span data-l="pt">Movimentos mais suaves, o clima do mês nas estações, favoritos, fotos nos perfis e uma transição de vento para ir direto a uma seção.</span><span data-l="en">Softer motion, monthly weather on the seasons, favorites, profile photos and a wind transition to jump straight to a section.</span></p></li>
+  </ol>
+</section>
+
+<section class="sec band" aria-labelledby="ds-t">
+  <div class="wrap">
+    <div class="sec__head rv">
+      <p class="kicker"><span data-l="pt">Sistema visual</span><span data-l="en">Visual system</span></p>
+      <h2 class="h2" id="ds-t"><span data-l="pt">Cores de fim de tarde, letras macias e movimento sem pressa.</span><span data-l="en">Late afternoon colors, soft letters and unhurried motion.</span></h2>
+    </div>
+    <div class="ds">
+
+      <div class="ds__block">
+        <div class="ds__label rv"><h3 class="h3"><span data-l="pt">Cores</span><span data-l="en">Color</span></h3><p><span data-l="pt">Tiradas da luz de outono: o branco quente como base, o creme nas superfícies, o ocre e o dourado como brilho e a terracota só para o que é ação.</span><span data-l="en">Taken from autumn light: warm white as the base, cream for surfaces, ochre and gold as glow, and terracotta only for actions.</span></p></div>
+        <div class="rv">
+          <div class="swatches">
+            <div class="sw"><div class="sw__c" style="background:#FFFEFA;border-bottom:1px solid var(--line)"></div><div class="sw__t"><b><span data-l="pt">Branco quente</span><span data-l="en">Warm white</span></b><code>#FFFEFA</code><span><span data-l="pt">Fundo</span><span data-l="en">Background</span></span></div></div>
+            <div class="sw"><div class="sw__c" style="background:#F2ECD8"></div><div class="sw__t"><b><span data-l="pt">Creme</span><span data-l="en">Cream</span></b><code>#F2ECD8</code><span><span data-l="pt">Superfícies</span><span data-l="en">Surfaces</span></span></div></div>
+            <div class="sw"><div class="sw__c" style="background:#D9C252"></div><div class="sw__t"><b><span data-l="pt">Amarelo outono</span><span data-l="en">Autumn yellow</span></b><code>#D9C252</code><span><span data-l="pt">Luz e detalhe</span><span data-l="en">Light and detail</span></span></div></div>
+            <div class="sw"><div class="sw__c" style="background:#F2C063"></div><div class="sw__t"><b><span data-l="pt">Dourado suave</span><span data-l="en">Soft gold</span></b><code>#F2C063</code><span><span data-l="pt">Brilho</span><span data-l="en">Glow</span></span></div></div>
+            <div class="sw"><div class="sw__c" style="background:#8C2F0D"></div><div class="sw__t"><b><span data-l="pt">Terracota</span><span data-l="en">Terracotta</span></b><code>#8C2F0D</code><span><span data-l="pt">Ação principal</span><span data-l="en">Main action</span></span></div></div>
+            <div class="sw"><div class="sw__c" style="background:#655D52"></div><div class="sw__t"><b><span data-l="pt">Marrom acinzentado</span><span data-l="en">Grey brown</span></b><code>#655D52</code><span><span data-l="pt">Texto de apoio</span><span data-l="en">Supporting text</span></span></div></div>
+          </div>
+          <div class="ratio" aria-hidden="true"><i style="flex:58;background:#FFFEFA"></i><i style="flex:20;background:#F2ECD8"></i><i style="flex:8;background:#655D52"></i><i style="flex:6;background:#D9C252"></i><i style="flex:4;background:#F2C063"></i><i style="flex:4;background:#8C2F0D"></i></div>
+          <p class="ratio-note"><span data-l="pt">Como as cores dividem a tela: muito branco e creme, pouca terracota.</span><span data-l="en">How the colors share the screen: lots of white and cream, very little terracotta.</span></p>
+        </div>
+      </div>
+
+      <div class="ds__block">
+        <div class="ds__label rv"><h3 class="h3"><span data-l="pt">Tipografia</span><span data-l="en">Type</span></h3><p><span data-l="pt">Apfel Grotezk nos títulos, com curvas arredondadas que lembram letra pintada à mão. DM Sans nos textos, para ler com conforto.</span><span data-l="en">Apfel Grotezk for headings, with rounded curves that recall hand painted lettering. DM Sans for text, for comfortable reading.</span></p></div>
+        <div class="type rv">
+          <div class="type__face"><span class="type__aa" style="font-family:var(--display)">Aa</span><p><b>Apfel Grotezk</b><span data-l="pt">Títulos, nomes de lugares e números grandes.</span><span data-l="en">Headings, place names and large numbers.</span></p></div>
+          <div class="type__face"><span class="type__aa" style="font-family:var(--body)">Aa</span><p><b>DM Sans</b><span data-l="pt">Textos, botões, campos e legendas.</span><span data-l="en">Text, buttons, fields and captions.</span></p></div>
+          <div class="scale">
+            <div><small><span data-l="pt">Abertura</span><span data-l="en">Opening</span></small><span class="s-hero"><span data-l="pt">Tem dias que pedem uma mudança de cenário.</span><span data-l="en">Some days ask for a change of scenery.</span></span></div>
+            <div><small><span data-l="pt">Seção</span><span data-l="en">Section</span></small><span class="s-sec"><span data-l="pt">Antes de escolher, vale saber.</span><span data-l="en">Good to know before you choose.</span></span></div>
+            <div><small>Card</small><span class="s-card"><span data-l="pt">Chalé com vista para o vale</span><span data-l="en">Hut above the valley</span></span></div>
+            <div><small><span data-l="pt">Texto</span><span data-l="en">Body</span></small><span class="s-body"><span data-l="pt">Um chalé de madeira na encosta, com deck para o vale e silêncio de verdade.</span><span data-l="en">A small wooden hut on the meadows above Corvara, with the peaks all around.</span></span></div>
+            <div><small><span data-l="pt">Etiqueta</span><span data-l="en">Label</span></small><span class="s-kick"><span data-l="pt">Estações do ano</span><span data-l="en">Seasons of the year</span></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ds__block">
+        <div class="ds__label rv"><h3 class="h3"><span data-l="pt">Formas</span><span data-l="en">Shapes</span></h3><p><span data-l="pt">Cantos arredondados em quatro tamanhos. Quanto maior a peça, mais suave a curva, como uma janela.</span><span data-l="en">Rounded corners in four sizes. The bigger the piece, the softer the curve, like a window.</span></p></div>
+        <div class="shapes rv">
+          <div class="shape"><i style="border-radius:24px"></i><span><span data-l="pt">Fotos · 24</span><span data-l="en">Photos · 24</span></span></div>
+          <div class="shape"><i style="border-radius:16px"></i><span>Cards · 16</span></div>
+          <div class="shape"><i style="border-radius:12px"></i><span><span data-l="pt">Campos · 12</span><span data-l="en">Fields · 12</span></span></div>
+          <div class="shape"><i style="border-radius:999px;height:48px;align-self:center"></i><span><span data-l="pt">Filtros · redondo</span><span data-l="en">Filters · round</span></span></div>
+        </div>
+      </div>
+
+      <div class="ds__block">
+        <div class="ds__label rv"><h3 class="h3"><span data-l="pt">Peças</span><span data-l="en">Pieces</span></h3><p><span data-l="pt">Poucas peças, repetidas com cuidado em todas as telas.</span><span data-l="en">A small set of pieces, repeated with care on every screen.</span></p></div>
+        <div class="kit rv">
+          <div class="kit__row">
+            <span class="btn btn--primary"><span data-l="pt">Encontrar hospedagem</span><span data-l="en">Find a place to stay</span><svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+            <span class="btn btn--ghost"><span data-l="pt">Ver hospedagem</span><span data-l="en">View stay</span></span>
+            <span class="btn btn--light" style="border:1px solid var(--line)"><span data-l="pt">Encontrar meu refúgio</span><span data-l="en">Find my retreat</span></span>
+          </div>
+          <div class="kit__row">
+            <span class="chip"><span data-l="pt">Todos</span><span data-l="en">All</span></span>
+            <span class="chip on"><span data-l="pt">Serra</span><span data-l="en">Mountains</span></span>
+            <span class="chip"><span data-l="pt">Praia</span><span data-l="en">Beach</span></span>
+            <span class="chip"><span data-l="pt">Campo</span><span data-l="en">Countryside</span></span>
+            <span class="chip"><span data-l="pt">Dias frios</span><span data-l="en">Cold days</span></span>
+          </div>
+          <div class="kit__row">
+            <div class="field"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><div><span data-l="pt">Destino</span><span data-l="en">Destination</span><span><span data-l="pt">Urubici</span><span data-l="en">Zermatt</span></span></div></div>
+            <div class="field"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg><div><span data-l="pt">Entrada</span><span data-l="en">Check in</span><span><span data-l="pt">10 de jul. de 2026</span><span data-l="en">Jan 10, 2026</span></span></div></div>
+          </div>
+          <div class="kit__row">
+            <div class="steps"><span class="s done"><i></i><span data-l="pt">Hospedagem</span><span data-l="en">The stay</span></span><span class="ln on"></span><span class="s now"><i></i><span data-l="pt">Seus dados</span><span data-l="en">Your details</span></span><span class="ln"></span><span class="s"><i></i><span data-l="pt">Confirmado</span><span data-l="en">Confirmed</span></span></div>
+          </div>
+          <div class="kit__row">
+            <span class="avs"><span class="av"><img data-face="women/44" alt=""></span><span class="av"><img data-face="men/32" alt=""></span></span>
+            <span class="climate"><svg class="icon icon--sm" aria-hidden="true"><use href="#i-thermo"/></svg><span data-l="pt">julho em Urubici: 1 a 15°C</span><span data-l="en">January in Zermatt: −9 to −1°C</span></span>
+            <span class="pin" style="position:relative;left:auto;top:auto;transform:none;margin-left:8px"><svg aria-hidden="true"><use href="#i-leaf"/></svg></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ds__block">
+        <div class="ds__label rv"><h3 class="h3"><span data-l="pt">Ícones</span><span data-l="en">Icons</span></h3><p><span data-l="pt">Traço fino e pontas arredondadas, do mesmo peso das letras.</span><span data-l="en">Thin strokes and rounded ends, matching the weight of the type.</span></p></div>
+        <div class="icons rv"><span title="mountain"><svg class="icon" aria-hidden="true"><use href="#i-mountain"/></svg></span><span title="wave"><svg class="icon" aria-hidden="true"><use href="#i-wave"/></svg></span><span title="fireplace"><svg class="icon" aria-hidden="true"><use href="#i-fireplace"/></svg></span><span title="coffee"><svg class="icon" aria-hidden="true"><use href="#i-coffee"/></svg></span><span title="bed"><svg class="icon" aria-hidden="true"><use href="#i-bed"/></svg></span><span title="guests"><svg class="icon" aria-hidden="true"><use href="#i-guests"/></svg></span><span title="garden"><svg class="icon" aria-hidden="true"><use href="#i-garden"/></svg></span><span title="pool"><svg class="icon" aria-hidden="true"><use href="#i-pool"/></svg></span><span title="bath"><svg class="icon" aria-hidden="true"><use href="#i-bath"/></svg></span><span title="thermo"><svg class="icon" aria-hidden="true"><use href="#i-thermo"/></svg></span><span title="calendar"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg></span><span title="pin"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span><span title="heart"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></span><span title="star"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg></span><span title="leaf"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span></div>
+      </div>
+
+      <div class="ds__block">
+        <div class="ds__label rv"><h3 class="h3"><span data-l="pt">Movimento</span><span data-l="en">Motion</span></h3><p><span data-l="pt">Entrar devagar, sair rápido. As coisas chegam decididas e pousam com calma. Quando vão embora, não ficam enrolando.</span><span data-l="en">Arrive slowly, leave quickly. Things arrive with intent and settle gently. When they leave, they do not linger.</span></p></div>
+        <div class="motion rv">
+          <div class="curve">
+            <svg viewBox="0 0 220 140" role="img" aria-label="Curva de entrada"><rect x="10" y="10" width="200" height="120" rx="10" fill="#FFFEFA" stroke="rgba(101,93,82,.16)"/><path d="M20 120 C 55 0, 80 20, 200 20" fill="none" stroke="#8C2F0D" stroke-width="2.5" stroke-linecap="round"/><circle cx="200" cy="20" r="4" fill="#8C2F0D"/></svg>
+            <p><b><span data-l="pt">Aparecer · 1 segundo</span><span data-l="en">Appear · 1 second</span></b><br><span data-l="pt">Começa rápido e desacelera até parar.</span><span data-l="en">Starts fast and slows to a stop.</span></p>
+          </div>
+          <div class="curve">
+            <svg viewBox="0 0 220 140" role="img" aria-label="Curva de saída"><rect x="10" y="10" width="200" height="120" rx="10" fill="#FFFEFA" stroke="rgba(101,93,82,.16)"/><path d="M20 120 C 140 120, 200 70, 200 20" fill="none" stroke="#D9C252" stroke-width="2.5" stroke-linecap="round"/><circle cx="200" cy="20" r="4" fill="#B8892E"/></svg>
+            <p><b><span data-l="pt">Sair · 0,3 segundo</span><span data-l="en">Leave · 0.3 second</span></b><br><span data-l="pt">Curta, para não fazer ninguém esperar.</span><span data-l="en">Short, so nobody waits.</span></p>
+          </div>
+          <div class="demo">
+            <div class="demo__stage" data-demo><div class="demo__card"><i></i><span></span></div></div>
+            <button class="btn btn--ghost" type="button" data-replay><span data-l="pt">Ver de novo</span><span data-l="en">Play again</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="ds__block">
+        <div class="ds__label rv"><h3 class="h3"><span data-l="pt">Escrita</span><span data-l="en">Writing</span></h3><p><span data-l="pt">Frases curtas, sem travessões e sem clichês de turismo. O lugar é descrito pelo que ele tem.</span><span data-l="en">Short sentences, no dashes and no travel clichés. A place is described by what it has.</span></p></div>
+        <div class="write rv">
+          <div class="no"><small><span data-l="pt">Evitei</span><span data-l="en">I avoided</span></small><p><span data-l="pt">Seu refúgio perfeito espera por você em um paraíso inesquecível.</span><span data-l="en">Your perfect getaway awaits in an unforgettable paradise.</span></p></div>
+          <div class="yes"><small><span data-l="pt">Usei</span><span data-l="en">I used</span></small><p><span data-l="pt">Uma cabana pequena entre araucárias. A lareira fica acesa à noite.</span><span data-l="en">An old larch chalet on a quiet slope. The Matterhorn sits right in the window.</span></p></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="sec wrap" aria-labelledby="nums-t">
+  <div class="sec__head rv">
+    <p class="kicker"><span data-l="pt">Em números</span><span data-l="en">In numbers</span></p>
+    <h2 class="h2" id="nums-t"><span data-l="pt">Pequeno no tamanho, cuidadoso nos detalhes.</span><span data-l="en">Small in size, careful in detail.</span></h2>
+  </div>
+  <div class="nums rv">
+    <div class="num"><b>2</b><span><span data-l="pt">idiomas, cada um com seus destinos</span><span data-l="en">languages, each with its own destinations</span></span></div>
+    <div class="num"><b>12</b><span><span data-l="pt">hospedagens, seis por idioma</span><span data-l="en">stays, six per language</span></span></div>
+    <div class="num"><b>10</b><span><span data-l="pt">destinos para explorar</span><span data-l="en">destinations to explore</span></span></div>
+    <div class="num"><b>52</b><span><span data-l="pt">fotos de lugares reais</span><span data-l="en">photos of real places</span></span></div>
+    <div class="num"><b>3</b><span><span data-l="pt">passos para reservar</span><span data-l="en">steps to book</span></span></div>
+  </div>
+</section>
+
+<section class="sec wrap" style="padding-top:0" aria-labelledby="learn-t">
+  <div class="sec__head rv">
+    <p class="kicker"><span data-l="pt">O que aprendi</span><span data-l="en">What I learned</span></p>
+    <h2 class="h2" id="learn-t"><span data-l="pt">Começar pela foto mudou todo o resto.</span><span data-l="en">Starting with the photo changed everything else.</span></h2>
+  </div>
+  <div class="learn">
+    <div class="rv"><h3 class="h3"><span data-l="pt">Menos texto pede texto melhor</span><span data-l="en">Less text asks for better text</span></h3><p><span data-l="pt">Com a foto em primeiro plano, cada frase precisou dizer mais com menos palavras.</span><span data-l="en">With the photo up front, every line had to say more with fewer words.</span></p></div>
+    <div class="rv"><h3 class="h3"><span data-l="pt">Idioma também é lugar</span><span data-l="en">Language is also a place</span></h3><p><span data-l="pt">Traduzir não bastava. Quem lê em inglês vê outros destinos, outra moeda e outras fotos.</span><span data-l="en">Translating was not enough. English readers see other destinations, another currency and other photos.</span></p></div>
+    <div class="rv"><h3 class="h3"><span data-l="pt">Movimento bom passa despercebido</span><span data-l="en">Good motion goes unnoticed</span></h3><p><span data-l="pt">As animações ficaram mais suaves a cada revisão, até parecerem parte natural da página.</span><span data-l="en">The animations got softer with each review, until they felt like a natural part of the page.</span></p></div>
+  </div>
+</section>
+
+<section class="end">
+  <div class="end__frame">
+    <img data-img="closing" alt="">
+    <div class="wrap end__copy">
+      <h2><span data-l="pt">Lugares reais, no seu tempo.</span><span data-l="en">Real places, at your own pace.</span></h2>
+      <a class="btn btn--light" href="https://verana-jet.vercel.app/" target="_blank" rel="noopener" data-site><span data-l="pt">Ver o site</span><span data-l="en">See the site</span><svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap foot">
+  <p><span data-l="pt">VÉRANA é uma marca conceitual. Hospedagens, anfitriões, avaliações e preços são demonstrativos.</span><span data-l="en">VÉRANA is a concept brand. Stays, hosts, reviews and prices are for demonstration.</span></p>
+  <p><span data-l="pt">Fotos de lugares reais via Unsplash e Wikimedia Commons, com os créditos completos no site. Fotos de perfil genéricas. Mapa: Esri, USGS, NOAA e OpenStreetMap. Fontes: Apfel Grotezk e DM Sans.</span><span data-l="en">Real place photos via Unsplash and Wikimedia Commons, with full credits on the site. Generic profile photos. Map: Esri, USGS, NOAA and OpenStreetMap. Typefaces: Apfel Grotezk and DM Sans.</span></p>
+  <p>© 2026 VÉRANA</p>
+</footer>
+
+<script>
+(() => {
+  const html = document.documentElement;
+  html.classList.add('js');
+  const U = (id, w) => `https://images.unsplash.com/${id}?auto=format&fit=crop&q=75&w=${w}`;
+  const C = (path, w) => { const n = path.split('/').pop(); return `https://upload.wikimedia.org/wikipedia/commons/thumb/${path}/${w}px-${n}`; };
+  // cada idioma mostra os seus lugares: Brasil em português, fora do Brasil em inglês
+  const IMG = {
+    hero:    { pt: ['photo-1682347812423-45911f8e6ef1', 'Vale verde da Serra da Mantiqueira, em Gonçalves'], en: ['photo-1600762516498-761775b86af7', 'Green valley below the peaks around Corvara, Dolomites'] },
+    moment:  { pt: ['photo-1542300058-849d3b08aa0f', 'Nascer do sol sobre a praia em Praia do Forte'], en: ['photo-1716551615753-f4bca8229b29', 'Morning light over the meadows of Toblach, South Tyrol'] },
+    season:  { pt: ['photo-1788543632159-d128c452d10a', 'Paisagem de inverno em Urubici'], en: ['photo-1622513027693-3ef7c21b3dae', 'Snowy Zermatt with the Matterhorn'] },
+    stay:    { pt: ['photo-1666886505087-fc64ec7a8be6', 'Cabana de madeira entre araucárias em Urubici'], en: ['photo-1769029299328-31fa8472ef67', 'Wooden cabin in the mountains of Zermatt'] },
+    stay2:   { pt: ['photo-1666886505087-fc64ec7a8be6', ''], en: ['photo-1769029299328-31fa8472ef67', ''] },
+    closing: { pt: ['c:b/b6/Vale_do_Quilombo_-_Serra_Ga%C3%BAcha.jpg', 'Vale do Quilombo, na Serra Gaúcha'], en: ['photo-1603657289433-e4983d2114b9', 'Terraced vineyards in the Douro Valley'] }
+  };
+  const W = { hero: 2000, moment: 1600, season: 1200, stay: 900, stay2: 900, closing: 2000 };
+  const MAP = { pt: [-28.015, -49.592], en: [46.020, 7.749] };
+  let LANG = html.dataset.lang === 'en' ? 'en' : 'pt';
+
+  function paintImages() {
+    document.querySelectorAll('[data-img]').forEach(img => {
+      const [src, alt] = IMG[img.dataset.img][LANG];
+      const url = src.startsWith('c:') ? C(src.slice(2), 1920) : U(src, W[img.dataset.img]);
+      if (img.getAttribute('src') !== url) { img.src = url; }
+      img.alt = alt; img.loading = img.dataset.img === 'hero' && img.closest('.hero') ? 'eager' : 'lazy'; img.decoding = 'async';
+    });
+    document.querySelectorAll('[data-face]').forEach(img => { img.src = `https://randomuser.me/api/portraits/${img.dataset.face}.jpg`; img.loading = 'lazy'; });
+  }
+
+  // mapa fixo: quadros de base clara e relevo ao redor do ponto, tingidos pela paleta
+  const mapEl = document.querySelector('[data-map]'), tiles = document.querySelector('[data-tiles]');
+  const ESRI = 'https://server.arcgisonline.com/ArcGIS/rest/services';
+  function drawMap() {
+    const Wd = mapEl.clientWidth, H = mapEl.clientHeight; if (!Wd || !H) return;
+    const z = Wd > 720 ? 11 : 10, n = 2 ** z, T = 256, [lat, lon] = MAP[LANG], r = lat * Math.PI / 180;
+    const cx = (lon + 180) / 360 * n * T, cy = (1 - Math.log(Math.tan(r) + 1 / Math.cos(r)) / Math.PI) / 2 * n * T;
+    const ox = Wd * .62, x0 = cx - ox, y0 = cy - H / 2;
+    let out = '';
+    for (let tx = Math.floor(x0 / T); tx <= Math.floor((x0 + Wd) / T); tx++) for (let ty = Math.floor(y0 / T); ty <= Math.floor((y0 + H) / T); ty++) {
+      const wx = ((tx % n) + n) % n, pos = `left:${Math.round(tx * T - x0)}px;top:${Math.round(ty * T - y0)}px`;
+      out += `<img src="${ESRI}/Canvas/World_Light_Gray_Base/MapServer/tile/${z}/${ty}/${wx}" style="${pos}" alt="" loading="lazy" onerror="this.remove()"><img class="r" src="${ESRI}/World_Shaded_Relief/MapServer/tile/${z}/${ty}/${wx}" style="${pos}" alt="" loading="lazy" onerror="this.remove()">`;
+    }
+    tiles.innerHTML = out;
+  }
+
+  function setLang(l, save) {
+    LANG = l; html.dataset.lang = l; html.lang = l === 'en' ? 'en' : 'pt-BR';
+    document.querySelectorAll('[data-set]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.set === l)));
+    document.querySelectorAll('[data-site]').forEach(a => { a.href = 'https://verana-jet.vercel.app/' + (l === 'en' ? '?lang=en' : ''); });
+    paintImages(); drawMap();
+    if (save) {
+      try { localStorage.setItem('verana-case-lang', l); } catch (_) {}
+      const u = new URL(location.href); if (l === 'en') u.searchParams.set('lang', 'en'); else u.searchParams.delete('lang');
+      history.replaceState(null, '', u.pathname + u.search + u.hash);
+    }
+  }
+  document.querySelectorAll('[data-set]').forEach(b => b.addEventListener('click', () => { if (b.dataset.set !== LANG) setLang(b.dataset.set, true); }));
+  let rT; addEventListener('resize', () => { clearTimeout(rT); rT = setTimeout(drawMap, 150); });
+
+  // entradas suaves
+  const io = new IntersectionObserver(es => {
+    let k = 0;
+    es.filter(e => e.isIntersecting).forEach(e => { e.target.style.transitionDelay = (Math.min(k++, 4) * 80) + 'ms'; e.target.classList.add('in'); io.unobserve(e.target); });
+  }, { rootMargin: '0px 0px -6% 0px', threshold: .06 });
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+  setTimeout(() => document.querySelectorAll('.rv').forEach(el => el.classList.add('in')), 4000); // nada fica escondido
+
+  // demonstração do movimento
+  const stage = document.querySelector('[data-demo]');
+  const play = () => { stage.classList.remove('play'); void stage.offsetWidth; stage.classList.add('play'); };
+  document.querySelector('[data-replay]').addEventListener('click', play);
+  new IntersectionObserver((es, o) => { if (es[0].isIntersecting) { play(); o.disconnect(); } }, { threshold: .6 }).observe(stage);
+
+  setLang(LANG, false);
+})();
+</script>
+</body>
+</html>
