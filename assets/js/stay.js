@@ -86,7 +86,6 @@
     const ns = people(name), ps = photos && photos.length ? photos : ns.map(() => '');
     return `<span class="av ${cls}${ps.length > 1 ? ' av--duo' : ''}" aria-hidden="true" data-noph>${ps.map((p, k) => `<span class="av__one"><b>${initial(ns[k] || ns[0])}</b>${p ? `<img src="https://randomuser.me/api/portraits/${esc(p)}.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()">` : ''}</span>`).join('')}</span>`;
   };
-  const dms = (v, pos, neg) => { const a = Math.abs(v), d = Math.floor(a), m = Math.round((a - d) * 60); return `${d}°${String(m === 60 ? 0 : m).padStart(2, '0')}′ ${v >= 0 ? pos : neg}`; };
   const reviewsN = fmt(P.reviewsCount, { n: s.reviews });
   const FKEY = 'verana-favs';
   const favs = new Set((() => { try { return JSON.parse(localStorage.getItem(FKEY) || '[]'); } catch (_) { return []; } })());
@@ -138,6 +137,7 @@
       <section class="sp__sec reveal"><h2 class="sp__h">${esc(P.amenities)}</h2>
         <ul class="sp__amen">${s.amenities.map(([k, t]) => `<li>${icon(k)}<span>${esc(t)}</span></li>`).join('')}</ul>
       </section>
+      <section class="sp__sec reveal"><h2 class="sp__h">${esc(P.arrive)}</h2><p class="sp__arrive">${icon('car')}<span>${esc(s.arrive)}</span></p></section>
     </div>
 
     <aside class="sp__aside" id="book">
@@ -170,27 +170,6 @@
       <figcaption>${av(r.name, r.photo, 'av--review')}<span><strong>${esc(r.name)}</strong><small>${esc(r.from)} · ${esc(r.date)}</small></span></figcaption>
       <blockquote><p>${esc(r.text)}</p></blockquote></figure>`).join('')}</div>
     <p class="sp__note">${esc(fmt(P.reviewsShowing, { n: s.reviews }))} · ${esc(P.reviewsNote)}</p>
-  </section>
-
-  <section class="container sp__sec2" aria-labelledby="map-title">
-    <div class="sp__sechead reveal"><h2 class="sp__h2" id="map-title">${esc(P.map)}</h2><p class="sp__sub">${icon('pin', 'icon icon--sm')}${esc(s.where)}</p></div>
-    <div class="mapbox reveal">
-      <div class="mapbox__map smap" data-map data-noph role="img" aria-label="${esc(P.map)}: ${esc(s.where)}">
-        <div class="smap__tiles" data-tiles></div>
-        <div class="smap__tint"></div>
-        <span class="smap__area"></span>
-        <span class="mpin"><span>${icon('leaf')}</span></span>
-        <span class="smap__north" aria-hidden="true">N</span>
-        <p class="smap__coords"><small>${esc(P.mapCoords)}</small><span>${dms(s.geo[0], 'N', 'S')} · ${dms(s.geo[1], LANG === 'en' ? 'E' : 'L', LANG === 'en' ? 'W' : 'O')}</span></p>
-        <p class="smap__attr">Esri, USGS, NOAA, OpenStreetMap</p>
-      </div>
-      <div class="mapbox__card">
-        <p class="kicker">${esc(P.arrive)}</p>
-        <p>${esc(s.arrive)}</p>
-        <a class="link-arrow" href="https://www.openstreetmap.org/?mlat=${s.geo[0]}&mlon=${s.geo[1]}#map=12/${s.geo[0]}/${s.geo[1]}" target="_blank" rel="noopener">${esc(P.mapOpen)}${icon('arrow', 'icon icon--sm')}</a>
-      </div>
-    </div>
-    <p class="sp__note">${esc(P.mapNote)}</p>
   </section>
 
   <section class="container sp__sec2 sp__hk">
@@ -321,35 +300,6 @@
     const card = $('.sim__item', track); const step = card ? card.offsetWidth + 20 : 300;
     track.scrollBy({ left: +b.dataset.sim * step * 2, behavior: calm() ? 'auto' : 'smooth' });
   }));
-
-  /* ---------- Mapa: uma imagem fixa da região, nas cores da marca ----------
-     Monta os quadros da Esri (base clara e relevo, sem nomes) ao redor do ponto e tinge com a paleta. */
-  const ESRI = 'https://server.arcgisonline.com/ArcGIS/rest/services';
-  const mapEl = $('[data-map]'), tilesEl = $('[data-tiles]');
-  function drawMap() {
-    const W = mapEl.clientWidth, H = mapEl.clientHeight; if (!W || !H) return;
-    const z = W > 720 ? 11 : 10, n = 2 ** z, T = 256;
-    const [lat, lon] = s.geo, r = lat * Math.PI / 180;
-    const cx = (lon + 180) / 360 * n * T, cy = (1 - Math.log(Math.tan(r) + 1 / Math.cos(r)) / Math.PI) / 2 * n * T;
-    // o ponto fica um pouco à direita, longe do card de "Como chegar"
-    const ox = W < 640 ? W / 2 : W * .62, x0 = cx - ox, y0 = cy - H / 2;
-    let out = '';
-    for (let tx = Math.floor(x0 / T); tx <= Math.floor((x0 + W) / T); tx++) {
-      for (let ty = Math.floor(y0 / T); ty <= Math.floor((y0 + H) / T); ty++) {
-        if (ty < 0 || ty >= n) continue;
-        const wx = ((tx % n) + n) % n, pos = `left:${Math.round(tx * T - x0)}px;top:${Math.round(ty * T - y0)}px`;
-        // base clara (água, costa, estradas) + relevo sombreado por cima
-        out += `<img src="${ESRI}/Canvas/World_Light_Gray_Base/MapServer/tile/${z}/${ty}/${wx}" style="${pos}" alt="" decoding="async" onerror="this.remove()">`
-             + `<img class="relief" src="${ESRI}/World_Shaded_Relief/MapServer/tile/${z}/${ty}/${wx}" style="${pos}" alt="" decoding="async" onerror="this.remove()">`;
-      }
-    }
-    tilesEl.innerHTML = out;
-    mapEl.style.setProperty('--px', ox + 'px');
-  }
-  let mapOn = false, mT;
-  const mo = new IntersectionObserver(en => { if (en[0].isIntersecting) { mo.disconnect(); mapOn = true; drawMap(); } }, { rootMargin: '400px' });
-  mo.observe(mapEl);
-  addEventListener('resize', () => { if (!mapOn) return; clearTimeout(mT); mT = setTimeout(drawMap, 150); });
 
   /* ---------- Barra fixa no celular: some quando a reserva está na tela ---------- */
   const bar = $('[data-bar]'), aside = $('#book');

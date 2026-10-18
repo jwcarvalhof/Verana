@@ -1268,7 +1268,7 @@
     ],
     "stepsLabel": "Etapas da reserva",
     "seeAll": "Ver tudo sobre a hospedagem",
-    "seeAllHint": "Mapa, quartos, avaliações e opções parecidas."
+    "seeAllHint": "Quartos, avaliações e opções parecidas."
   },
   "fav": {
     "add": "Salvar nos favoritos",
@@ -1317,10 +1317,6 @@
       "Chegada",
       "Custo benefício"
     ],
-    "map": "Onde você vai estar",
-    "mapNote": "A localização exata aparece depois da confirmação da reserva.",
-    "mapOpen": "Abrir no mapa",
-    "mapFail": "Não foi possível carregar o mapa agora.",
     "arrive": "Como chegar",
     "host": "Conheça quem recebe",
     "hostResp": "Responde em até 1 hora",
@@ -1348,7 +1344,6 @@
     "notFound": "Não encontramos esta hospedagem.",
     "notFoundLink": "Ver todas as hospedagens",
     "photoBy": "Fotos",
-    "demo": "Hospedagem, anfitrião, avaliações e preços são demonstrativos. As fotos e os lugares são reais.",
-    "mapCoords": "Coordenadas aproximadas"
+    "demo": "Hospedagem, anfitrião, avaliações e preços são demonstrativos. As fotos e os lugares são reais."
   }
 }

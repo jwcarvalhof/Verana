@@ -12,7 +12,7 @@ import json, html, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 load = lambda n: json.load(open(os.path.join(ROOT, 'content', n), encoding='utf-8'))
 PT, EN, CREDITS = load('pt.json'), load('en.json'), load('credits.json')
-VERSION = '8'
+VERSION = '9'
 DOMAIN = 'https://SEU-DOMINIO'  # DEPLOY STEP: endereço final do Vercel, sem barra no fim
 e = lambda s: html.escape(str(s), quote=True)
 
@@ -538,7 +538,6 @@ def stay_page():
   setTimeout(function(){{document.documentElement.classList.remove('sp-pending')}},3000)}})();
 </script>
 <link rel="preconnect" href="https://images.unsplash.com">
-<link rel="preconnect" href="https://server.arcgisonline.com">
 <link rel="preload" href="/assets/fonts/ApfelGrotezk-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap">
 <link rel="stylesheet" href="/assets/css/tokens.css?v={VERSION}">

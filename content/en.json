@@ -1261,7 +1261,7 @@
     ],
     "stepsLabel": "Booking steps",
     "seeAll": "See everything about this stay",
-    "seeAllHint": "Map, bedrooms, reviews and similar places."
+    "seeAllHint": "Bedrooms, reviews and similar places."
   },
   "fav": {
     "add": "Save to favorites",
@@ -1310,10 +1310,6 @@
       "Arrival",
       "Value"
     ],
-    "map": "Where you will be",
-    "mapNote": "The exact location is shared once your booking is confirmed.",
-    "mapOpen": "Open in maps",
-    "mapFail": "The map could not be loaded right now.",
     "arrive": "Getting there",
     "host": "Meet your host",
     "hostResp": "Replies within an hour",
@@ -1341,7 +1337,6 @@
     "notFound": "We could not find this stay.",
     "notFoundLink": "See all stays",
     "photoBy": "Photos",
-    "demo": "Stays, hosts, reviews and prices are for demonstration. The photos and places are real.",
-    "mapCoords": "Approximate coordinates"
+    "demo": "Stays, hosts, reviews and prices are for demonstration. The photos and places are real."
   }
 }

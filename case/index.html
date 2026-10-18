@@ -183,21 +183,6 @@ button{font:inherit;color:inherit;cursor:pointer}
 .panel__more>span:last-child{width:clamp(18px,2vw,28px);height:clamp(18px,2vw,28px);border-radius:50%;display:grid;place-items:center;background:var(--terra);color:var(--white)}
 .panel__more .icon{width:12px;height:12px}
 
-/* tela 6: mapa fixo tingido */
-.f-map{aspect-ratio:16/9;background:#EDE5CC}
-.f-map .tiles{position:absolute;inset:0;overflow:hidden;filter:grayscale(1) contrast(1.05) brightness(1.12)}
-.f-map .tiles img{position:absolute;width:256px;height:256px;max-width:none}
-.f-map .tiles img.r{mix-blend-mode:multiply;opacity:.75}
-.f-map .tint{position:absolute;inset:0;mix-blend-mode:multiply;background:radial-gradient(70% 90% at 62% 50%,#F4ECD6 0%,#EADBB4 55%,#D9C79A 100%)}
-.f-map .area{position:absolute;left:62%;top:50%;width:24%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;border:1.5px dashed rgba(140,47,13,.55);background:radial-gradient(circle,rgba(242,192,99,.42),rgba(242,192,99,0) 72%)}
-.pin{position:absolute;left:62%;top:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--terra);box-shadow:0 0 0 6px rgba(255,254,250,.85),0 10px 24px -6px rgba(60,20,4,.55)}
-.pin svg{width:22px;height:22px;fill:none;stroke:var(--white);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.f-map .arr{position:absolute;left:4%;bottom:7%;width:38%;max-width:300px;background:rgba(255,254,250,.94);border-radius:16px;padding:clamp(10px,1.4vw,18px);display:grid;gap:6px;box-shadow:0 20px 40px -20px rgba(40,24,8,.35)}
-.f-map .arr p{font-size:clamp(9px,.95vw,13px);color:var(--brown);line-height:1.45}
-.f-map .co{position:absolute;right:4%;bottom:9%;display:grid;justify-items:end;padding:8px 12px;border-radius:12px;background:rgba(255,254,250,.86);font-size:clamp(9px,1vw,14px);font-variant-numeric:tabular-nums}
-.f-map .co small{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--brown)}
-.f-map .attr{position:absolute;right:4%;bottom:3%;font-size:9px;color:var(--white);text-shadow:0 1px 2px rgba(0,0,0,.5);opacity:.85}
-
 /* sistema visual */
 .ds{display:grid;gap:clamp(56px,7vw,96px)}
 .ds__block{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(24px,5vw,72px);align-items:start}
@@ -313,14 +298,12 @@ button{font:inherit;color:inherit;cursor:pointer}
   .nums{grid-template-columns:repeat(2,minmax(0,1fr))}
   .type__face{grid-template-columns:1fr;gap:12px}
   .scale div{grid-template-columns:1fr;gap:4px}
-  .f-home,.f-sheet,.f-map,.f-moment{aspect-ratio:4/5}
+  .f-home,.f-sheet,.f-moment{aspect-ratio:4/5}
   .f-home .copy{width:84%;top:16%}
   .f-home .book{left:5%;right:5%;width:auto;top:auto;bottom:6%}
   .f-moment .t{left:6%;width:auto}
   .panel{width:88%}
   .panel__body{grid-template-columns:1fr}
-  .f-map .arr{width:auto;right:4%;max-width:none}
-  .f-map .co{bottom:auto;top:5%}
   .field{min-width:0}
 }
 @media (prefers-reduced-motion:reduce){
@@ -428,7 +411,7 @@ button{font:inherit;color:inherit;cursor:pointer}
     <div class="sec__head rv">
       <p class="kicker"><span data-l="pt">As telas</span><span data-l="en">The screens</span></p>
       <h2 class="h2" id="screens-t"><span data-l="pt">Um percurso que vai do sonho à reserva.</span><span data-l="en">A path that goes from daydream to booking.</span></h2>
-      <p class="lead"><span data-l="pt">Cada tela foi pensada para uma pergunta de quem está planejando a viagem: para onde ir, quando ir, onde ficar e como chegar.</span><span data-l="en">Each screen answers one question a traveler has: where to go, when to go, where to stay and how to get there.</span></p>
+      <p class="lead"><span data-l="pt">Cada tela foi pensada para uma pergunta de quem está planejando a viagem: para onde ir, quando ir e onde ficar.</span><span data-l="en">Each screen answers one question a traveler has: where to go, when to go and where to stay.</span></p>
     </div>
     <div class="screens">
       <figure class="shot rv">
@@ -496,18 +479,6 @@ button{font:inherit;color:inherit;cursor:pointer}
         <figcaption><span><b><span data-l="pt">Reserva.</span><span data-l="en">Booking.</span></b> <span data-l="pt">O site fica desfocado ao fundo com a foto do próprio lugar. Três palavras no topo mostram em que passo a pessoa está.</span><span data-l="en">The site blurs in the background using the place's own photo. Three words at the top show which step you are on.</span></span></figcaption>
       </figure>
 
-      <figure class="shot rv">
-        <div class="frame f-map" data-map>
-          <div class="tiles" data-tiles></div>
-          <div class="tint"></div>
-          <span class="area"></span>
-          <span class="pin"><svg aria-hidden="true"><use href="#i-leaf"/></svg></span>
-          <div class="arr"><p class="kicker"><span data-l="pt">Como chegar</span><span data-l="en">Getting there</span></p><p><span data-l="pt">A cerca de 2h30 de Florianópolis, de carro, pela Serra do Corvo Branco ou pela BR 282.</span><span data-l="en">Zermatt is car free: take the train from Täsch, or from Zurich in about 3h30.</span></p></div>
-          <p class="co"><small><span data-l="pt">Coordenadas aproximadas</span><span data-l="en">Approximate coordinates</span></small><span data-l="pt">28°01′ S · 49°36′ O</span><span data-l="en">46°01′ N · 7°45′ E</span></p>
-          <p class="attr">Esri, USGS, NOAA, OpenStreetMap</p>
-        </div>
-        <figcaption><span><b><span data-l="pt">Onde você vai estar.</span><span data-l="en">Where you will be.</span></b> <span data-l="pt">Em vez de um mapa comum, uma imagem fixa do relevo tingida com as cores da marca. Mostra a região, não o endereço.</span><span data-l="en">Instead of a generic map, a still image of the terrain tinted in the brand colors. It shows the area, not the address.</span></span></figcaption>
-      </figure>
     </div>
   </div>
 </section>
@@ -522,7 +493,7 @@ button{font:inherit;color:inherit;cursor:pointer}
     <li class="step rv"><span class="step__n">02</span><h3 class="h3"><span data-l="pt">A foto ganhou a tela</span><span data-l="en">The photo took the screen</span></h3><p><span data-l="pt">Na revisão, o texto ocupava quase tudo e a foto ficava pequena. Inverti: a foto ocupa a tela e o texto passa por cima.</span><span data-l="en">In review, text took up most of the space and the photo was small. I flipped it: the photo fills the screen and text sits on top.</span></p></li>
     <li class="step rv"><span class="step__n">03</span><h3 class="h3"><span data-l="pt">Um site, dois idiomas</span><span data-l="en">One site, two languages</span></h3><p><span data-l="pt">Português e inglês viraram uma página só. Ao trocar o idioma, mudam textos, fotos, destinos e moeda.</span><span data-l="en">Portuguese and English became a single page. Switching language changes the text, photos, destinations and currency.</span></p></li>
     <li class="step rv"><span class="step__n">04</span><h3 class="h3"><span data-l="pt">Reservar sem sair do lugar</span><span data-l="en">Booking without leaving the place</span></h3><p><span data-l="pt">Ao abrir uma hospedagem, a foto do lugar fica desfocada ao fundo e a reserva acontece em três passos curtos.</span><span data-l="en">When you open a stay, its photo blurs in the background and booking happens in three short steps.</span></p></li>
-    <li class="step rv"><span class="step__n">05</span><h3 class="h3"><span data-l="pt">Resumo e página completa</span><span data-l="en">A summary and a full page</span></h3><p><span data-l="pt">O painel virou um resumo. Quem quer saber mais abre a página completa, com quartos, avaliações, mapa e opções parecidas.</span><span data-l="en">The panel became a summary. Anyone who wants more opens the full page, with rooms, reviews, a map and similar places.</span></p></li>
+    <li class="step rv"><span class="step__n">05</span><h3 class="h3"><span data-l="pt">Resumo e página completa</span><span data-l="en">A summary and a full page</span></h3><p><span data-l="pt">O painel virou um resumo. Quem quer saber mais abre a página completa, com quartos, avaliações e opções parecidas.</span><span data-l="en">The panel became a summary. Anyone who wants more opens the full page, with rooms, reviews and similar places.</span></p></li>
     <li class="step rv"><span class="step__n">06</span><h3 class="h3"><span data-l="pt">Os detalhes</span><span data-l="en">The details</span></h3><p><span data-l="pt">Movimentos mais suaves, o clima do mês nas estações, favoritos, fotos nos perfis e uma transição de vento para ir direto a uma seção.</span><span data-l="en">Softer motion, monthly weather on the seasons, favorites, profile photos and a wind transition to jump straight to a section.</span></p></li>
   </ol>
 </section>
@@ -601,7 +572,6 @@ button{font:inherit;color:inherit;cursor:pointer}
           <div class="kit__row">
             <span class="avs"><span class="av"><img data-face="women/44" alt=""></span><span class="av"><img data-face="men/32" alt=""></span></span>
             <span class="climate"><svg class="icon icon--sm" aria-hidden="true"><use href="#i-thermo"/></svg><span data-l="pt">julho em Urubici: 1 a 15°C</span><span data-l="en">January in Zermatt: −9 to −1°C</span></span>
-            <span class="pin" style="position:relative;left:auto;top:auto;transform:none;margin-left:8px"><svg aria-hidden="true"><use href="#i-leaf"/></svg></span>
           </div>
         </div>
       </div>
@@ -680,7 +650,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 
 <footer class="wrap foot">
   <p><span data-l="pt">VÉRANA é uma marca conceitual. Hospedagens, anfitriões, avaliações e preços são demonstrativos.</span><span data-l="en">VÉRANA is a concept brand. Stays, hosts, reviews and prices are for demonstration.</span></p>
-  <p><span data-l="pt">Fotos de lugares reais via Unsplash e Wikimedia Commons, com os créditos completos no site. Fotos de perfil genéricas. Mapa: Esri, USGS, NOAA e OpenStreetMap. Fontes: Apfel Grotezk e DM Sans.</span><span data-l="en">Real place photos via Unsplash and Wikimedia Commons, with full credits on the site. Generic profile photos. Map: Esri, USGS, NOAA and OpenStreetMap. Typefaces: Apfel Grotezk and DM Sans.</span></p>
+  <p><span data-l="pt">Fotos de lugares reais via Unsplash e Wikimedia Commons, com os créditos completos no site. Fotos de perfil genéricas. Fontes: Apfel Grotezk e DM Sans.</span><span data-l="en">Real place photos via Unsplash and Wikimedia Commons, with full credits on the site. Generic profile photos. Typefaces: Apfel Grotezk and DM Sans.</span></p>
   <p>© 2026 VÉRANA</p>
 </footer>
 
@@ -700,7 +670,6 @@ button{font:inherit;color:inherit;cursor:pointer}
     closing: { pt: ['c:b/b6/Vale_do_Quilombo_-_Serra_Ga%C3%BAcha.jpg', 'Vale do Quilombo, na Serra Gaúcha'], en: ['photo-1603657289433-e4983d2114b9', 'Terraced vineyards in the Douro Valley'] }
   };
   const W = { hero: 2000, moment: 1600, season: 1200, stay: 900, stay2: 900, closing: 2000 };
-  const MAP = { pt: [-28.015, -49.592], en: [46.020, 7.749] };
   let LANG = html.dataset.lang === 'en' ? 'en' : 'pt';
 
   function paintImages() {
@@ -713,27 +682,11 @@ button{font:inherit;color:inherit;cursor:pointer}
     document.querySelectorAll('[data-face]').forEach(img => { img.src = `https://randomuser.me/api/portraits/${img.dataset.face}.jpg`; img.loading = 'lazy'; });
   }
 
-  // mapa fixo: quadros de base clara e relevo ao redor do ponto, tingidos pela paleta
-  const mapEl = document.querySelector('[data-map]'), tiles = document.querySelector('[data-tiles]');
-  const ESRI = 'https://server.arcgisonline.com/ArcGIS/rest/services';
-  function drawMap() {
-    const Wd = mapEl.clientWidth, H = mapEl.clientHeight; if (!Wd || !H) return;
-    const z = Wd > 720 ? 11 : 10, n = 2 ** z, T = 256, [lat, lon] = MAP[LANG], r = lat * Math.PI / 180;
-    const cx = (lon + 180) / 360 * n * T, cy = (1 - Math.log(Math.tan(r) + 1 / Math.cos(r)) / Math.PI) / 2 * n * T;
-    const ox = Wd * .62, x0 = cx - ox, y0 = cy - H / 2;
-    let out = '';
-    for (let tx = Math.floor(x0 / T); tx <= Math.floor((x0 + Wd) / T); tx++) for (let ty = Math.floor(y0 / T); ty <= Math.floor((y0 + H) / T); ty++) {
-      const wx = ((tx % n) + n) % n, pos = `left:${Math.round(tx * T - x0)}px;top:${Math.round(ty * T - y0)}px`;
-      out += `<img src="${ESRI}/Canvas/World_Light_Gray_Base/MapServer/tile/${z}/${ty}/${wx}" style="${pos}" alt="" loading="lazy" onerror="this.remove()"><img class="r" src="${ESRI}/World_Shaded_Relief/MapServer/tile/${z}/${ty}/${wx}" style="${pos}" alt="" loading="lazy" onerror="this.remove()">`;
-    }
-    tiles.innerHTML = out;
-  }
-
   function setLang(l, save) {
     LANG = l; html.dataset.lang = l; html.lang = l === 'en' ? 'en' : 'pt-BR';
     document.querySelectorAll('[data-set]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.set === l)));
     document.querySelectorAll('[data-site]').forEach(a => { a.href = 'https://verana-jet.vercel.app/' + (l === 'en' ? '?lang=en' : ''); });
-    paintImages(); drawMap();
+    paintImages();
     if (save) {
       try { localStorage.setItem('verana-case-lang', l); } catch (_) {}
       const u = new URL(location.href); if (l === 'en') u.searchParams.set('lang', 'en'); else u.searchParams.delete('lang');
@@ -741,7 +694,6 @@ button{font:inherit;color:inherit;cursor:pointer}
     }
   }
   document.querySelectorAll('[data-set]').forEach(b => b.addEventListener('click', () => { if (b.dataset.set !== LANG) setLang(b.dataset.set, true); }));
-  let rT; addEventListener('resize', () => { clearTimeout(rT); rT = setTimeout(drawMap, 150); });
 
   // entradas suaves
   const io = new IntersectionObserver(es => {
