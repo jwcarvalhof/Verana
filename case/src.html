@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>VÉRANA · Case</title>
-<meta name="description" content="Case VÉRANA: ideia, processo e sistema visual de um site de hospedagens em português e inglês.">
+<meta name="description" content="Case VÉRANA: ideia, processo e sistema visual de um site de hospedagens.">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#FFFEFA">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -259,7 +259,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .write .yes p{font-family:var(--display);font-size:20px;line-height:1.3}
 
 /* números e aprendizados */
-.nums{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px;border-top:1px solid var(--line-2);padding-top:32px}
+.nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;border-top:1px solid var(--line-2);padding-top:32px}
 .num b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(2.5rem,1.8rem + 2.4vw,4.25rem);line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
 .num span{font-size:14px;color:var(--brown)}
 .learn{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
@@ -283,7 +283,6 @@ button{font:inherit;color:inherit;cursor:pointer}
 @media (max-width:1024px){
   .rules{grid-template-columns:repeat(2,minmax(0,1fr))}
   .meta{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .nums{grid-template-columns:repeat(3,minmax(0,1fr))}
   .ds__block{grid-template-columns:1fr}
   .ds__label{position:static}
 }
@@ -343,7 +342,7 @@ button{font:inherit;color:inherit;cursor:pointer}
     <dl class="meta">
       <div><dt><span data-l="pt">Meu papel</span><span data-l="en">My role</span></dt><dd><span data-l="pt">Conceito, direção de arte e design de interface</span><span data-l="en">Concept, art direction and interface design</span></dd></div>
       <div><dt><span data-l="pt">Ano</span><span data-l="en">Year</span></dt><dd>2026</dd></div>
-      <div><dt><span data-l="pt">O que entreguei</span><span data-l="en">What I delivered</span></dt><dd><span data-l="pt">Marca, site em português e inglês, página de cada hospedagem e sistema visual</span><span data-l="en">Brand, a site in Portuguese and English, a page for each stay and a visual system</span></dd></div>
+      <div><dt><span data-l="pt">O que entreguei</span><span data-l="en">What I delivered</span></dt><dd><span data-l="pt">Marca, site, página de cada hospedagem e sistema visual</span><span data-l="en">Brand, website, a page for each stay and a visual system</span></dd></div>
       <div><dt>Site</dt><dd><a href="{{SITE}}" target="_blank" rel="noopener" data-site>{{SITE_SHORT}}</a></dd></div>
     </dl>
   </div>
@@ -358,7 +357,7 @@ button{font:inherit;color:inherit;cursor:pointer}
     <div class="idea__text rv">
       <p><span data-l="pt">VÉRANA é uma marca conceitual que criei para descobrir hospedagens. O ponto de partida foi um briefing curto: uma experiência aconchegante e humana.</span><span data-l="en">VÉRANA is a concept brand I created for discovering places to stay. It started from a short brief: a cozy, human experience.</span></p>
       <p><span data-l="pt">Os sites de reserva costumam abrir com filtros, preços e listas. Eu quis inverter a ordem: primeiro o lugar, a luz e o clima. Depois, com calma, os detalhes para decidir.</span><span data-l="en">Booking sites usually open with filters, prices and lists. I wanted to flip that order: the place first, its light and its weather. Then, calmly, the details needed to decide.</span></p>
-      <p><span data-l="pt">O resultado é um site em duas línguas, com seis hospedagens em cada uma, uma reserva em três passos curtos e uma página completa para cada lugar.</span><span data-l="en">The result is a site in two languages, with six stays in each, a booking in three short steps and a full page for every place.</span></p>
+      <p><span data-l="pt">O resultado é um site com seis hospedagens, uma reserva em três passos curtos e uma página completa para cada lugar.</span><span data-l="en">The result is a site with six stays, a booking in three short steps and a full page for every place.</span></p>
     </div>
   </div>
 </section>
@@ -372,7 +371,7 @@ button{font:inherit;color:inherit;cursor:pointer}
     <article class="rule rv"><span class="rule__i"><svg class="icon" aria-hidden="true"><use href="#i-mountain"/></svg></span><h3 class="h3"><span data-l="pt">O lugar vem primeiro</span><span data-l="en">The place comes first</span></h3><p><span data-l="pt">Fotos ocupam a tela inteira. O texto é curto e passa por cima, sem disputar atenção.</span><span data-l="en">Photos fill the screen. Text is short and sits on top without competing.</span></p></article>
     <article class="rule rv"><span class="rule__i"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span><h3 class="h3"><span data-l="pt">Só lugares reais</span><span data-l="en">Only real places</span></h3><p><span data-l="pt">Cada foto mostra o lugar escrito na legenda. Nenhuma imagem genérica ou inventada.</span><span data-l="en">Every photo shows the place named in its caption. No generic or made up images.</span></p></article>
     <article class="rule rv"><span class="rule__i"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span><h3 class="h3"><span data-l="pt">Ritmo calmo</span><span data-l="en">A calm pace</span></h3><p><span data-l="pt">Tudo aparece devagar e com suavidade, mas sem fazer ninguém esperar.</span><span data-l="en">Everything appears slowly and softly, without making anyone wait.</span></p></article>
-    <article class="rule rv"><span class="rule__i"><svg class="icon" aria-hidden="true"><use href="#i-wave"/></svg></span><h3 class="h3"><span data-l="pt">Cada idioma, seu mapa</span><span data-l="en">Each language, its own map</span></h3><p><span data-l="pt">Em português, só destinos no Brasil. Em inglês, só destinos fora dele.</span><span data-l="en">In Portuguese, only destinations in Brazil. In English, only places outside it.</span></p></article>
+    <article class="rule rv"><span class="rule__i"><svg class="icon" aria-hidden="true"><use href="#i-thermo"/></svg></span><h3 class="h3"><span data-l="pt">Informação que ajuda a decidir</span><span data-l="en">Information that helps you decide</span></h3><p><span data-l="pt">O clima do mês, o que tem na casa e como chegar. Só o que muda a escolha.</span><span data-l="en">The month's weather, what the house has and how to get there. Only what changes the choice.</span></p></article>
   </div>
 </section>
 
@@ -461,10 +460,9 @@ button{font:inherit;color:inherit;cursor:pointer}
   <ol class="path">
     <li class="step rv"><span class="step__n">01</span><h3 class="h3"><span data-l="pt">Referências e primeira versão</span><span data-l="en">References and a first version</span></h3><p><span data-l="pt">Juntei as referências do briefing e montei uma primeira página com busca, estações e hospedagens.</span><span data-l="en">I gathered the brief's references and built a first page with search, seasons and stays.</span></p></li>
     <li class="step rv"><span class="step__n">02</span><h3 class="h3"><span data-l="pt">A foto ganhou a tela</span><span data-l="en">The photo took the screen</span></h3><p><span data-l="pt">Na revisão, o texto ocupava quase tudo e a foto ficava pequena. Inverti: a foto ocupa a tela e o texto passa por cima.</span><span data-l="en">In review, text took up most of the space and the photo was small. I flipped it: the photo fills the screen and text sits on top.</span></p></li>
-    <li class="step rv"><span class="step__n">03</span><h3 class="h3"><span data-l="pt">Um site, dois idiomas</span><span data-l="en">One site, two languages</span></h3><p><span data-l="pt">Português e inglês viraram uma página só. Ao trocar o idioma, mudam textos, fotos, destinos e moeda.</span><span data-l="en">Portuguese and English became a single page. Switching language changes the text, photos, destinations and currency.</span></p></li>
-    <li class="step rv"><span class="step__n">04</span><h3 class="h3"><span data-l="pt">Reservar sem sair do lugar</span><span data-l="en">Booking without leaving the place</span></h3><p><span data-l="pt">Ao abrir uma hospedagem, a foto do lugar fica desfocada ao fundo e a reserva acontece em três passos curtos.</span><span data-l="en">When you open a stay, its photo blurs in the background and booking happens in three short steps.</span></p></li>
-    <li class="step rv"><span class="step__n">05</span><h3 class="h3"><span data-l="pt">Resumo e página completa</span><span data-l="en">A summary and a full page</span></h3><p><span data-l="pt">O painel virou um resumo. Quem quer saber mais abre a página completa, com quartos, avaliações e opções parecidas.</span><span data-l="en">The panel became a summary. Anyone who wants more opens the full page, with rooms, reviews and similar places.</span></p></li>
-    <li class="step rv"><span class="step__n">06</span><h3 class="h3"><span data-l="pt">Os detalhes</span><span data-l="en">The details</span></h3><p><span data-l="pt">Movimentos mais suaves, o clima do mês nas estações, favoritos, fotos nos perfis e uma transição de vento para ir direto a uma seção.</span><span data-l="en">Softer motion, monthly weather on the seasons, favorites, profile photos and a wind transition to jump straight to a section.</span></p></li>
+    <li class="step rv"><span class="step__n">03</span><h3 class="h3"><span data-l="pt">Reservar sem sair do lugar</span><span data-l="en">Booking without leaving the place</span></h3><p><span data-l="pt">Ao abrir uma hospedagem, a foto do lugar fica desfocada ao fundo e a reserva acontece em três passos curtos.</span><span data-l="en">When you open a stay, its photo blurs in the background and booking happens in three short steps.</span></p></li>
+    <li class="step rv"><span class="step__n">04</span><h3 class="h3"><span data-l="pt">Resumo e página completa</span><span data-l="en">A summary and a full page</span></h3><p><span data-l="pt">O painel virou um resumo. Quem quer saber mais abre a página completa, com quartos, avaliações e opções parecidas.</span><span data-l="en">The panel became a summary. Anyone who wants more opens the full page, with rooms, reviews and similar places.</span></p></li>
+    <li class="step rv"><span class="step__n">05</span><h3 class="h3"><span data-l="pt">Os detalhes</span><span data-l="en">The details</span></h3><p><span data-l="pt">Movimentos mais suaves, o clima do mês nas estações, favoritos, fotos nos perfis e uma transição de vento para ir direto a uma seção.</span><span data-l="en">Softer motion, monthly weather on the seasons, favorites, profile photos and a wind transition to jump straight to a section.</span></p></li>
   </ol>
 </section>
 
@@ -587,10 +585,9 @@ button{font:inherit;color:inherit;cursor:pointer}
     <h2 class="h2" id="nums-t"><span data-l="pt">Pequeno no tamanho, cuidadoso nos detalhes.</span><span data-l="en">Small in size, careful in detail.</span></h2>
   </div>
   <div class="nums rv">
-    <div class="num"><b>2</b><span><span data-l="pt">idiomas, cada um com seus destinos</span><span data-l="en">languages, each with its own destinations</span></span></div>
-    <div class="num"><b>12</b><span><span data-l="pt">hospedagens, seis por idioma</span><span data-l="en">stays, six per language</span></span></div>
-    <div class="num"><b>10</b><span><span data-l="pt">destinos para explorar</span><span data-l="en">destinations to explore</span></span></div>
-    <div class="num"><b>52</b><span><span data-l="pt">fotos de lugares reais</span><span data-l="en">photos of real places</span></span></div>
+    <div class="num"><b>6</b><span><span data-l="pt">hospedagens, cada uma com sua página</span><span data-l="en">stays, each with its own page</span></span></div>
+    <div class="num"><b>5</b><span><span data-l="pt">destinos para explorar</span><span data-l="en">destinations to explore</span></span></div>
+    <div class="num"><b>4</b><span><span data-l="pt">estações para escolher a época</span><span data-l="en">seasons to choose when to go</span></span></div>
     <div class="num"><b>3</b><span><span data-l="pt">passos para reservar</span><span data-l="en">steps to book</span></span></div>
   </div>
 </section>
@@ -602,7 +599,7 @@ button{font:inherit;color:inherit;cursor:pointer}
   </div>
   <div class="learn">
     <div class="rv"><h3 class="h3"><span data-l="pt">Menos texto pede texto melhor</span><span data-l="en">Less text asks for better text</span></h3><p><span data-l="pt">Com a foto em primeiro plano, cada frase precisou dizer mais com menos palavras.</span><span data-l="en">With the photo up front, every line had to say more with fewer words.</span></p></div>
-    <div class="rv"><h3 class="h3"><span data-l="pt">Idioma também é lugar</span><span data-l="en">Language is also a place</span></h3><p><span data-l="pt">Traduzir não bastava. Quem lê em inglês vê outros destinos, outra moeda e outras fotos.</span><span data-l="en">Translating was not enough. English readers see other destinations, another currency and other photos.</span></p></div>
+    <div class="rv"><h3 class="h3"><span data-l="pt">Resumo antes do detalhe</span><span data-l="en">Summary before detail</span></h3><p><span data-l="pt">O painel mostra o essencial para decidir rápido. Quem quer mais abre a página completa.</span><span data-l="en">The panel shows what you need to decide quickly. Anyone who wants more opens the full page.</span></p></div>
     <div class="rv"><h3 class="h3"><span data-l="pt">Movimento bom passa despercebido</span><span data-l="en">Good motion goes unnoticed</span></h3><p><span data-l="pt">As animações ficaram mais suaves a cada revisão, até parecerem parte natural da página.</span><span data-l="en">The animations got softer with each review, until they felt like a natural part of the page.</span></p></div>
   </div>
 </section>
