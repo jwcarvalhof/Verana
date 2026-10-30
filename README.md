@@ -64,3 +64,10 @@ Depois de publicar:
 ## O que é demonstrativo
 
 Hospedagens, preços, notas e contatos são fictícios e estão identificados na página. A busca filtra os exemplos e não faz reservas. As fotos de lugares são reais, com local conferido, e os créditos estão no rodapé.
+
+## Case de portfólio (fora do site)
+
+A pasta `case/` vira o projeto **verana-case** na Vercel e não aparece no site.
+
+- `case/index.html`: página do projeto no template do portfólio (mesmo topo, fundo preto e Geist da página da Nexus). Título, um parágrafo, ano, cliente, serviços, quatro imagens do trabalho, link para o estudo completo, próximo projeto e rodapé. As imagens ficam em `case/assets/verana-1..4.webp` (versão em inglês com `-en`) e são capturas reais do site com as fotos dos lugares.
+- `case/estudo/`: o estudo de caso completo (ideia, regras, telas, etapas, sistema visual), gerado por `python3 tools/case.py` a partir de `case/src.html`.

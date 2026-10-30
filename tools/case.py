@@ -1,4 +1,5 @@
-"""Gera case/index.html (página de portfólio, fora do site) a partir de case/src.html."""
+"""Gera case/estudo/index.html (estudo de caso completo, fora do site) a partir de case/src.html.
+A página do projeto (case/index.html) é o template do portfólio e não é gerada aqui."""
 import os, re, shutil
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = 'https://verana-jet.vercel.app/'
@@ -12,5 +13,7 @@ os.makedirs(os.path.join(ROOT, 'case', 'assets'), exist_ok=True)
 for f in ('ApfelGrotezk-Regular.woff2', 'ApfelGrotezk-Mittel.woff2'):
     shutil.copy(os.path.join(ROOT, 'assets', 'fonts', f), os.path.join(ROOT, 'case', 'assets', f))
 shutil.copy(os.path.join(ROOT, 'assets', 'icons', 'favicon.svg'), os.path.join(ROOT, 'case', 'assets', 'favicon.svg'))
-open(os.path.join(ROOT, 'case', 'index.html'), 'w', encoding='utf-8').write(out)
+out = out.replace('href="assets/', 'href="../assets/').replace('url("assets/', 'url("../assets/')
+os.makedirs(os.path.join(ROOT, 'case', 'estudo'), exist_ok=True)
+open(os.path.join(ROOT, 'case', 'estudo', 'index.html'), 'w', encoding='utf-8').write(out)
 print('ok', len(out), icons.count('<span'))
