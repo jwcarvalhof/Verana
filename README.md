@@ -67,7 +67,11 @@ Hospedagens, preços, notas e contatos são fictícios e estão identificados na
 
 ## Case de portfólio (fora do site)
 
-A pasta `case/` vira o projeto **verana-case** na Vercel e não aparece no site.
+A pasta `case/` vira o projeto **verana-case** na Vercel e não aparece no site. É uma página só, no template do portfólio (mesmo topo, fundo preto e Geist da página da Nexus):
 
-- `case/index.html`: página do projeto no template do portfólio (mesmo topo, fundo preto e Geist da página da Nexus). Título, um parágrafo, ano, cliente, serviços, quatro imagens do trabalho, link para o estudo completo, próximo projeto e rodapé. As imagens ficam em `case/assets/verana-1..4.webp` (versão em inglês com `-en`) e são capturas reais do site com as fotos dos lugares.
-- `case/estudo/`: o estudo de caso completo (ideia, regras, telas, etapas, sistema visual), gerado por `python3 tools/case.py` a partir de `case/src.html`.
+- título, parágrafo, ano, cliente, serviços e o botão **Ver o site**;
+- quatro imagens do trabalho em `case/assets/verana-1..4.webp` (versão em inglês com `-en`), capturas reais do site com as fotos dos lugares;
+- o estudo: a ideia, o que guiou, como chegou aqui, sistema visual e o que aprendi;
+- próximo projeto (Nexus) e rodapé.
+
+O endereço antigo `case/estudo/` só redireciona para a página do case.
